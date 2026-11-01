@@ -3,6 +3,7 @@ const BUILDINGS = {"hut":0,"brick_house":1,"grain_farm":2,"lumber_camp":3,"carpe
 const GOODS = {"wood":0,"grain":1,"clay":2,"brick":3,"furniture":4,"luxury":5,"pop":6,"influence":7,"prestige":8}
 static var cache: Dictionary = {}
 static func sprite(id: String) -> Texture2D:
+	if id == "stone": return null # Text-only placeholder until artwork is selected.
 	var building := BUILDINGS.has(id)
 	var key := ("b:" if building else "g:")+id
 	if cache.has(key): return cache[key]
@@ -21,6 +22,7 @@ static func sprite(id: String) -> Texture2D:
 	cache[key] = texture
 	return texture
 static func building_id(id: String, state: Dictionary) -> String:
+	if id == "kiln": return "brick" # Temporary resource icon; no kiln sprite has been commissioned.
 	if id.begins_with("hut_"): return "brick_house" if int(state.buildings[id].level)>1 else "hut"
 	return id
 static func picture(parent: Node, id: String, size: Vector2) -> TextureRect:

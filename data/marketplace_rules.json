@@ -1,6 +1,6 @@
 {
   "schema_version": 5,
-  "experiment": "marketplace_scenario_v1",
+  "experiment": "every_house_scenario_v1",
   "resources": [
     "wood",
     "grain",
@@ -180,5 +180,6 @@
         "influence": 2
       }
     }
-  ]
+  ],
+  "all_houses_goal": true
 }

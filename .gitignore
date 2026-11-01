@@ -1,0 +1,12 @@
+.godot/
+runs/
+*.tmp
+__pycache__/
+*.pyc
+build/
+
+# Regenerable Godot metadata and experiment traces
+*.import
+experiments/**/decisions.jsonl
+experiments/**/checkpoint.json
+experiments/**/save.json

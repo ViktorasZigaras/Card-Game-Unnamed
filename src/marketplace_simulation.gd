@@ -90,16 +90,26 @@ func _new_round() -> void:
 		state.caravan.bricks_left = 2
 		state.round_events.append({"type":"caravan_arrival","visit":state.caravan.visits})
 		if not state.clay_contract.is_empty():
-			var plan = public_plan({"wood":1})
+			var plan = public_plan(_clay_upkeep())
 			if plan.ok:
 				_consume_plan(state.clay_contract.sponsor,plan,state.round_events)
 				_add_lot("clay",1,"","clay_import",0)
 				state.clay_deliveries += 1
-				state.round_events.append({"type":"automatic_clay_import","wood_exported":1,"clay":1})
+				state.round_events.append({"type":"automatic_clay_import","wood_exported":int(_clay_upkeep().get("wood",0)),"clay":1})
 			else: state.access_metrics.missed_clay_shipments += 1
+	_process_links()
 	_draw_hand()
 	state.actor = (int(state.round)-1) % state.houses.size()
 	_check_end()
+
+func _clay_upkeep() -> Dictionary:
+	return {"wood":1}
+
+func _process_links() -> void:
+	pass
+
+func _experimental_action(_action: Dictionary,_h: Dictionary,_events: Array) -> void:
+	pass
 
 func _close_round() -> void:
 	state.discard.append_array(state.revealed)
@@ -225,6 +235,17 @@ func _milestone(key: String,house_id: String,events: Array) -> void:
 	_prestige(house_id,amount,key,events)
 	state.milestones.append({"kind":key,"house":house_id,"round":state.round,"sequence":int(state.sequence)+1,"prestige":amount})
 
+func _upgrade_building(action: Dictionary,h: Dictionary,events: Array) -> void:
+	var plan = payment_plan(h.id,rules.housing_upgrade_cost)
+	_pay(h.id,plan,events)
+	_consume_plan(h.id,plan,events)
+	state.buildings[action.building].level = 2
+	if h.first_upgrade_round == 0: h.first_upgrade_round = state.round
+	_milestone("brick_house",h.id,events)
+
+func _after_action(_event: Dictionary) -> void:
+	pass
+
 func apply(action: Dictionary) -> Dictionary:
 	if action not in legal_actions(): return {"ok":false,"error":"illegal_action","action":action.duplicate(true)}
 	var h = current_house()
@@ -238,6 +259,8 @@ func apply(action: Dictionary) -> Dictionary:
 		state.consecutive_passes = 0
 		state.passed = []
 	match action.type:
+		"secure_contract", "cancel_contract", "demolish", "bulk_exchange", "buy_contract", "build_kiln", "supply_town", "export_brick", "buy_prestige", "buy_stone", "contribute_upgrade":
+			_experimental_action(action,h,events)
 		"pass":
 			if not h.did_something and not h.idle_rewarded:
 				_gain_influence(h.id,1,"idle_pass",events)
@@ -271,12 +294,7 @@ func apply(action: Dictionary) -> Dictionary:
 			state.buildings[action.building].owner = h.id
 			if is_housing(action.building) and h.first_claim_round == 0: h.first_claim_round = state.round
 		"upgrade":
-			var plan = payment_plan(h.id,rules.housing_upgrade_cost)
-			_pay(h.id,plan,events)
-			_consume_plan(h.id,plan,events)
-			state.buildings[action.building].level = 2
-			if h.first_upgrade_round == 0: h.first_upgrade_round = state.round
-			_milestone("brick_house",h.id,events)
+			_upgrade_building(action,h,events)
 		"build_market":
 			var plan = payment_plan(h.id,rules.market_cost)
 			_pay(h.id,plan,events)
@@ -339,6 +357,7 @@ func apply(action: Dictionary) -> Dictionary:
 	var event = {"sequence":state.sequence,"round":before_round,"house":h.id,"action":action.duplicate(true),"free_action":free,"consequences":events}
 	state.history.append(event)
 	if state.history.size() > 64: state.history.pop_front()
+	_after_action(event)
 	_check_end()
 	var round_done = false
 	if not state.ended and state.consecutive_passes == state.houses.size():
@@ -348,15 +367,17 @@ func apply(action: Dictionary) -> Dictionary:
 	return {"ok":true,"event":event,"round_closed":round_done,"free_action":free,"scenario_ended":state.ended}
 
 func _check_end() -> void:
-	if not state.clay_contract.is_empty() and state.clay_deliveries > 0:
-		for h in state.houses:
-			if not owned_huts(h.id,true).is_empty():
-				state.ended = true
-				state.end_reason = "clay_import_and_brick_house"
-				return
+	if state.clay_contract.is_empty() or state.clay_deliveries <= 0: return
+	var improved = 0
+	for h in state.houses:
+		if not owned_huts(h.id,true).is_empty(): improved += 1
+	var all_houses = rules.get("all_houses_goal",false)
+	if improved == state.houses.size() if all_houses else improved > 0:
+		state.ended = true
+		state.end_reason = "clay_import_and_every_house" if all_houses else "clay_import_and_brick_house"
 
 func restore(saved: Dictionary) -> void:
-	assert(int(saved.state.schema_version) == 5,"Unsupported marketplace save schema")
+	assert(int(saved.state.schema_version) in [5,6,7,8,9,10,11],"Unsupported marketplace save schema")
 	rules = saved.rules.duplicate(true)
 	definitions.clear()
 	for d in rules.buildings: definitions[d.id] = d

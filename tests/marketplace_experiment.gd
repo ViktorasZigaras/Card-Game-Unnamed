@@ -19,6 +19,7 @@ func fund(sim: MarketplaceSimulation,id: String,amount: int) -> void:
 	sim._gain_influence(id,amount,"fixture",events)
 func fresh(link: bool = false) -> MarketplaceSimulation:
 	var sim = MarketplaceSimulation.new()
+	sim.rules.all_houses_goal = false
 	sim.scenario_lumber_link = link
 	sim.start(1)
 	return sim
@@ -154,6 +155,7 @@ func run() -> void:
 	for seed_value in [1,7,42]:
 		for link in [false,true]:
 			var sim = MarketplaceSimulation.new()
+			sim.rules.all_houses_goal = false
 			sim.scenario_lumber_link = link
 			sim.start(seed_value)
 			var probe = GameProbe.new()

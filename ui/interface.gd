@@ -125,7 +125,13 @@ func _build() -> void:
 	left.add_child(houses)
 	_label(left,"Town assets",22)
 	assets = VBoxContainer.new()
-	left.add_child(assets)
+	var asset_scroll := ScrollContainer.new()
+	asset_scroll.custom_minimum_size.y = 140
+	asset_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	asset_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	left.add_child(asset_scroll)
+	assets.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	asset_scroll.add_child(assets)
 	var centre := VBoxContainer.new()
 	centre.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	centre.add_theme_constant_override("separation",10)
@@ -271,9 +277,9 @@ func _draw_detail() -> void:
 	var count := 0
 	for entry in _m().legal:
 		var a: Dictionary = entry.action
-		var show: bool = (tab == "Caravan" and a.type in ["secure_clay_contract","buy_brick"]) or (tab == "Selected" and ((selected_kind == "building" and (a.get("building","") == selected or (selected == "marketplace" and a.type == "build_market"))) or (selected_kind == "resource" and a.get("resource","") == selected)))
+		var show: bool = (tab == "Links" and a.type in ["secure_contract","cancel_contract","bulk_exchange","buy_contract","build_kiln","supply_town"]) or (tab == "Caravan" and a.type in ["secure_clay_contract","buy_brick","export_brick","buy_prestige","buy_stone"]) or (tab == "Selected" and ((selected_kind == "building" and (a.get("building","") == selected or (selected == "marketplace" and a.type in ["build_market","build_kiln"]))) or (selected_kind == "resource" and a.get("resource","") == selected)))
 		if show:
-			_button(inspector,"Preview " + _name(a.type) + " " + str(a.get("mode","")),_preview.bind(entry))
+			_button(inspector,"Preview " + _name(a.type) + " " + str(a.get("resource",a.get("mode",""))) + (" " + JSON.stringify(a.bundle) if a.has("bundle") else ""),_preview.bind(entry))
 			count += 1
 	if tab == "Selected" and count == 0:
 		detail.append_text("\n\nNo matching legal actions for the current actor.")

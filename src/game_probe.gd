@@ -100,6 +100,12 @@ static func replay_journal(path: String) -> Dictionary:
 	var initial = JSON.parse_string(file.get_line())
 	var replay: TownSimulation
 	match int(initial.snapshot.state.schema_version):
+		11: replay = ProjectSimulation.new()
+		10: replay = TradeSimulation.new()
+		9: replay = CapacitySimulation.new()
+		8: replay = RetrySimulation.new()
+		7: replay = PrioritySimulation.new()
+		6: replay = ContractSimulation.new()
 		5: replay = MarketplaceSimulation.new()
 		4: replay = CommonsSimulation.new()
 		3: replay = ReservationSimulation.new()

@@ -50,3 +50,38 @@ The initial fifteen-topic discussion is complete. See Medieval_Town_Design_Synth
 ## Marketplace scenario 004 — newly authorized test
 
 The user requested the proposed comparison plus a town end objective: a small wooden marketplace brings a caravan periodically; establish clay import through a thematic resource-backed contract, purchase unavailable bricks by barter, and have at least one upgraded hut. Market construction, clay-link establishment and good houses earn prestige; conversion from influence is one-way. Implemented in 0.5.0. Six runs, no corrective AI reruns: all completed; 75 original checks plus 46 final focused fixture checks passed, with all six original journals reverified. See MARKETPLACE_EXPERIMENT_004.md for assumptions, milestone ownership, paired timing and caveats.
+
+
+## Local experiment 005 · v0.65
+
+All-house goal completed in six baseline games. Follow-up questions: what should successful houses pursue; should public export wood be committed ahead of caravan arrival; should prestige from conversions reward longer scenarios; how should imported clay matter beyond its delivery milestone? No new rules were introduced for these questions. See EVERY_HOUSE_EXPERIMENT_005.md.
+
+
+## Local v0.70 · contract economy tests
+
+Three batches of six games completed. See CONTRACT_ECONOMY_TESTS_006.md. Open topics: shipment-input priority versus idle civic delivery; equal-value bulk exchange; authority to cancel public contracts; repeatable milestone rewards; upgrading automated huts; genuine obsolete-building replacement; and unselected workshop automation prices. No natural demolitions occurred. The latest policy improves housing speed but misses more clay shipments than batch two.
+
+
+## v0.75 · priority and ownership
+
+The creator gets a first-output reservation without ownership; prestige buys recurring first picks and is consumed on purchase/takeover. Passing expires priority, and paid/free activations also use the one-action opportunity. Linked upgrades activate only incremental recipes. Cancellation stays legal at a higher cost; AI reasoning rather than a rule gate controls its use. Six towns completed by rounds 14–18 with 23 takeovers. The next timing question is whether a blocked caravan shipment should be retried after first actions, without more than one successful shipment per visit. See PRIORITY_CONTRACT_TEST_007.md.
+
+
+## v0.80 · caravan retry
+
+A one-time retry after all houses' first actions rescues some clay shipments while respecting reservations. Outstanding question: should the AI plan to leave/return one public wood for an outstanding visit before idle civic exchanges? Seven failed retries lacked physical wood, four had only protected wood, and two had newly reserved wood. No guarantee or automatic stockpile seizure was added. See CARAVAN_RETRY_TEST_008.md.
+
+
+## v0.85 · permanent wood capacity and kiln
+
+The clay link now retains its setup wood as inaccessible export capacity, returning it on cancellation; no fresh wood is charged each visit. A two-wood/one-pop public kiln converts clay plus pop into brick. All six matched towns completed. Next questions: ongoing town demand for bricks; recognition/reward for the house paying shared construction costs; meaningful urban competition and later overbuilding; and long-term pricing of reversible resource-backed links. See COMMITTED_WOOD_AND_KILN_TEST_009.md.
+
+
+## v0.90 · town demand, gold and industry goals
+
+Provisional offers: town 1 brick → 2 influence; caravan one shared brick order per visit → 1 gold; caravan 2 gold → 1 prestige, replacing brick sales. Goals are one brick home and one productive rural/workshop property, then prestige. Public automated industries can be claimed off-card at the existing influence cost. Policy 2 removes obsolete chest planning. One house remains unfinished after rivals legally use six of its held/reserved bricks. Discuss project-bound resource commitments versus paid access, and sequential versus parallel pursuit of home/industry goals. See BRICK_DEMAND_GOLD_AND_INDUSTRY_TEST_010.md.
+
+
+## v0.901 · partial upgrades and chapel stone
+
+New numbering: 0.901, 0.902, etc. Partial home and chapel upgrades consume contributions into persistent progress; old functionality remains until completion. Caravan offers two stone per visit at one gold each. Chapel upgrade costs two stone/one wood/one pop and outputs exactly three influence while retaining unownable catch-up status. Partial-upgrade cases completed 6/6 versus atomic 4/6. General partial new construction, plot reservation, partial supply/contract establishment, and full-price forced overbuilding remain recorded design work. See PARTIAL_UPGRADES_AND_STONE_CHAPEL_011.md.

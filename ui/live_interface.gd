@@ -1,5 +1,5 @@
 extends "res://ui/interface.gd"
-## v0.60: themed native play, recorded inspection, and the same authoritative logging tool.
+## v0.901: themed native play, recorded inspection, and the same authoritative logging tool.
 const Art = preload("res://ui/artwork.gd")
 const Session = preload("res://ui/live_session.gd")
 var session = Session.new()
@@ -61,7 +61,7 @@ func _build() -> void:
 	inspector.add_child(hero)
 	inspector.move_child(hero,1)
 	var header = status.get_parent()
-	header.get_child(0).text = "CARD GAME  ·  v0.60"
+	header.get_child(0).text = "CARD GAME  ·  v0.901"
 	_button(header,"New",_new_game)
 	_button(header,"Save",_save)
 	_button(header,"Load",_load_save)
@@ -74,6 +74,7 @@ func _build() -> void:
 			child.queue_free()
 	_button(action_footer,"AI step",_ai_step)
 	auto_button = _button(action_footer,"AI play",_toggle_auto)
+	_button(action_footer,"Trade 3 goods",func(): _review_type("bulk_exchange"))
 	_button(action_footer,"Pass",func(): _review_type("pass"))
 	var conversion := _button(action_footer,"5 influence → prestige",func(): _review_type("convert_prestige"))
 	conversion.icon = Art.sprite("influence")
@@ -106,20 +107,25 @@ func _draw() -> void:
 	var mode := "REPLAY" if archive else ("LIVE" if cursor == session.frames.size()-1 else "HISTORY")
 	status.text = "  %s  ·  Round %d  ·  %s  ·  Pass %d/3" % [mode,s.round,_name(s.houses[int(s.actor)].id),s.consecutive_passes]
 	if s.ended: status.text += "  ·  COMPLETE"
-	goal.text = "TOWN GOAL: clay delivered + one brick house  |  " + ("COMPLETE" if s.ended else "In progress")
+	goal.text = "EVERY HOUSE: " + ("reached round %d; economy continues" % s.economy.goal_round if s.has("economy") and s.economy.goal_round > 0 else "clay import + three good homes")
+	if s.has("trade"):
+		goal.text = "HOME + INDUSTRY: " + ("all reached round %d; prestige phase" % s.trade.all_goals_round if s.trade.all_goals_round > 0 else "houses pursuing their goals")
 	goal.text += "\nMarket +2  ·  Clay link +3  ·  Brick house +5 prestige"
 	goal.text += "   |   Urban %d/6 · Rural %d/4" % [6-int(s.terrain_free.urban),4-int(s.terrain_free.forest)-int(s.terrain_free.field)]
 	for m in s.milestones: goal.text += "\n%s: %s +%d (round %d)" % [_name(m.kind),_name(m.house),m.prestige,m.round]
 	# Milestone history belongs in the inspector to keep the town's geometry stable.
 	goal.max_lines_visible = 2
 	town_view.set_state(s,selected if selected_kind == "building" else "")
+	var house_i = 0
 	for house_button in houses.get_children():
 		if house_button is Button:
 			house_button.icon = Art.sprite("prestige")
 			house_button.expand_icon = true
 			house_button.add_theme_constant_override("icon_max_width",26)
+			if s.has("trade"): house_button.text += "\nGold: %d" % s.houses[house_i].inventory.get("gold",0)
+			house_i += 1
 	_clear(pile)
-	for r in ["wood","grain","clay","brick","furniture","luxury","pop"]:
+	for r in ["wood","grain","clay","brick","furniture","luxury","pop"] + (["stone"] if s.market.has("stone") else []):
 		var reserved := 0
 		for lot in s.lots:
 			if lot.resource == r and lot.reserved_for != "" and not lot.released: reserved += int(lot.amount)
@@ -191,7 +197,21 @@ func _draw_detail() -> void:
 	if tab == "Caravan":
 		hero.texture = Art.sprite("caravan")
 		hero.show()
+	if tab == "Caravan" and _s().has("capacity"):
+		detail.text = "[b]Caravan[/b]\n\nOne chest buys one brick.\nClay link: one chest consumed, one pop and one wood committed.\nOne clay per visit; no further wood payment.\nCommitted wood returns on cancellation.\n\n"+JSON.stringify(_s().caravan,"  ")
+	if tab == "Caravan" and _s().has("trade"):
+		detail.text = "[b]Caravan[/b]\n\nOne shared brick order per visit: 1 brick → 1 gold.\nOrder available: %s\nPrestige for sale: 2 gold → 1 prestige.\nNo bricks for sale.\n\nClay import: one wood and one pop committed; one clay per visit.\n\n" % _s().caravan.get("brick_order_open",false)
+	if tab == "Caravan" and _s().has("projects"):
+		detail.append_text("\nStone: 1 gold each; %d left this visit.\nChapel upgrade: 2 stone + 1 wood + 1 pop.\nCompleted chapel produces 3 influence." % _s().caravan.stone_left)
+	if tab == "Selected" and selected_kind == "building" and _s().get("projects",{}).has(selected):
+		detail.append_text("\n\nUpgrade progress (goods already consumed):\n"+JSON.stringify(_s().projects[selected],"  "))
+	if tab == "Links" and _s().has("trade"):
+		detail.append_text("\n\nTown demand: 1 brick → 2 influence.\nHouse goals: one brick home, one industry, then prestige.\n"+JSON.stringify(_s().trade,"  "))
+	if tab == "Links" and _s().has("capacity"):
+		detail.append_text("\n\nCommitted export wood: %d (excluded from public/private stock)" % _s().capacity.wood)
 	if tab == "Links":
+		detail.append_text("\n\nContract ownership\n"+JSON.stringify(_s().get("titles",{}),"  "))
+		detail.append_text("\n\nContracts\n"+JSON.stringify(_s().get("contracts",[]),"  "))
 		detail.append_text("\n\n[State-based milestones]\n"+JSON.stringify(_s().milestones,"  "))
 	if _s().ended: detail.append_text("\n\nTown objective complete. Inspect the journal or start another game.")
 
@@ -199,6 +219,8 @@ func _preview(entry: Dictionary) -> void:
 	detail.text = ""
 	pending = entry.action.duplicate(true)
 	var text := "[b]%s[/b]\n\n%s\n\nInputs: %s\nOutputs: %s\nPrestige: %d\n\n" % [_name(pending.type),"Free action; normal turn retained" if entry.free else "One normal action",_bundle(entry.inputs),_bundle(entry.outputs),entry.prestige]
+	if entry.has("recurring"): text += "Contract upkeep and cadence:\n"+JSON.stringify(entry.recurring,"  ")+"\n"
+	if entry.has("commitments"): text += "Committed capacity, unavailable until cancellation: "+_bundle(entry.commitments)+"\n\n"
 	var plan: Dictionary = entry.plan
 	for allocation in plan.get("allocations",[]):
 		text += "%d %s · %s\n" % [allocation.amount,_name(allocation.resource),("private store of " if allocation.source == "stockpile" else "reserved by ")+_name(allocation.owner) if allocation.get("owner","") != "" else "public pile"]
@@ -353,7 +375,7 @@ func _check_ui() -> void:
 	await get_tree().process_frame
 	largest = largest.max(root_box.get_minimum_size())
 	assert(largest.x+32 <= 1920 and largest.y+32 <= 1080,"Layout exceeds 1080p: "+str(largest))
-	print("v0.60 UI checks passed: 83 states, all selections, tabs, previews, manual action, AI step, exact save/load; minimum ",largest+Vector2(32,32))
+	print("v0.901 UI checks passed: 83 states, all selections, tabs, previews, manual action, AI step, exact save/load; minimum ",largest+Vector2(32,32))
 	get_tree().quit()
 
 func _fullscreen() -> void:

@@ -1,0 +1,3788 @@
+[
+	{
+		"buildings": {
+			"carpenter": {
+				"built": true,
+				"definition": "carpenter",
+				"level": 1,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"chapel": {
+				"built": true,
+				"definition": "chapel",
+				"level": 2,
+				"owner": "",
+				"plot": "special"
+			},
+			"grain_farm": {
+				"built": true,
+				"definition": "grain_farm",
+				"level": 1,
+				"owner": "gold",
+				"plot": "field"
+			},
+			"hut_1": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"hut_2": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"hut_3": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"kiln": {
+				"built": true,
+				"definition": "kiln",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			},
+			"lumber_camp": {
+				"built": true,
+				"definition": "lumber_camp",
+				"level": 1,
+				"owner": "blue",
+				"plot": "forest"
+			},
+			"marketplace": {
+				"built": true,
+				"definition": "marketplace",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			}
+		},
+		"economy": {
+			"cancellations": 0,
+			"cumulative_consumed_inputs": {
+				"grain": 16
+			},
+			"deliveries": {
+				"grain": 39,
+				"pop": 16,
+				"wood": 40
+			},
+			"demolitions": 0,
+			"exchanged": {
+				"brick": 0,
+				"clay": 0,
+				"furniture": 0,
+				"grain": 10,
+				"luxury": 0,
+				"pop": 5,
+				"stone": 0,
+				"wood": 24
+			},
+			"exchanges": 13,
+			"goal_round": 32,
+			"goals": [
+				{
+					"round": 32,
+					"sequence": 265
+				}
+			],
+			"misses": {
+				"pop": 13
+			},
+			"setups": {
+				"grain": 1,
+				"pop": 1,
+				"wood": 1
+			}
+		},
+		"failure": "",
+		"houses": [
+			{
+				"bias": {
+					"ownership": 1.2,
+					"production": 1.3,
+					"trade": 0.7
+				},
+				"did_something": false,
+				"first_claim_round": 9,
+				"first_upgrade_round": 13,
+				"id": "blue",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 0.0,
+					"prestige": 5
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 121
+			},
+			{
+				"bias": {
+					"ownership": 0.8,
+					"production": 0.9,
+					"trade": 1.5
+				},
+				"did_something": false,
+				"first_claim_round": 4,
+				"first_upgrade_round": 8,
+				"id": "red",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 3.0,
+					"prestige": 3
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 1,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 112
+			},
+			{
+				"bias": {
+					"ownership": 1.4,
+					"production": 1.0,
+					"trade": 1.0
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 32,
+				"id": "gold",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 4.0,
+					"prestige": 8
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 1,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 114
+			}
+		],
+		"linked": false,
+		"locale": "clayless_valley",
+		"market": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 0,
+			"grain": 4,
+			"luxury": 0,
+			"pop": 1,
+			"stone": 0,
+			"wood": 3
+		},
+		"metrics": {
+			"actions": {
+				"activate": 43,
+				"build_kiln": 1,
+				"build_market": 1,
+				"bulk_exchange": 13,
+				"buy_contract": 5,
+				"buy_prestige": 2,
+				"buy_stone": 2,
+				"claim": 6,
+				"contribute_upgrade": 3,
+				"convert_prestige": 15,
+				"export_brick": 6,
+				"pass": 189,
+				"return": 2,
+				"secure_clay_contract": 1,
+				"secure_contract": 3,
+				"supply_town": 3,
+				"take": 51,
+				"upgrade": 4
+			},
+			"decisions": 350,
+			"failures": [],
+			"invariant_checks": 350,
+			"max_built": 9,
+			"owner_fee_activations": 0,
+			"owner_recognition_activations": 0,
+			"rounds_closed": 40
+		},
+		"partial": false,
+		"project_metrics": {
+			"chapel_contributors": {
+				"blue": 2,
+				"red": 2
+			},
+			"chapel_round": 18,
+			"contributions": 7,
+			"partial_home_completions": 0,
+			"stone_bought": 2,
+			"stone_gold_spent": 2
+		},
+		"projects": {
+			"chapel": {
+				"building": "chapel",
+				"completed": true,
+				"contributions": 4,
+				"paid": {
+					"pop": 1,
+					"stone": 2,
+					"wood": 1
+				}
+			},
+			"hut_1": {
+				"building": "hut_1",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_2": {
+				"building": "hut_2",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_3": {
+				"building": "hut_3",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			}
+		},
+		"replay": {
+			"checked": 350,
+			"ok": true
+		},
+		"round": 41,
+		"save_exact": true,
+		"seed": 1,
+		"sequence": 350,
+		"trade": {
+			"all_goals_round": 32,
+			"exported_bricks": 6,
+			"gold_minted": 6,
+			"gold_spent": 6,
+			"industry_rounds": {
+				"blue": 13,
+				"gold": 32,
+				"red": 10
+			},
+			"orders": {
+				"10": 1,
+				"12": 1,
+				"5": 1,
+				"6": 1,
+				"7": 1,
+				"9": 1
+			},
+			"prestige_bought": 2,
+			"town_bricks": 3
+		}
+	},
+	{
+		"buildings": {
+			"carpenter": {
+				"built": true,
+				"definition": "carpenter",
+				"level": 1,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"chapel": {
+				"built": true,
+				"definition": "chapel",
+				"level": 2,
+				"owner": "",
+				"plot": "special"
+			},
+			"grain_farm": {
+				"built": true,
+				"definition": "grain_farm",
+				"level": 1,
+				"owner": "blue",
+				"plot": "field"
+			},
+			"hut_1": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"hut_2": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"hut_3": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"kiln": {
+				"built": true,
+				"definition": "kiln",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			},
+			"lumber_camp": {
+				"built": true,
+				"definition": "lumber_camp",
+				"level": 1,
+				"owner": "red",
+				"plot": "forest"
+			},
+			"marketplace": {
+				"built": true,
+				"definition": "marketplace",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			}
+		},
+		"economy": {
+			"cancellations": 0,
+			"cumulative_consumed_inputs": {
+				"grain": 16
+			},
+			"deliveries": {
+				"grain": 39,
+				"pop": 16,
+				"wood": 40
+			},
+			"demolitions": 0,
+			"exchanged": {
+				"brick": 0,
+				"clay": 0,
+				"furniture": 0,
+				"grain": 10,
+				"luxury": 0,
+				"pop": 6,
+				"stone": 0,
+				"wood": 23
+			},
+			"exchanges": 13,
+			"goal_round": 26,
+			"goals": [
+				{
+					"round": 26,
+					"sequence": 212
+				}
+			],
+			"misses": {
+				"pop": 11
+			},
+			"setups": {
+				"grain": 1,
+				"pop": 1,
+				"wood": 1
+			}
+		},
+		"failure": "",
+		"houses": [
+			{
+				"bias": {
+					"ownership": 1.2,
+					"production": 1.3,
+					"trade": 0.7
+				},
+				"did_something": false,
+				"first_claim_round": 6,
+				"first_upgrade_round": 15,
+				"id": "blue",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 0.0,
+					"prestige": 5
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 1
+				},
+				"turns_taken": 122
+			},
+			{
+				"bias": {
+					"ownership": 0.8,
+					"production": 0.9,
+					"trade": 1.5
+				},
+				"did_something": false,
+				"first_claim_round": 4,
+				"first_upgrade_round": 13,
+				"id": "red",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 1.0,
+					"prestige": 4
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 1,
+					"stone": 0,
+					"wood": 1
+				},
+				"turns_taken": 117
+			},
+			{
+				"bias": {
+					"ownership": 1.4,
+					"production": 1.0,
+					"trade": 1.0
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 26,
+				"id": "gold",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 0.0,
+					"prestige": 5
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 1,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 116
+			}
+		],
+		"linked": false,
+		"locale": "clayless_valley",
+		"market": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 0,
+			"grain": 4,
+			"luxury": 0,
+			"pop": 1,
+			"stone": 0,
+			"wood": 2
+		},
+		"metrics": {
+			"actions": {
+				"activate": 44,
+				"build_kiln": 1,
+				"build_market": 1,
+				"bulk_exchange": 13,
+				"buy_contract": 6,
+				"buy_prestige": 2,
+				"buy_stone": 2,
+				"claim": 6,
+				"contribute_upgrade": 9,
+				"convert_prestige": 18,
+				"export_brick": 6,
+				"pass": 190,
+				"return": 2,
+				"secure_clay_contract": 1,
+				"secure_contract": 3,
+				"supply_town": 2,
+				"take": 47,
+				"upgrade": 4
+			},
+			"decisions": 357,
+			"failures": [],
+			"invariant_checks": 357,
+			"max_built": 9,
+			"owner_fee_activations": 0,
+			"owner_recognition_activations": 0,
+			"rounds_closed": 40
+		},
+		"partial": true,
+		"project_metrics": {
+			"chapel_contributors": {
+				"blue": 1,
+				"red": 2
+			},
+			"chapel_round": 24,
+			"contributions": 13,
+			"partial_home_completions": 3,
+			"stone_bought": 2,
+			"stone_gold_spent": 2
+		},
+		"projects": {
+			"chapel": {
+				"building": "chapel",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"pop": 1,
+					"stone": 2,
+					"wood": 1
+				}
+			},
+			"hut_1": {
+				"building": "hut_1",
+				"completed": true,
+				"contributions": 4,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_2": {
+				"building": "hut_2",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_3": {
+				"building": "hut_3",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			}
+		},
+		"replay": {
+			"checked": 357,
+			"ok": true
+		},
+		"round": 41,
+		"save_exact": true,
+		"seed": 1,
+		"sequence": 357,
+		"trade": {
+			"all_goals_round": 27,
+			"exported_bricks": 6,
+			"gold_minted": 6,
+			"gold_spent": 6,
+			"industry_rounds": {
+				"blue": 15,
+				"gold": 27,
+				"red": 13
+			},
+			"orders": {
+				"10": 1,
+				"11": 1,
+				"12": 1,
+				"13": 1,
+				"5": 1,
+				"8": 1
+			},
+			"prestige_bought": 2,
+			"town_bricks": 2
+		}
+	},
+	{
+		"buildings": {
+			"carpenter": {
+				"built": true,
+				"definition": "carpenter",
+				"level": 1,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"chapel": {
+				"built": true,
+				"definition": "chapel",
+				"level": 2,
+				"owner": "",
+				"plot": "special"
+			},
+			"grain_farm": {
+				"built": true,
+				"definition": "grain_farm",
+				"level": 1,
+				"owner": "",
+				"plot": "field"
+			},
+			"hut_1": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"hut_2": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"hut_3": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"kiln": {
+				"built": true,
+				"definition": "kiln",
+				"level": 1,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"lumber_camp": {
+				"built": true,
+				"definition": "lumber_camp",
+				"level": 1,
+				"owner": "red",
+				"plot": "forest"
+			},
+			"marketplace": {
+				"built": true,
+				"definition": "marketplace",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			}
+		},
+		"economy": {
+			"cancellations": 0,
+			"cumulative_consumed_inputs": {
+				"grain": 23
+			},
+			"deliveries": {
+				"grain": 40,
+				"pop": 23
+			},
+			"demolitions": 0,
+			"exchanged": {
+				"brick": 0,
+				"clay": 0,
+				"furniture": 0,
+				"grain": 8,
+				"luxury": 0,
+				"pop": 9,
+				"stone": 0,
+				"wood": 25
+			},
+			"exchanges": 14,
+			"goal_round": 18,
+			"goals": [
+				{
+					"round": 18,
+					"sequence": 135
+				}
+			],
+			"misses": {
+				"pop": 10
+			},
+			"setups": {
+				"grain": 1,
+				"pop": 1
+			}
+		},
+		"failure": "",
+		"houses": [
+			{
+				"bias": {
+					"ownership": 1.2,
+					"production": 1.3,
+					"trade": 0.7
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 11,
+				"id": "blue",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 1,
+					"influence": 0.0,
+					"prestige": 4
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 1
+				},
+				"turns_taken": 115
+			},
+			{
+				"bias": {
+					"ownership": 0.8,
+					"production": 0.9,
+					"trade": 1.5
+				},
+				"did_something": false,
+				"first_claim_round": 6,
+				"first_upgrade_round": 18,
+				"id": "red",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 1.0,
+					"prestige": 6
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 1
+				},
+				"turns_taken": 117
+			},
+			{
+				"bias": {
+					"ownership": 1.4,
+					"production": 1.0,
+					"trade": 1.0
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 7,
+				"id": "gold",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 1.0,
+					"prestige": 2
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 116
+			}
+		],
+		"linked": true,
+		"locale": "clayless_valley",
+		"market": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 0,
+			"grain": 3,
+			"luxury": 0,
+			"pop": 3,
+			"stone": 0,
+			"wood": 2
+		},
+		"metrics": {
+			"actions": {
+				"activate": 43,
+				"build_kiln": 1,
+				"build_market": 1,
+				"bulk_exchange": 14,
+				"buy_contract": 6,
+				"buy_prestige": 1,
+				"buy_stone": 2,
+				"claim": 6,
+				"contribute_upgrade": 2,
+				"convert_prestige": 21,
+				"export_brick": 5,
+				"pass": 178,
+				"return": 5,
+				"secure_clay_contract": 1,
+				"secure_contract": 2,
+				"supply_town": 5,
+				"take": 57,
+				"upgrade": 4
+			},
+			"decisions": 354,
+			"failures": [],
+			"invariant_checks": 354,
+			"max_built": 9,
+			"owner_fee_activations": 0,
+			"owner_recognition_activations": 0,
+			"rounds_closed": 40
+		},
+		"partial": false,
+		"project_metrics": {
+			"chapel_contributors": {
+				"blue": 1,
+				"gold": 2
+			},
+			"chapel_round": 31,
+			"contributions": 6,
+			"partial_home_completions": 0,
+			"stone_bought": 2,
+			"stone_gold_spent": 2
+		},
+		"projects": {
+			"chapel": {
+				"building": "chapel",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"pop": 1,
+					"stone": 2,
+					"wood": 1
+				}
+			},
+			"hut_1": {
+				"building": "hut_1",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_2": {
+				"building": "hut_2",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_3": {
+				"building": "hut_3",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			}
+		},
+		"replay": {
+			"checked": 354,
+			"ok": true
+		},
+		"round": 41,
+		"save_exact": true,
+		"seed": 1,
+		"sequence": 354,
+		"trade": {
+			"all_goals_round": 18,
+			"exported_bricks": 5,
+			"gold_minted": 5,
+			"gold_spent": 4,
+			"industry_rounds": {
+				"blue": 11,
+				"gold": 9,
+				"red": 18
+			},
+			"orders": {
+				"10": 1,
+				"11": 1,
+				"12": 1,
+				"13": 1,
+				"8": 1
+			},
+			"prestige_bought": 1,
+			"town_bricks": 5
+		}
+	},
+	{
+		"buildings": {
+			"carpenter": {
+				"built": true,
+				"definition": "carpenter",
+				"level": 1,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"chapel": {
+				"built": true,
+				"definition": "chapel",
+				"level": 2,
+				"owner": "",
+				"plot": "special"
+			},
+			"grain_farm": {
+				"built": true,
+				"definition": "grain_farm",
+				"level": 1,
+				"owner": "",
+				"plot": "field"
+			},
+			"hut_1": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"hut_2": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"hut_3": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"kiln": {
+				"built": true,
+				"definition": "kiln",
+				"level": 1,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"lumber_camp": {
+				"built": true,
+				"definition": "lumber_camp",
+				"level": 1,
+				"owner": "blue",
+				"plot": "forest"
+			},
+			"marketplace": {
+				"built": true,
+				"definition": "marketplace",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			}
+		},
+		"economy": {
+			"cancellations": 0,
+			"cumulative_consumed_inputs": {
+				"grain": 21
+			},
+			"deliveries": {
+				"grain": 40,
+				"pop": 21
+			},
+			"demolitions": 0,
+			"exchanged": {
+				"brick": 0,
+				"clay": 0,
+				"furniture": 0,
+				"grain": 5,
+				"luxury": 0,
+				"pop": 10,
+				"stone": 0,
+				"wood": 27
+			},
+			"exchanges": 14,
+			"goal_round": 13,
+			"goals": [
+				{
+					"round": 13,
+					"sequence": 108
+				}
+			],
+			"misses": {
+				"pop": 10
+			},
+			"setups": {
+				"grain": 1,
+				"pop": 1
+			}
+		},
+		"failure": "",
+		"houses": [
+			{
+				"bias": {
+					"ownership": 1.2,
+					"production": 1.3,
+					"trade": 0.7
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 10,
+				"id": "blue",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 1,
+					"influence": 1.0,
+					"prestige": 5
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 117
+			},
+			{
+				"bias": {
+					"ownership": 0.8,
+					"production": 0.9,
+					"trade": 1.5
+				},
+				"did_something": false,
+				"first_claim_round": 11,
+				"first_upgrade_round": 13,
+				"id": "red",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 4.0,
+					"prestige": 1
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 1,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 112
+			},
+			{
+				"bias": {
+					"ownership": 1.4,
+					"production": 1.0,
+					"trade": 1.0
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 8,
+				"id": "gold",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 4.0,
+					"prestige": 0
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 1,
+					"luxury": 0,
+					"pop": 1,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 114
+			}
+		],
+		"linked": true,
+		"locale": "clayless_valley",
+		"market": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 0,
+			"grain": 3,
+			"luxury": 0,
+			"pop": 2,
+			"stone": 0,
+			"wood": 2
+		},
+		"metrics": {
+			"actions": {
+				"activate": 48,
+				"build_kiln": 1,
+				"build_market": 1,
+				"bulk_exchange": 14,
+				"buy_contract": 7,
+				"buy_prestige": 1,
+				"buy_stone": 2,
+				"claim": 6,
+				"contribute_upgrade": 8,
+				"convert_prestige": 18,
+				"export_brick": 5,
+				"pass": 171,
+				"return": 4,
+				"secure_clay_contract": 1,
+				"secure_contract": 2,
+				"supply_town": 5,
+				"take": 52,
+				"upgrade": 4
+			},
+			"decisions": 350,
+			"failures": [],
+			"invariant_checks": 350,
+			"max_built": 9,
+			"owner_fee_activations": 0,
+			"owner_recognition_activations": 0,
+			"rounds_closed": 40
+		},
+		"partial": true,
+		"project_metrics": {
+			"chapel_contributors": {
+				"blue": 1,
+				"gold": 2
+			},
+			"chapel_round": 31,
+			"contributions": 12,
+			"partial_home_completions": 3,
+			"stone_bought": 2,
+			"stone_gold_spent": 2
+		},
+		"projects": {
+			"chapel": {
+				"building": "chapel",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"pop": 1,
+					"stone": 2,
+					"wood": 1
+				}
+			},
+			"hut_1": {
+				"building": "hut_1",
+				"completed": true,
+				"contributions": 4,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_2": {
+				"building": "hut_2",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_3": {
+				"building": "hut_3",
+				"completed": true,
+				"contributions": 2,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			}
+		},
+		"replay": {
+			"checked": 350,
+			"ok": true
+		},
+		"round": 41,
+		"save_exact": true,
+		"seed": 1,
+		"sequence": 350,
+		"trade": {
+			"all_goals_round": 13,
+			"exported_bricks": 5,
+			"gold_minted": 5,
+			"gold_spent": 4,
+			"industry_rounds": {
+				"blue": 11,
+				"gold": 8,
+				"red": 13
+			},
+			"orders": {
+				"10": 1,
+				"11": 1,
+				"12": 1,
+				"13": 1,
+				"8": 1
+			},
+			"prestige_bought": 1,
+			"town_bricks": 5
+		}
+	},
+	{
+		"buildings": {
+			"carpenter": {
+				"built": true,
+				"definition": "carpenter",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			},
+			"chapel": {
+				"built": true,
+				"definition": "chapel",
+				"level": 2,
+				"owner": "",
+				"plot": "special"
+			},
+			"grain_farm": {
+				"built": true,
+				"definition": "grain_farm",
+				"level": 1,
+				"owner": "blue",
+				"plot": "field"
+			},
+			"hut_1": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"hut_2": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"hut_3": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"kiln": {
+				"built": true,
+				"definition": "kiln",
+				"level": 1,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"lumber_camp": {
+				"built": true,
+				"definition": "lumber_camp",
+				"level": 1,
+				"owner": "red",
+				"plot": "forest"
+			},
+			"marketplace": {
+				"built": true,
+				"definition": "marketplace",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			}
+		},
+		"economy": {
+			"cancellations": 0,
+			"cumulative_consumed_inputs": {
+				"grain": 15
+			},
+			"deliveries": {
+				"grain": 40,
+				"pop": 15,
+				"wood": 40
+			},
+			"demolitions": 0,
+			"exchanged": {
+				"brick": 0,
+				"clay": 0,
+				"furniture": 0,
+				"grain": 14,
+				"luxury": 0,
+				"pop": 3,
+				"stone": 0,
+				"wood": 25
+			},
+			"exchanges": 14,
+			"goal_round": 35,
+			"goals": [
+				{
+					"round": 35,
+					"sequence": 295
+				}
+			],
+			"misses": {
+				"pop": 15
+			},
+			"setups": {
+				"grain": 1,
+				"pop": 1,
+				"wood": 1
+			}
+		},
+		"failure": "",
+		"houses": [
+			{
+				"bias": {
+					"ownership": 1.2,
+					"production": 1.3,
+					"trade": 0.7
+				},
+				"did_something": false,
+				"first_claim_round": 11,
+				"first_upgrade_round": 35,
+				"id": "blue",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 3.0,
+					"prestige": 1
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 1,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 113
+			},
+			{
+				"bias": {
+					"ownership": 0.8,
+					"production": 0.9,
+					"trade": 1.5
+				},
+				"did_something": false,
+				"first_claim_round": 4,
+				"first_upgrade_round": 10,
+				"id": "red",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 4.0,
+					"prestige": 3
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 118
+			},
+			{
+				"bias": {
+					"ownership": 1.4,
+					"production": 1.0,
+					"trade": 1.0
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 9,
+				"id": "gold",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 1,
+					"influence": 2.0,
+					"prestige": 4
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 118
+			}
+		],
+		"linked": false,
+		"locale": "clayless_valley",
+		"market": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 0,
+			"grain": 3,
+			"luxury": 0,
+			"pop": 2,
+			"stone": 0,
+			"wood": 2
+		},
+		"metrics": {
+			"actions": {
+				"activate": 40,
+				"build_kiln": 1,
+				"build_market": 1,
+				"bulk_exchange": 14,
+				"buy_contract": 6,
+				"buy_prestige": 2,
+				"buy_stone": 2,
+				"claim": 6,
+				"contribute_upgrade": 1,
+				"convert_prestige": 16,
+				"export_brick": 7,
+				"pass": 196,
+				"return": 2,
+				"secure_clay_contract": 1,
+				"secure_contract": 3,
+				"supply_town": 2,
+				"take": 54,
+				"upgrade": 4
+			},
+			"decisions": 358,
+			"failures": [],
+			"invariant_checks": 358,
+			"max_built": 9,
+			"owner_fee_activations": 0,
+			"owner_recognition_activations": 0,
+			"rounds_closed": 40
+		},
+		"partial": false,
+		"project_metrics": {
+			"chapel_contributors": {
+				"gold": 2
+			},
+			"chapel_round": 15,
+			"contributions": 5,
+			"partial_home_completions": 0,
+			"stone_bought": 2,
+			"stone_gold_spent": 2
+		},
+		"projects": {
+			"chapel": {
+				"building": "chapel",
+				"completed": true,
+				"contributions": 2,
+				"paid": {
+					"pop": 1,
+					"stone": 2,
+					"wood": 1
+				}
+			},
+			"hut_1": {
+				"building": "hut_1",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_2": {
+				"building": "hut_2",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_3": {
+				"building": "hut_3",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			}
+		},
+		"replay": {
+			"checked": 358,
+			"ok": true
+		},
+		"round": 41,
+		"save_exact": true,
+		"seed": 7,
+		"sequence": 358,
+		"trade": {
+			"all_goals_round": 35,
+			"exported_bricks": 7,
+			"gold_minted": 7,
+			"gold_spent": 6,
+			"industry_rounds": {
+				"blue": 35,
+				"gold": 9,
+				"red": 10
+			},
+			"orders": {
+				"10": 1,
+				"11": 1,
+				"4": 1,
+				"5": 1,
+				"6": 1,
+				"7": 1,
+				"8": 1
+			},
+			"prestige_bought": 2,
+			"town_bricks": 2
+		}
+	},
+	{
+		"buildings": {
+			"carpenter": {
+				"built": true,
+				"definition": "carpenter",
+				"level": 1,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"chapel": {
+				"built": true,
+				"definition": "chapel",
+				"level": 2,
+				"owner": "",
+				"plot": "special"
+			},
+			"grain_farm": {
+				"built": true,
+				"definition": "grain_farm",
+				"level": 1,
+				"owner": "gold",
+				"plot": "field"
+			},
+			"hut_1": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"hut_2": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"hut_3": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"kiln": {
+				"built": true,
+				"definition": "kiln",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			},
+			"lumber_camp": {
+				"built": true,
+				"definition": "lumber_camp",
+				"level": 1,
+				"owner": "blue",
+				"plot": "forest"
+			},
+			"marketplace": {
+				"built": true,
+				"definition": "marketplace",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			}
+		},
+		"economy": {
+			"cancellations": 0,
+			"cumulative_consumed_inputs": {
+				"grain": 15
+			},
+			"deliveries": {
+				"grain": 40,
+				"pop": 15,
+				"wood": 40
+			},
+			"demolitions": 0,
+			"exchanged": {
+				"brick": 0,
+				"clay": 2,
+				"furniture": 0,
+				"grain": 13,
+				"luxury": 0,
+				"pop": 5,
+				"stone": 0,
+				"wood": 25
+			},
+			"exchanges": 15,
+			"goal_round": 23,
+			"goals": [
+				{
+					"round": 23,
+					"sequence": 199
+				}
+			],
+			"misses": {
+				"pop": 13
+			},
+			"setups": {
+				"grain": 1,
+				"pop": 1,
+				"wood": 1
+			}
+		},
+		"failure": "",
+		"houses": [
+			{
+				"bias": {
+					"ownership": 1.2,
+					"production": 1.3,
+					"trade": 0.7
+				},
+				"did_something": false,
+				"first_claim_round": 6,
+				"first_upgrade_round": 15,
+				"id": "blue",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 1,
+					"influence": 0.0,
+					"prestige": 6
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 1,
+					"luxury": 0,
+					"pop": 1,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 124
+			},
+			{
+				"bias": {
+					"ownership": 0.8,
+					"production": 0.9,
+					"trade": 1.5
+				},
+				"did_something": false,
+				"first_claim_round": 4,
+				"first_upgrade_round": 13,
+				"id": "red",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 1.0,
+					"prestige": 6
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 123
+			},
+			{
+				"bias": {
+					"ownership": 1.4,
+					"production": 1.0,
+					"trade": 1.0
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 23,
+				"id": "gold",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 1,
+					"influence": 4.0,
+					"prestige": 5
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 126
+			}
+		],
+		"linked": false,
+		"locale": "clayless_valley",
+		"market": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 0,
+			"grain": 3,
+			"luxury": 0,
+			"pop": 2,
+			"stone": 0,
+			"wood": 2
+		},
+		"metrics": {
+			"actions": {
+				"activate": 48,
+				"build_kiln": 1,
+				"build_market": 1,
+				"bulk_exchange": 15,
+				"buy_contract": 6,
+				"buy_prestige": 1,
+				"buy_stone": 2,
+				"claim": 6,
+				"contribute_upgrade": 9,
+				"convert_prestige": 22,
+				"export_brick": 6,
+				"pass": 192,
+				"return": 4,
+				"secure_clay_contract": 1,
+				"secure_contract": 3,
+				"supply_town": 1,
+				"take": 55,
+				"upgrade": 4
+			},
+			"decisions": 377,
+			"failures": [],
+			"invariant_checks": 377,
+			"max_built": 9,
+			"owner_fee_activations": 0,
+			"owner_recognition_activations": 0,
+			"rounds_closed": 40
+		},
+		"partial": true,
+		"project_metrics": {
+			"chapel_contributors": {
+				"red": 3
+			},
+			"chapel_round": 20,
+			"contributions": 13,
+			"partial_home_completions": 3,
+			"stone_bought": 2,
+			"stone_gold_spent": 2
+		},
+		"projects": {
+			"chapel": {
+				"building": "chapel",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"pop": 1,
+					"stone": 2,
+					"wood": 1
+				}
+			},
+			"hut_1": {
+				"building": "hut_1",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_2": {
+				"building": "hut_2",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_3": {
+				"building": "hut_3",
+				"completed": true,
+				"contributions": 4,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			}
+		},
+		"replay": {
+			"checked": 377,
+			"ok": true
+		},
+		"round": 41,
+		"save_exact": true,
+		"seed": 7,
+		"sequence": 377,
+		"trade": {
+			"all_goals_round": 23,
+			"exported_bricks": 6,
+			"gold_minted": 6,
+			"gold_spent": 4,
+			"industry_rounds": {
+				"blue": 15,
+				"gold": 23,
+				"red": 13
+			},
+			"orders": {
+				"10": 1,
+				"11": 1,
+				"12": 1,
+				"13": 1,
+				"6": 1,
+				"7": 1
+			},
+			"prestige_bought": 1,
+			"town_bricks": 1
+		}
+	},
+	{
+		"buildings": {
+			"carpenter": {
+				"built": true,
+				"definition": "carpenter",
+				"level": 1,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"chapel": {
+				"built": true,
+				"definition": "chapel",
+				"level": 2,
+				"owner": "",
+				"plot": "special"
+			},
+			"grain_farm": {
+				"built": true,
+				"definition": "grain_farm",
+				"level": 1,
+				"owner": "gold",
+				"plot": "field"
+			},
+			"hut_1": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"hut_2": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"hut_3": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"kiln": {
+				"built": true,
+				"definition": "kiln",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			},
+			"lumber_camp": {
+				"built": true,
+				"definition": "lumber_camp",
+				"level": 1,
+				"owner": "red",
+				"plot": "forest"
+			},
+			"marketplace": {
+				"built": true,
+				"definition": "marketplace",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			}
+		},
+		"economy": {
+			"cancellations": 0,
+			"cumulative_consumed_inputs": {
+				"grain": 19
+			},
+			"deliveries": {
+				"grain": 39,
+				"pop": 19
+			},
+			"demolitions": 0,
+			"exchanged": {
+				"brick": 0,
+				"clay": 0,
+				"furniture": 0,
+				"grain": 7,
+				"luxury": 0,
+				"pop": 6,
+				"stone": 0,
+				"wood": 23
+			},
+			"exchanges": 12,
+			"goal_round": 20,
+			"goals": [
+				{
+					"round": 20,
+					"sequence": 151
+				}
+			],
+			"misses": {
+				"pop": 13
+			},
+			"setups": {
+				"grain": 1,
+				"pop": 1
+			}
+		},
+		"failure": "",
+		"houses": [
+			{
+				"bias": {
+					"ownership": 1.2,
+					"production": 1.3,
+					"trade": 0.7
+				},
+				"did_something": false,
+				"first_claim_round": 9,
+				"first_upgrade_round": 12,
+				"id": "blue",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 1,
+					"influence": 3.0,
+					"prestige": 5
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 1,
+					"luxury": 0,
+					"pop": 1,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 117
+			},
+			{
+				"bias": {
+					"ownership": 0.8,
+					"production": 0.9,
+					"trade": 1.5
+				},
+				"did_something": false,
+				"first_claim_round": 2,
+				"first_upgrade_round": 8,
+				"id": "red",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 2.0,
+					"prestige": 6
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 1,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 1
+				},
+				"turns_taken": 117
+			},
+			{
+				"bias": {
+					"ownership": 1.4,
+					"production": 1.0,
+					"trade": 1.0
+				},
+				"did_something": false,
+				"first_claim_round": 8,
+				"first_upgrade_round": 20,
+				"id": "gold",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 2.0,
+					"prestige": 6
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 1,
+					"stone": 0,
+					"wood": 1
+				},
+				"turns_taken": 116
+			}
+		],
+		"linked": true,
+		"locale": "clayless_valley",
+		"market": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 1,
+			"grain": 4,
+			"luxury": 0,
+			"pop": 1,
+			"stone": 0,
+			"wood": 2
+		},
+		"metrics": {
+			"actions": {
+				"activate": 50,
+				"build_kiln": 1,
+				"build_market": 1,
+				"bulk_exchange": 12,
+				"buy_contract": 6,
+				"buy_prestige": 2,
+				"buy_stone": 2,
+				"claim": 6,
+				"contribute_upgrade": 2,
+				"convert_prestige": 21,
+				"export_brick": 7,
+				"pass": 170,
+				"return": 6,
+				"secure_clay_contract": 1,
+				"secure_contract": 2,
+				"supply_town": 2,
+				"take": 57,
+				"upgrade": 4
+			},
+			"decisions": 352,
+			"failures": [],
+			"invariant_checks": 352,
+			"max_built": 9,
+			"owner_fee_activations": 0,
+			"owner_recognition_activations": 0,
+			"rounds_closed": 40
+		},
+		"partial": false,
+		"project_metrics": {
+			"chapel_contributors": {
+				"blue": 1,
+				"red": 2
+			},
+			"chapel_round": 15,
+			"contributions": 6,
+			"partial_home_completions": 0,
+			"stone_bought": 2,
+			"stone_gold_spent": 2
+		},
+		"projects": {
+			"chapel": {
+				"building": "chapel",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"pop": 1,
+					"stone": 2,
+					"wood": 1
+				}
+			},
+			"hut_1": {
+				"building": "hut_1",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_2": {
+				"building": "hut_2",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_3": {
+				"building": "hut_3",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			}
+		},
+		"replay": {
+			"checked": 352,
+			"ok": true
+		},
+		"round": 41,
+		"save_exact": true,
+		"seed": 7,
+		"sequence": 352,
+		"trade": {
+			"all_goals_round": 20,
+			"exported_bricks": 7,
+			"gold_minted": 7,
+			"gold_spent": 6,
+			"industry_rounds": {
+				"blue": 14,
+				"gold": 20,
+				"red": 8
+			},
+			"orders": {
+				"10": 1,
+				"11": 1,
+				"12": 1,
+				"13": 1,
+				"3": 1,
+				"5": 1,
+				"8": 1
+			},
+			"prestige_bought": 2,
+			"town_bricks": 2
+		}
+	},
+	{
+		"buildings": {
+			"carpenter": {
+				"built": true,
+				"definition": "carpenter",
+				"level": 1,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"chapel": {
+				"built": true,
+				"definition": "chapel",
+				"level": 2,
+				"owner": "",
+				"plot": "special"
+			},
+			"grain_farm": {
+				"built": true,
+				"definition": "grain_farm",
+				"level": 1,
+				"owner": "red",
+				"plot": "field"
+			},
+			"hut_1": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"hut_2": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"hut_3": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"kiln": {
+				"built": true,
+				"definition": "kiln",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			},
+			"lumber_camp": {
+				"built": true,
+				"definition": "lumber_camp",
+				"level": 1,
+				"owner": "blue",
+				"plot": "forest"
+			},
+			"marketplace": {
+				"built": true,
+				"definition": "marketplace",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			}
+		},
+		"economy": {
+			"cancellations": 0,
+			"cumulative_consumed_inputs": {
+				"grain": 23
+			},
+			"deliveries": {
+				"grain": 39,
+				"pop": 23
+			},
+			"demolitions": 0,
+			"exchanged": {
+				"brick": 0,
+				"clay": 0,
+				"furniture": 0,
+				"grain": 11,
+				"luxury": 0,
+				"pop": 6,
+				"stone": 0,
+				"wood": 25
+			},
+			"exchanges": 14,
+			"goal_round": 27,
+			"goals": [
+				{
+					"round": 27,
+					"sequence": 211
+				}
+			],
+			"misses": {
+				"pop": 14
+			},
+			"setups": {
+				"grain": 1,
+				"pop": 1
+			}
+		},
+		"failure": "",
+		"houses": [
+			{
+				"bias": {
+					"ownership": 1.2,
+					"production": 1.3,
+					"trade": 0.7
+				},
+				"did_something": false,
+				"first_claim_round": 7,
+				"first_upgrade_round": 12,
+				"id": "blue",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 1,
+					"influence": 1.0,
+					"prestige": 5
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 119
+			},
+			{
+				"bias": {
+					"ownership": 0.8,
+					"production": 0.9,
+					"trade": 1.5
+				},
+				"did_something": false,
+				"first_claim_round": 2,
+				"first_upgrade_round": 27,
+				"id": "red",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 1.0,
+					"prestige": 0
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 114
+			},
+			{
+				"bias": {
+					"ownership": 1.4,
+					"production": 1.0,
+					"trade": 1.0
+				},
+				"did_something": false,
+				"first_claim_round": 3,
+				"first_upgrade_round": 10,
+				"id": "gold",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 2.0,
+					"prestige": 5
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 2
+				},
+				"turns_taken": 116
+			}
+		],
+		"linked": true,
+		"locale": "clayless_valley",
+		"market": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 0,
+			"grain": 4,
+			"luxury": 0,
+			"pop": 2,
+			"stone": 0,
+			"wood": 2
+		},
+		"metrics": {
+			"actions": {
+				"activate": 38,
+				"build_kiln": 1,
+				"build_market": 1,
+				"bulk_exchange": 14,
+				"buy_contract": 6,
+				"buy_prestige": 2,
+				"buy_stone": 2,
+				"claim": 6,
+				"contribute_upgrade": 9,
+				"convert_prestige": 18,
+				"export_brick": 7,
+				"pass": 180,
+				"return": 4,
+				"secure_clay_contract": 1,
+				"secure_contract": 2,
+				"supply_town": 2,
+				"take": 52,
+				"upgrade": 4
+			},
+			"decisions": 349,
+			"failures": [],
+			"invariant_checks": 349,
+			"max_built": 9,
+			"owner_fee_activations": 0,
+			"owner_recognition_activations": 0,
+			"rounds_closed": 40
+		},
+		"partial": true,
+		"project_metrics": {
+			"chapel_contributors": {
+				"blue": 1,
+				"gold": 2
+			},
+			"chapel_round": 20,
+			"contributions": 13,
+			"partial_home_completions": 3,
+			"stone_bought": 2,
+			"stone_gold_spent": 2
+		},
+		"projects": {
+			"chapel": {
+				"building": "chapel",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"pop": 1,
+					"stone": 2,
+					"wood": 1
+				}
+			},
+			"hut_1": {
+				"building": "hut_1",
+				"completed": true,
+				"contributions": 4,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_2": {
+				"building": "hut_2",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_3": {
+				"building": "hut_3",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			}
+		},
+		"replay": {
+			"checked": 349,
+			"ok": true
+		},
+		"round": 41,
+		"save_exact": true,
+		"seed": 7,
+		"sequence": 349,
+		"trade": {
+			"all_goals_round": 27,
+			"exported_bricks": 7,
+			"gold_minted": 7,
+			"gold_spent": 6,
+			"industry_rounds": {
+				"blue": 12,
+				"gold": 13,
+				"red": 27
+			},
+			"orders": {
+				"10": 1,
+				"11": 1,
+				"12": 1,
+				"13": 1,
+				"6": 1,
+				"7": 1,
+				"8": 1
+			},
+			"prestige_bought": 2,
+			"town_bricks": 2
+		}
+	},
+	{
+		"buildings": {
+			"carpenter": {
+				"built": true,
+				"definition": "carpenter",
+				"level": 1,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"chapel": {
+				"built": true,
+				"definition": "chapel",
+				"level": 2,
+				"owner": "",
+				"plot": "special"
+			},
+			"grain_farm": {
+				"built": true,
+				"definition": "grain_farm",
+				"level": 1,
+				"owner": "",
+				"plot": "field"
+			},
+			"hut_1": {
+				"built": true,
+				"definition": "hut",
+				"level": 1,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"hut_2": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"hut_3": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"kiln": {
+				"built": true,
+				"definition": "kiln",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			},
+			"lumber_camp": {
+				"built": true,
+				"definition": "lumber_camp",
+				"level": 1,
+				"owner": "gold",
+				"plot": "forest"
+			},
+			"marketplace": {
+				"built": true,
+				"definition": "marketplace",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			}
+		},
+		"economy": {
+			"cancellations": 0,
+			"cumulative_consumed_inputs": {
+				"grain": 10
+			},
+			"deliveries": {
+				"grain": 39,
+				"pop": 10,
+				"wood": 40
+			},
+			"demolitions": 0,
+			"exchanged": {
+				"brick": 0,
+				"clay": 0,
+				"furniture": 0,
+				"grain": 15,
+				"luxury": 0,
+				"pop": 0,
+				"stone": 0,
+				"wood": 24
+			},
+			"exchanges": 13,
+			"goal_round": 0,
+			"goals": [],
+			"misses": {
+				"pop": 18
+			},
+			"setups": {
+				"grain": 1,
+				"pop": 1,
+				"wood": 1
+			}
+		},
+		"failure": "",
+		"houses": [
+			{
+				"bias": {
+					"ownership": 1.2,
+					"production": 1.3,
+					"trade": 0.7
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 12,
+				"id": "blue",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 2.0,
+					"prestige": 1
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 114
+			},
+			{
+				"bias": {
+					"ownership": 0.8,
+					"production": 0.9,
+					"trade": 1.5
+				},
+				"did_something": false,
+				"first_claim_round": 4,
+				"first_upgrade_round": 0,
+				"id": "red",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 10.0,
+					"prestige": 3
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 1,
+					"stone": 0,
+					"wood": 1
+				},
+				"turns_taken": 108
+			},
+			{
+				"bias": {
+					"ownership": 1.4,
+					"production": 1.0,
+					"trade": 1.0
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 9,
+				"id": "gold",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 1,
+					"influence": 0.0,
+					"prestige": 4
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 116
+			}
+		],
+		"linked": false,
+		"locale": "clayless_valley",
+		"market": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 0,
+			"grain": 5,
+			"luxury": 0,
+			"pop": 2,
+			"stone": 0,
+			"wood": 4
+		},
+		"metrics": {
+			"actions": {
+				"activate": 34,
+				"build_kiln": 1,
+				"build_market": 1,
+				"bulk_exchange": 13,
+				"buy_contract": 5,
+				"buy_prestige": 2,
+				"buy_stone": 2,
+				"claim": 5,
+				"contribute_upgrade": 3,
+				"convert_prestige": 12,
+				"export_brick": 7,
+				"pass": 192,
+				"return": 2,
+				"secure_clay_contract": 1,
+				"secure_contract": 3,
+				"supply_town": 3,
+				"take": 51,
+				"upgrade": 3
+			},
+			"decisions": 340,
+			"failures": [],
+			"invariant_checks": 340,
+			"max_built": 9,
+			"owner_fee_activations": 0,
+			"owner_recognition_activations": 0,
+			"rounds_closed": 40
+		},
+		"partial": false,
+		"project_metrics": {
+			"chapel_contributors": {
+				"blue": 2,
+				"gold": 2
+			},
+			"chapel_round": 17,
+			"contributions": 6,
+			"partial_home_completions": 0,
+			"stone_bought": 2,
+			"stone_gold_spent": 2
+		},
+		"projects": {
+			"chapel": {
+				"building": "chapel",
+				"completed": true,
+				"contributions": 4,
+				"paid": {
+					"pop": 1,
+					"stone": 2,
+					"wood": 1
+				}
+			},
+			"hut_2": {
+				"building": "hut_2",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_3": {
+				"building": "hut_3",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			}
+		},
+		"replay": {
+			"checked": 340,
+			"ok": true
+		},
+		"round": 41,
+		"save_exact": true,
+		"seed": 42,
+		"sequence": 340,
+		"trade": {
+			"all_goals_round": 0,
+			"exported_bricks": 7,
+			"gold_minted": 7,
+			"gold_spent": 6,
+			"industry_rounds": {
+				"blue": 13,
+				"gold": 9,
+				"red": 0
+			},
+			"orders": {
+				"10": 1,
+				"11": 1,
+				"13": 1,
+				"5": 1,
+				"6": 1,
+				"7": 1,
+				"8": 1
+			},
+			"prestige_bought": 2,
+			"town_bricks": 3
+		}
+	},
+	{
+		"buildings": {
+			"carpenter": {
+				"built": true,
+				"definition": "carpenter",
+				"level": 1,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"chapel": {
+				"built": true,
+				"definition": "chapel",
+				"level": 2,
+				"owner": "",
+				"plot": "special"
+			},
+			"grain_farm": {
+				"built": true,
+				"definition": "grain_farm",
+				"level": 1,
+				"owner": "red",
+				"plot": "field"
+			},
+			"hut_1": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"hut_2": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"hut_3": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"kiln": {
+				"built": true,
+				"definition": "kiln",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			},
+			"lumber_camp": {
+				"built": true,
+				"definition": "lumber_camp",
+				"level": 1,
+				"owner": "gold",
+				"plot": "forest"
+			},
+			"marketplace": {
+				"built": true,
+				"definition": "marketplace",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			}
+		},
+		"economy": {
+			"cancellations": 0,
+			"cumulative_consumed_inputs": {
+				"grain": 13
+			},
+			"deliveries": {
+				"grain": 39,
+				"pop": 13,
+				"wood": 40
+			},
+			"demolitions": 0,
+			"exchanged": {
+				"brick": 0,
+				"clay": 0,
+				"furniture": 0,
+				"grain": 12,
+				"luxury": 0,
+				"pop": 4,
+				"stone": 0,
+				"wood": 23
+			},
+			"exchanges": 13,
+			"goal_round": 30,
+			"goals": [
+				{
+					"round": 30,
+					"sequence": 233
+				}
+			],
+			"misses": {
+				"pop": 14
+			},
+			"setups": {
+				"grain": 1,
+				"pop": 1,
+				"wood": 1
+			}
+		},
+		"failure": "",
+		"houses": [
+			{
+				"bias": {
+					"ownership": 1.2,
+					"production": 1.3,
+					"trade": 0.7
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 12,
+				"id": "blue",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 1,
+					"influence": 1.0,
+					"prestige": 8
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 109
+			},
+			{
+				"bias": {
+					"ownership": 0.8,
+					"production": 0.9,
+					"trade": 1.5
+				},
+				"did_something": false,
+				"first_claim_round": 4,
+				"first_upgrade_round": 30,
+				"id": "red",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 0.0,
+					"prestige": 4
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 2,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 109
+			},
+			{
+				"bias": {
+					"ownership": 1.4,
+					"production": 1.0,
+					"trade": 1.0
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 13,
+				"id": "gold",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 1,
+					"influence": 3.0,
+					"prestige": 3
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 2
+				},
+				"turns_taken": 112
+			}
+		],
+		"linked": false,
+		"locale": "clayless_valley",
+		"market": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 0,
+			"grain": 4,
+			"luxury": 0,
+			"pop": 1,
+			"stone": 0,
+			"wood": 2
+		},
+		"metrics": {
+			"actions": {
+				"activate": 42,
+				"build_kiln": 1,
+				"build_market": 1,
+				"bulk_exchange": 13,
+				"buy_contract": 5,
+				"buy_prestige": 1,
+				"buy_stone": 2,
+				"claim": 6,
+				"contribute_upgrade": 8,
+				"convert_prestige": 15,
+				"export_brick": 6,
+				"pass": 173,
+				"return": 2,
+				"secure_clay_contract": 1,
+				"secure_contract": 3,
+				"supply_town": 2,
+				"take": 48,
+				"upgrade": 4
+			},
+			"decisions": 333,
+			"failures": [],
+			"invariant_checks": 333,
+			"max_built": 9,
+			"owner_fee_activations": 0,
+			"owner_recognition_activations": 0,
+			"rounds_closed": 40
+		},
+		"partial": true,
+		"project_metrics": {
+			"chapel_contributors": {
+				"gold": 3
+			},
+			"chapel_round": 18,
+			"contributions": 12,
+			"partial_home_completions": 3,
+			"stone_bought": 2,
+			"stone_gold_spent": 2
+		},
+		"projects": {
+			"chapel": {
+				"building": "chapel",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"pop": 1,
+					"stone": 2,
+					"wood": 1
+				}
+			},
+			"hut_1": {
+				"building": "hut_1",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_2": {
+				"building": "hut_2",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_3": {
+				"building": "hut_3",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			}
+		},
+		"replay": {
+			"checked": 333,
+			"ok": true
+		},
+		"round": 41,
+		"save_exact": true,
+		"seed": 42,
+		"sequence": 333,
+		"trade": {
+			"all_goals_round": 30,
+			"exported_bricks": 6,
+			"gold_minted": 6,
+			"gold_spent": 4,
+			"industry_rounds": {
+				"blue": 17,
+				"gold": 13,
+				"red": 30
+			},
+			"orders": {
+				"11": 1,
+				"13": 1,
+				"5": 1,
+				"6": 1,
+				"7": 1,
+				"9": 1
+			},
+			"prestige_bought": 1,
+			"town_bricks": 2
+		}
+	},
+	{
+		"buildings": {
+			"carpenter": {
+				"built": true,
+				"definition": "carpenter",
+				"level": 1,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"chapel": {
+				"built": true,
+				"definition": "chapel",
+				"level": 2,
+				"owner": "",
+				"plot": "special"
+			},
+			"grain_farm": {
+				"built": true,
+				"definition": "grain_farm",
+				"level": 1,
+				"owner": "",
+				"plot": "field"
+			},
+			"hut_1": {
+				"built": true,
+				"definition": "hut",
+				"level": 1,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"hut_2": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"hut_3": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"kiln": {
+				"built": true,
+				"definition": "kiln",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			},
+			"lumber_camp": {
+				"built": true,
+				"definition": "lumber_camp",
+				"level": 1,
+				"owner": "blue",
+				"plot": "forest"
+			},
+			"marketplace": {
+				"built": true,
+				"definition": "marketplace",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			}
+		},
+		"economy": {
+			"cancellations": 0,
+			"cumulative_consumed_inputs": {
+				"grain": 11
+			},
+			"deliveries": {
+				"grain": 39,
+				"pop": 11
+			},
+			"demolitions": 0,
+			"exchanged": {
+				"brick": 0,
+				"clay": 0,
+				"furniture": 0,
+				"grain": 17,
+				"luxury": 0,
+				"pop": 0,
+				"stone": 0,
+				"wood": 25
+			},
+			"exchanges": 14,
+			"goal_round": 0,
+			"goals": [],
+			"misses": {
+				"pop": 19
+			},
+			"setups": {
+				"grain": 1,
+				"pop": 1
+			}
+		},
+		"failure": "",
+		"houses": [
+			{
+				"bias": {
+					"ownership": 1.2,
+					"production": 1.3,
+					"trade": 0.7
+				},
+				"did_something": false,
+				"first_claim_round": 4,
+				"first_upgrade_round": 6,
+				"id": "blue",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 2.0,
+					"prestige": 3
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 119
+			},
+			{
+				"bias": {
+					"ownership": 0.8,
+					"production": 0.9,
+					"trade": 1.5
+				},
+				"did_something": false,
+				"first_claim_round": 2,
+				"first_upgrade_round": 0,
+				"id": "red",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 10.0,
+					"prestige": 3
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 1,
+					"stone": 0,
+					"wood": 2
+				},
+				"turns_taken": 112
+			},
+			{
+				"bias": {
+					"ownership": 1.4,
+					"production": 1.0,
+					"trade": 1.0
+				},
+				"did_something": false,
+				"first_claim_round": 8,
+				"first_upgrade_round": 11,
+				"id": "gold",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 1,
+					"influence": 1.0,
+					"prestige": 2
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 120
+			}
+		],
+		"linked": true,
+		"locale": "clayless_valley",
+		"market": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 0,
+			"grain": 4,
+			"luxury": 0,
+			"pop": 2,
+			"stone": 0,
+			"wood": 4
+		},
+		"metrics": {
+			"actions": {
+				"activate": 32,
+				"build_kiln": 1,
+				"build_market": 1,
+				"bulk_exchange": 14,
+				"buy_contract": 5,
+				"buy_prestige": 1,
+				"buy_stone": 2,
+				"claim": 5,
+				"contribute_upgrade": 2,
+				"convert_prestige": 13,
+				"export_brick": 5,
+				"pass": 201,
+				"return": 3,
+				"secure_clay_contract": 1,
+				"secure_contract": 2,
+				"supply_town": 5,
+				"take": 57,
+				"upgrade": 3
+			},
+			"decisions": 353,
+			"failures": [],
+			"invariant_checks": 353,
+			"max_built": 9,
+			"owner_fee_activations": 0,
+			"owner_recognition_activations": 0,
+			"rounds_closed": 40
+		},
+		"partial": false,
+		"project_metrics": {
+			"chapel_contributors": {
+				"blue": 1,
+				"gold": 2
+			},
+			"chapel_round": 24,
+			"contributions": 5,
+			"partial_home_completions": 0,
+			"stone_bought": 2,
+			"stone_gold_spent": 2
+		},
+		"projects": {
+			"chapel": {
+				"building": "chapel",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"pop": 1,
+					"stone": 2,
+					"wood": 1
+				}
+			},
+			"hut_2": {
+				"building": "hut_2",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_3": {
+				"building": "hut_3",
+				"completed": true,
+				"contributions": 1,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			}
+		},
+		"replay": {
+			"checked": 353,
+			"ok": true
+		},
+		"round": 41,
+		"save_exact": true,
+		"seed": 42,
+		"sequence": 353,
+		"trade": {
+			"all_goals_round": 0,
+			"exported_bricks": 5,
+			"gold_minted": 5,
+			"gold_spent": 4,
+			"industry_rounds": {
+				"blue": 8,
+				"gold": 11,
+				"red": 0
+			},
+			"orders": {
+				"10": 1,
+				"11": 1,
+				"5": 1,
+				"8": 1,
+				"9": 1
+			},
+			"prestige_bought": 1,
+			"town_bricks": 5
+		}
+	},
+	{
+		"buildings": {
+			"carpenter": {
+				"built": true,
+				"definition": "carpenter",
+				"level": 1,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"chapel": {
+				"built": true,
+				"definition": "chapel",
+				"level": 2,
+				"owner": "",
+				"plot": "special"
+			},
+			"grain_farm": {
+				"built": true,
+				"definition": "grain_farm",
+				"level": 1,
+				"owner": "gold",
+				"plot": "field"
+			},
+			"hut_1": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "red",
+				"plot": "urban"
+			},
+			"hut_2": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "blue",
+				"plot": "urban"
+			},
+			"hut_3": {
+				"built": true,
+				"definition": "hut",
+				"level": 2,
+				"owner": "gold",
+				"plot": "urban"
+			},
+			"kiln": {
+				"built": true,
+				"definition": "kiln",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			},
+			"lumber_camp": {
+				"built": true,
+				"definition": "lumber_camp",
+				"level": 1,
+				"owner": "blue",
+				"plot": "forest"
+			},
+			"marketplace": {
+				"built": true,
+				"definition": "marketplace",
+				"level": 1,
+				"owner": "",
+				"plot": "urban"
+			}
+		},
+		"economy": {
+			"cancellations": 0,
+			"cumulative_consumed_inputs": {
+				"grain": 23
+			},
+			"deliveries": {
+				"grain": 39,
+				"pop": 23
+			},
+			"demolitions": 0,
+			"exchanged": {
+				"brick": 0,
+				"clay": 0,
+				"furniture": 0,
+				"grain": 5,
+				"luxury": 0,
+				"pop": 11,
+				"stone": 0,
+				"wood": 26
+			},
+			"exchanges": 14,
+			"goal_round": 14,
+			"goals": [
+				{
+					"round": 14,
+					"sequence": 126
+				}
+			],
+			"misses": {
+				"pop": 6
+			},
+			"setups": {
+				"grain": 1,
+				"pop": 1
+			}
+		},
+		"failure": "",
+		"houses": [
+			{
+				"bias": {
+					"ownership": 1.2,
+					"production": 1.3,
+					"trade": 0.7
+				},
+				"did_something": false,
+				"first_claim_round": 6,
+				"first_upgrade_round": 13,
+				"id": "blue",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 0.0,
+					"prestige": 8
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 125
+			},
+			{
+				"bias": {
+					"ownership": 0.8,
+					"production": 0.9,
+					"trade": 1.5
+				},
+				"did_something": false,
+				"first_claim_round": 2,
+				"first_upgrade_round": 10,
+				"id": "red",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 0.0,
+					"prestige": 1
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 0,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 122
+			},
+			{
+				"bias": {
+					"ownership": 1.4,
+					"production": 1.0,
+					"trade": 1.0
+				},
+				"did_something": false,
+				"first_claim_round": 5,
+				"first_upgrade_round": 14,
+				"id": "gold",
+				"idle_rewarded": false,
+				"inventory": {
+					"gold": 0,
+					"influence": 2.0,
+					"prestige": 2
+				},
+				"passed_last": false,
+				"stockpile": {
+					"brick": 0,
+					"clay": 0,
+					"furniture": 0,
+					"grain": 1,
+					"luxury": 0,
+					"pop": 0,
+					"stone": 0,
+					"wood": 0
+				},
+				"turns_taken": 122
+			}
+		],
+		"linked": true,
+		"locale": "clayless_valley",
+		"market": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 0,
+			"grain": 3,
+			"luxury": 0,
+			"pop": 3,
+			"stone": 0,
+			"wood": 3
+		},
+		"metrics": {
+			"actions": {
+				"activate": 50,
+				"build_kiln": 1,
+				"build_market": 1,
+				"bulk_exchange": 14,
+				"buy_contract": 7,
+				"buy_prestige": 3,
+				"buy_stone": 2,
+				"claim": 6,
+				"contribute_upgrade": 9,
+				"convert_prestige": 21,
+				"export_brick": 8,
+				"pass": 182,
+				"return": 5,
+				"secure_clay_contract": 1,
+				"secure_contract": 2,
+				"supply_town": 1,
+				"take": 54,
+				"upgrade": 4
+			},
+			"decisions": 371,
+			"failures": [],
+			"invariant_checks": 371,
+			"max_built": 9,
+			"owner_fee_activations": 0,
+			"owner_recognition_activations": 0,
+			"rounds_closed": 40
+		},
+		"partial": true,
+		"project_metrics": {
+			"chapel_contributors": {
+				"gold": 2,
+				"red": 1
+			},
+			"chapel_round": 21,
+			"contributions": 13,
+			"partial_home_completions": 3,
+			"stone_bought": 2,
+			"stone_gold_spent": 2
+		},
+		"projects": {
+			"chapel": {
+				"building": "chapel",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"pop": 1,
+					"stone": 2,
+					"wood": 1
+				}
+			},
+			"hut_1": {
+				"building": "hut_1",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_2": {
+				"building": "hut_2",
+				"completed": true,
+				"contributions": 4,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			},
+			"hut_3": {
+				"building": "hut_3",
+				"completed": true,
+				"contributions": 3,
+				"paid": {
+					"brick": 1,
+					"pop": 1,
+					"wood": 2
+				}
+			}
+		},
+		"replay": {
+			"checked": 371,
+			"ok": true
+		},
+		"round": 41,
+		"save_exact": true,
+		"seed": 42,
+		"sequence": 371,
+		"trade": {
+			"all_goals_round": 14,
+			"exported_bricks": 8,
+			"gold_minted": 8,
+			"gold_spent": 8,
+			"industry_rounds": {
+				"blue": 13,
+				"gold": 14,
+				"red": 10
+			},
+			"orders": {
+				"10": 1,
+				"11": 1,
+				"12": 1,
+				"13": 1,
+				"6": 1,
+				"7": 1,
+				"8": 1,
+				"9": 1
+			},
+			"prestige_bought": 3,
+			"town_bricks": 1
+		}
+	}
+]
