@@ -58,3 +58,5 @@ Historical modes are `commons`, `reservations`, `housing` and `cash`. Their docu
 See [release notes](docs/RELEASE_0_60.md), [current scenario rules and results](docs/MARKETPLACE_EXPERIMENT_004.md), and [the suggested next scenario](docs/NEXT_SCENARIO_005.md).
 
 Versions advance by 0.05: **0.50 → 0.55 → 0.60 → 0.65**.
+
+Repository transfer check: single-file upload test performed on 2026-11-01.
