@@ -1,0 +1,16 @@
+; Native 1080p interface preview; command-line simulation options remain supported.
+config_version=5
+[application]
+config/name="Card Game — Town and Houses v0.60"
+run/main_scene="res://ui/interface.tscn"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+[rendering]
+renderer/rendering_method="gl_compatibility"
+
+[display]
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+
+[textures]
+canvas_textures/default_texture_filter=0

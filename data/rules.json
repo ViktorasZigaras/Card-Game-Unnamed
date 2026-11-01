@@ -1,0 +1,24 @@
+{
+  "schema_version":1,
+  "resources":["wood","grain","clay","brick","coin"],
+  "prices":{"wood":2,"grain":2,"clay":2,"brick":4},
+  "ownership_slots":3,"inventory_capacity":18,"market_capacity":30,
+  "reveal_count":4,"max_actions_per_house":6,"initial_bank":500,
+  "locales":{
+    "river_valley":{"terrain":{"forest":2,"field":3,"claybank":2,"town":3},"market":{"wood":4,"grain":6,"clay":5,"brick":1}},
+    "northern_woodland":{"terrain":{"forest":4,"field":1,"claybank":1,"town":4},"market":{"wood":8,"grain":2,"clay":2,"brick":1}}
+  },
+  "houses":[{"id":"blue","bias":{"production":1.3,"ownership":1.2,"trade":0.7}},{"id":"red","bias":{"production":0.9,"ownership":0.8,"trade":1.5}},{"id":"gold","bias":{"production":1.0,"ownership":1.4,"trade":1.0}}],
+  "buildings":[
+    {"id":"lumber_camp","terrain":"forest","inputs":{},"outputs":{"wood":2},"price":4},
+    {"id":"woodlot","terrain":"forest","inputs":{},"outputs":{"wood":1},"price":3},
+    {"id":"grain_farm","terrain":"field","inputs":{},"outputs":{"grain":2},"price":4},
+    {"id":"smallholding","terrain":"field","inputs":{},"outputs":{"grain":1},"price":3},
+    {"id":"clay_pit","terrain":"claybank","inputs":{},"outputs":{"clay":2},"price":4},
+    {"id":"brick_kiln","terrain":"town","inputs":{"clay":2,"wood":1},"outputs":{"brick":2},"price":5},
+    {"id":"carpenter","terrain":"town","inputs":{"wood":2},"outputs":{"coin":5},"price":5},
+    {"id":"bakery","terrain":"town","inputs":{"grain":2,"wood":1},"outputs":{"coin":6},"price":5},
+    {"id":"river_farm","terrain":"field","inputs":{},"outputs":{"grain":2},"price":4},
+    {"id":"clay_workings","terrain":"claybank","inputs":{},"outputs":{"clay":1},"price":3}
+  ]
+}

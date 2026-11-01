@@ -1,0 +1,231 @@
+{
+  "schema_version": 2,
+  "resources": [
+    "wood",
+    "grain",
+    "clay",
+    "brick",
+    "influence"
+  ],
+  "ownership_slots": 3,
+  "inventory_capacity": 18,
+  "market_capacity": 30,
+  "reveal_count": 4,
+  "max_actions_per_house": 6,
+  "locales": {
+    "river_valley": {
+      "terrain": {
+        "forest": 2,
+        "field": 3,
+        "claybank": 2,
+        "town": 3
+      },
+      "market": {
+        "wood": 4,
+        "grain": 6,
+        "clay": 5,
+        "brick": 1
+      }
+    },
+    "northern_woodland": {
+      "terrain": {
+        "forest": 4,
+        "field": 1,
+        "claybank": 1,
+        "town": 4
+      },
+      "market": {
+        "wood": 8,
+        "grain": 2,
+        "clay": 2,
+        "brick": 1
+      }
+    }
+  },
+  "houses": [
+    {
+      "id": "blue",
+      "bias": {
+        "production": 1.3,
+        "ownership": 1.2,
+        "trade": 0.7
+      }
+    },
+    {
+      "id": "red",
+      "bias": {
+        "production": 0.9,
+        "ownership": 0.8,
+        "trade": 1.5
+      }
+    },
+    {
+      "id": "gold",
+      "bias": {
+        "production": 1.0,
+        "ownership": 1.4,
+        "trade": 1.0
+      }
+    }
+  ],
+  "buildings": [
+    {
+      "id": "lumber_camp",
+      "terrain": "forest",
+      "inputs": {},
+      "outputs": {
+        "wood": 2
+      },
+      "kind": "industry",
+      "labour": 1
+    },
+    {
+      "id": "woodlot",
+      "terrain": "forest",
+      "inputs": {},
+      "outputs": {
+        "wood": 1
+      },
+      "kind": "industry",
+      "labour": 1
+    },
+    {
+      "id": "grain_farm",
+      "terrain": "field",
+      "inputs": {},
+      "outputs": {
+        "grain": 2
+      },
+      "kind": "industry",
+      "labour": 1
+    },
+    {
+      "id": "smallholding",
+      "terrain": "field",
+      "inputs": {},
+      "outputs": {
+        "grain": 1
+      },
+      "kind": "industry",
+      "labour": 1
+    },
+    {
+      "id": "clay_pit",
+      "terrain": "claybank",
+      "inputs": {},
+      "outputs": {
+        "clay": 2
+      },
+      "kind": "industry",
+      "labour": 1
+    },
+    {
+      "id": "brick_kiln",
+      "terrain": "town",
+      "inputs": {
+        "clay": 2,
+        "wood": 1
+      },
+      "outputs": {
+        "brick": 2
+      },
+      "kind": "industry",
+      "labour": 1
+    },
+    {
+      "id": "carpenter",
+      "terrain": "town",
+      "inputs": {
+        "wood": 2
+      },
+      "outputs": {
+        "influence": 3
+      },
+      "kind": "industry",
+      "labour": 1
+    },
+    {
+      "id": "bakery",
+      "terrain": "town",
+      "inputs": {
+        "grain": 2,
+        "wood": 1
+      },
+      "outputs": {
+        "influence": 4
+      },
+      "kind": "industry",
+      "labour": 1
+    },
+    {
+      "id": "river_farm",
+      "terrain": "field",
+      "inputs": {},
+      "outputs": {
+        "grain": 2
+      },
+      "kind": "industry",
+      "labour": 1
+    },
+    {
+      "id": "clay_workings",
+      "terrain": "claybank",
+      "inputs": {},
+      "outputs": {
+        "clay": 1
+      },
+      "kind": "industry",
+      "labour": 1
+    },
+    {
+      "id": "hut",
+      "kind": "housing",
+      "terrain": "any",
+      "inputs": {},
+      "outputs": {},
+      "labour": 0
+    }
+  ],
+  "experiment": "housing_influence_labour_v1",
+  "starting_inventory": {
+    "wood": 1,
+    "grain": 2,
+    "clay": 1,
+    "brick": 0,
+    "influence": 2
+  },
+  "housing_claim_cost": {
+    "influence": 2
+  },
+  "housing_upgrade_cost": {
+    "wood": 2,
+    "brick": 1,
+    "influence": 2
+  },
+  "housing_build_cost": {
+    "wood": 2,
+    "influence": 2
+  },
+  "productive_claim_cost": {
+    "influence": 4
+  },
+  "productive_upgrade_cost": {
+    "brick": 1,
+    "influence": 3
+  },
+  "productive_build_cost": {
+    "wood": 2,
+    "brick": 1,
+    "influence": 3
+  },
+  "goods": [
+    "wood",
+    "grain",
+    "clay",
+    "brick"
+  ],
+  "housing_capacity": {
+    "1": 2,
+    "2": 4
+  }
+}

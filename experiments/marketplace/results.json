@@ -1,0 +1,8709 @@
+{
+	"checks": 82,
+	"experiment": "marketplace_scenario_v1",
+	"failures": [],
+	"games": [
+		{
+			"access": {
+				"bricks_bartered": 1,
+				"building_uses": 0,
+				"cap_overflow": 0,
+				"chapel_activations": 4,
+				"emergency_units": 1,
+				"furniture_exported": 2,
+				"hut_fallbacks": 1,
+				"idle_pass_rewards": 6,
+				"influence_transferred": 6,
+				"lumber_delivered": 0,
+				"missed_clay_shipments": 0,
+				"paid_free_actions": 0,
+				"prestige_conversions": 0,
+				"reentries": 4,
+				"reserved_units_used": 4,
+				"rural_fallbacks": 0,
+				"rural_free_activations": 9,
+				"stockpile_takes": 7,
+				"working_passes": 21
+			},
+			"buildings": {
+				"carpenter": {
+					"built": true,
+					"definition": "carpenter",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				},
+				"chapel": {
+					"built": true,
+					"definition": "chapel",
+					"level": 1,
+					"owner": "",
+					"plot": "special"
+				},
+				"grain_farm": {
+					"built": true,
+					"definition": "grain_farm",
+					"level": 1,
+					"owner": "",
+					"plot": "field"
+				},
+				"hut_1": {
+					"built": true,
+					"definition": "hut",
+					"level": 1,
+					"owner": "blue",
+					"plot": "urban"
+				},
+				"hut_2": {
+					"built": true,
+					"definition": "hut",
+					"level": 1,
+					"owner": "red",
+					"plot": "urban"
+				},
+				"hut_3": {
+					"built": true,
+					"definition": "hut",
+					"level": 2,
+					"owner": "gold",
+					"plot": "urban"
+				},
+				"lumber_camp": {
+					"built": true,
+					"definition": "lumber_camp",
+					"level": 1,
+					"owner": "",
+					"plot": "forest"
+				},
+				"marketplace": {
+					"built": true,
+					"definition": "marketplace",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				}
+			},
+			"failure": "",
+			"houses": [
+				{
+					"bias": {
+						"ownership": 1.2,
+						"production": 1.3,
+						"trade": 0.7
+					},
+					"did_something": false,
+					"first_claim_round": 6,
+					"first_upgrade_round": 0,
+					"id": "blue",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 4.0,
+						"prestige": 2
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 1,
+						"wood": 0
+					},
+					"turns_taken": 23
+				},
+				{
+					"bias": {
+						"ownership": 0.8,
+						"production": 0.9,
+						"trade": 1.5
+					},
+					"did_something": true,
+					"first_claim_round": 4,
+					"first_upgrade_round": 0,
+					"id": "red",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 1.0,
+						"prestige": 0
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 1,
+						"wood": 0
+					},
+					"turns_taken": 24
+				},
+				{
+					"bias": {
+						"ownership": 1.4,
+						"production": 1.0,
+						"trade": 1.0
+					},
+					"did_something": true,
+					"first_claim_round": 3,
+					"first_upgrade_round": 3,
+					"id": "gold",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 0.0,
+						"prestige": 8
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"turns_taken": 24
+				}
+			],
+			"locale": "clayless_valley",
+			"market": {
+				"brick": 0,
+				"clay": 1,
+				"furniture": 0,
+				"grain": 3,
+				"luxury": 0,
+				"pop": 0,
+				"wood": 0
+			},
+			"metrics": {
+				"actions": {
+					"activate": 22,
+					"build_market": 1,
+					"buy_brick": 1,
+					"claim": 3,
+					"pass": 35,
+					"secure_clay_contract": 1,
+					"take": 7,
+					"upgrade": 1
+				},
+				"decisions": 71,
+				"failures": [],
+				"invariant_checks": 71,
+				"max_built": 8,
+				"owner_fee_activations": 0,
+				"owner_recognition_activations": 0,
+				"rounds_closed": 7
+			},
+			"milestones": [
+				{
+					"house": "blue",
+					"kind": "market",
+					"prestige": 2,
+					"round": 1,
+					"sequence": 4
+				},
+				{
+					"house": "gold",
+					"kind": "brick_house",
+					"prestige": 5,
+					"round": 3,
+					"sequence": 27
+				},
+				{
+					"house": "gold",
+					"kind": "clay_contract",
+					"prestige": 3,
+					"round": 8,
+					"sequence": 71
+				}
+			],
+			"result": "completed",
+			"round": 8,
+			"scenario": {
+				"caravan": {
+					"bricks_left": 2,
+					"first_round": 2,
+					"present": true,
+					"visits": 3
+				},
+				"clay_deliveries": 1,
+				"committed_pops": 1,
+				"end_reason": "clay_import_and_brick_house",
+				"ended": true,
+				"houses": [
+					{
+						"bias": {
+							"ownership": 1.2,
+							"production": 1.3,
+							"trade": 0.7
+						},
+						"did_something": false,
+						"first_claim_round": 6,
+						"first_upgrade_round": 0,
+						"id": "blue",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 4.0,
+							"prestige": 2
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 1,
+							"wood": 0
+						},
+						"turns_taken": 23
+					},
+					{
+						"bias": {
+							"ownership": 0.8,
+							"production": 0.9,
+							"trade": 1.5
+						},
+						"did_something": true,
+						"first_claim_round": 4,
+						"first_upgrade_round": 0,
+						"id": "red",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 1.0,
+							"prestige": 0
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 1,
+							"wood": 0
+						},
+						"turns_taken": 24
+					},
+					{
+						"bias": {
+							"ownership": 1.4,
+							"production": 1.0,
+							"trade": 1.0
+						},
+						"did_something": true,
+						"first_claim_round": 3,
+						"first_upgrade_round": 3,
+						"id": "gold",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 0.0,
+							"prestige": 8
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 0,
+							"wood": 0
+						},
+						"turns_taken": 24
+					}
+				],
+				"lumber_link": false,
+				"market_round": 1,
+				"milestones": [
+					{
+						"house": "blue",
+						"kind": "market",
+						"prestige": 2,
+						"round": 1,
+						"sequence": 4
+					},
+					{
+						"house": "gold",
+						"kind": "brick_house",
+						"prestige": 5,
+						"round": 3,
+						"sequence": 27
+					},
+					{
+						"house": "gold",
+						"kind": "clay_contract",
+						"prestige": 3,
+						"round": 8,
+						"sequence": 71
+					}
+				],
+				"pop_reserve": 3,
+				"public_stock": {
+					"brick": 0,
+					"clay": 1,
+					"furniture": 0,
+					"grain": 3,
+					"luxury": 0,
+					"pop": 0,
+					"wood": 0
+				},
+				"round": 8,
+				"sequence": 71
+			},
+			"seed": 1,
+			"sequence": 71,
+			"timeline": [
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 3
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 3
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 3
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 5,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 4,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 3
+					},
+					"round": 2,
+					"sequence": 9
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 6
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 7
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 7
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 4,
+					"public_stock": {
+						"brick": 1,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 3,
+					"sequence": 20
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 11
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 12
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 13
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						}
+					],
+					"pop_reserve": 4,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 4,
+					"sequence": 36
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 2
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 14
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 15
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 15
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 5,
+					"sequence": 44
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 2
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 16
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 17
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 17
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 6,
+					"sequence": 50
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 2
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 6,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 19
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 19
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 20
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 7,
+					"sequence": 58
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 3
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 6,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 23
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 23
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 23
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 8,
+					"sequence": 69
+				}
+			]
+		},
+		{
+			"access": {
+				"bricks_bartered": 1,
+				"building_uses": 0,
+				"cap_overflow": 0,
+				"chapel_activations": 4,
+				"emergency_units": 0,
+				"furniture_exported": 2,
+				"hut_fallbacks": 0,
+				"idle_pass_rewards": 3,
+				"influence_transferred": 3,
+				"lumber_delivered": 7,
+				"missed_clay_shipments": 0,
+				"paid_free_actions": 0,
+				"prestige_conversions": 0,
+				"reentries": 0,
+				"reserved_units_used": 3,
+				"rural_fallbacks": 0,
+				"rural_free_activations": 4,
+				"stockpile_takes": 10,
+				"working_passes": 24
+			},
+			"buildings": {
+				"carpenter": {
+					"built": true,
+					"definition": "carpenter",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				},
+				"chapel": {
+					"built": true,
+					"definition": "chapel",
+					"level": 1,
+					"owner": "",
+					"plot": "special"
+				},
+				"grain_farm": {
+					"built": true,
+					"definition": "grain_farm",
+					"level": 1,
+					"owner": "",
+					"plot": "field"
+				},
+				"hut_1": {
+					"built": true,
+					"definition": "hut",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				},
+				"hut_2": {
+					"built": true,
+					"definition": "hut",
+					"level": 2,
+					"owner": "gold",
+					"plot": "urban"
+				},
+				"hut_3": {
+					"built": true,
+					"definition": "hut",
+					"level": 1,
+					"owner": "blue",
+					"plot": "urban"
+				},
+				"lumber_camp": {
+					"built": true,
+					"definition": "lumber_camp",
+					"level": 1,
+					"owner": "",
+					"plot": "forest"
+				},
+				"marketplace": {
+					"built": true,
+					"definition": "marketplace",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				}
+			},
+			"failure": "",
+			"houses": [
+				{
+					"bias": {
+						"ownership": 1.2,
+						"production": 1.3,
+						"trade": 0.7
+					},
+					"did_something": true,
+					"first_claim_round": 7,
+					"first_upgrade_round": 0,
+					"id": "blue",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 0.0,
+						"prestige": 2
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 1,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 1,
+						"wood": 0
+					},
+					"turns_taken": 21
+				},
+				{
+					"bias": {
+						"ownership": 0.8,
+						"production": 0.9,
+						"trade": 1.5
+					},
+					"did_something": true,
+					"first_claim_round": 0,
+					"first_upgrade_round": 0,
+					"id": "red",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 3,
+						"prestige": 3
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 1,
+						"wood": 0
+					},
+					"turns_taken": 22
+				},
+				{
+					"bias": {
+						"ownership": 1.4,
+						"production": 1.0,
+						"trade": 1.0
+					},
+					"did_something": true,
+					"first_claim_round": 3,
+					"first_upgrade_round": 7,
+					"id": "gold",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 2.0,
+						"prestige": 5
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"turns_taken": 21
+				}
+			],
+			"locale": "clayless_valley",
+			"market": {
+				"brick": 0,
+				"clay": 1,
+				"furniture": 0,
+				"grain": 2,
+				"luxury": 0,
+				"pop": 0,
+				"wood": 0
+			},
+			"metrics": {
+				"actions": {
+					"activate": 19,
+					"build_market": 1,
+					"buy_brick": 1,
+					"claim": 2,
+					"pass": 29,
+					"secure_clay_contract": 1,
+					"take": 10,
+					"upgrade": 1
+				},
+				"decisions": 64,
+				"failures": [],
+				"invariant_checks": 64,
+				"max_built": 8,
+				"owner_fee_activations": 0,
+				"owner_recognition_activations": 0,
+				"rounds_closed": 6
+			},
+			"milestones": [
+				{
+					"house": "blue",
+					"kind": "market",
+					"prestige": 2,
+					"round": 1,
+					"sequence": 4
+				},
+				{
+					"house": "red",
+					"kind": "clay_contract",
+					"prestige": 3,
+					"round": 5,
+					"sequence": 48
+				},
+				{
+					"house": "gold",
+					"kind": "brick_house",
+					"prestige": 5,
+					"round": 7,
+					"sequence": 64
+				}
+			],
+			"result": "completed",
+			"round": 7,
+			"scenario": {
+				"caravan": {
+					"bricks_left": 0,
+					"first_round": 2,
+					"present": false,
+					"visits": 2
+				},
+				"clay_deliveries": 1,
+				"committed_pops": 2,
+				"end_reason": "clay_import_and_brick_house",
+				"ended": true,
+				"houses": [
+					{
+						"bias": {
+							"ownership": 1.2,
+							"production": 1.3,
+							"trade": 0.7
+						},
+						"did_something": true,
+						"first_claim_round": 7,
+						"first_upgrade_round": 0,
+						"id": "blue",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 0.0,
+							"prestige": 2
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 1,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 1,
+							"wood": 0
+						},
+						"turns_taken": 21
+					},
+					{
+						"bias": {
+							"ownership": 0.8,
+							"production": 0.9,
+							"trade": 1.5
+						},
+						"did_something": true,
+						"first_claim_round": 0,
+						"first_upgrade_round": 0,
+						"id": "red",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 3,
+							"prestige": 3
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 1,
+							"wood": 0
+						},
+						"turns_taken": 22
+					},
+					{
+						"bias": {
+							"ownership": 1.4,
+							"production": 1.0,
+							"trade": 1.0
+						},
+						"did_something": true,
+						"first_claim_round": 3,
+						"first_upgrade_round": 7,
+						"id": "gold",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 2.0,
+							"prestige": 5
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 0,
+							"wood": 0
+						},
+						"turns_taken": 21
+					}
+				],
+				"lumber_link": true,
+				"market_round": 1,
+				"milestones": [
+					{
+						"house": "blue",
+						"kind": "market",
+						"prestige": 2,
+						"round": 1,
+						"sequence": 4
+					},
+					{
+						"house": "red",
+						"kind": "clay_contract",
+						"prestige": 3,
+						"round": 5,
+						"sequence": 48
+					},
+					{
+						"house": "gold",
+						"kind": "brick_house",
+						"prestige": 5,
+						"round": 7,
+						"sequence": 64
+					}
+				],
+				"pop_reserve": 2,
+				"public_stock": {
+					"brick": 0,
+					"clay": 1,
+					"furniture": 0,
+					"grain": 2,
+					"luxury": 0,
+					"pop": 0,
+					"wood": 0
+				},
+				"round": 7,
+				"sequence": 64
+			},
+			"seed": 1,
+			"sequence": 64,
+			"timeline": [
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 4
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 4
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 3
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 5,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 4,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 2
+					},
+					"round": 2,
+					"sequence": 11
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 7
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 8
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 6
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 4,
+					"public_stock": {
+						"brick": 1,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 3,
+					"sequence": 21
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 12
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 13
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 12
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 2,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 2
+					},
+					"round": 4,
+					"sequence": 37
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 2
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 16
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 16
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 15
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 2,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 5,
+					"sequence": 47
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 2
+					},
+					"clay_deliveries": 1,
+					"committed_pops": 2,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 19
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 20
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 18
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "red",
+							"kind": "clay_contract",
+							"prestige": 3,
+							"round": 5,
+							"sequence": 48
+						}
+					],
+					"pop_reserve": 1,
+					"public_stock": {
+						"brick": 0,
+						"clay": 1,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 6,
+					"sequence": 57
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 2
+					},
+					"clay_deliveries": 1,
+					"committed_pops": 2,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 20
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 21
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 20
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "red",
+							"kind": "clay_contract",
+							"prestige": 3,
+							"round": 5,
+							"sequence": 48
+						}
+					],
+					"pop_reserve": 1,
+					"public_stock": {
+						"brick": 0,
+						"clay": 1,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 7,
+					"sequence": 61
+				}
+			]
+		},
+		{
+			"access": {
+				"bricks_bartered": 1,
+				"building_uses": 0,
+				"cap_overflow": 0,
+				"chapel_activations": 5,
+				"emergency_units": 3,
+				"furniture_exported": 2,
+				"hut_fallbacks": 0,
+				"idle_pass_rewards": 6,
+				"influence_transferred": 8,
+				"lumber_delivered": 0,
+				"missed_clay_shipments": 1,
+				"paid_free_actions": 0,
+				"prestige_conversions": 0,
+				"reentries": 2,
+				"reserved_units_used": 2,
+				"rural_fallbacks": 0,
+				"rural_free_activations": 9,
+				"stockpile_takes": 10,
+				"working_passes": 34
+			},
+			"buildings": {
+				"carpenter": {
+					"built": true,
+					"definition": "carpenter",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				},
+				"chapel": {
+					"built": true,
+					"definition": "chapel",
+					"level": 1,
+					"owner": "",
+					"plot": "special"
+				},
+				"grain_farm": {
+					"built": true,
+					"definition": "grain_farm",
+					"level": 1,
+					"owner": "",
+					"plot": "field"
+				},
+				"hut_1": {
+					"built": true,
+					"definition": "hut",
+					"level": 2,
+					"owner": "blue",
+					"plot": "urban"
+				},
+				"hut_2": {
+					"built": true,
+					"definition": "hut",
+					"level": 1,
+					"owner": "gold",
+					"plot": "urban"
+				},
+				"hut_3": {
+					"built": true,
+					"definition": "hut",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				},
+				"lumber_camp": {
+					"built": true,
+					"definition": "lumber_camp",
+					"level": 1,
+					"owner": "",
+					"plot": "forest"
+				},
+				"marketplace": {
+					"built": true,
+					"definition": "marketplace",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				}
+			},
+			"failure": "",
+			"houses": [
+				{
+					"bias": {
+						"ownership": 1.2,
+						"production": 1.3,
+						"trade": 0.7
+					},
+					"did_something": true,
+					"first_claim_round": 5,
+					"first_upgrade_round": 10,
+					"id": "blue",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 0.0,
+						"prestige": 7
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"turns_taken": 28
+				},
+				{
+					"bias": {
+						"ownership": 0.8,
+						"production": 0.9,
+						"trade": 1.5
+					},
+					"did_something": false,
+					"first_claim_round": 0,
+					"first_upgrade_round": 0,
+					"id": "red",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 4,
+						"prestige": 3
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 1,
+						"wood": 0
+					},
+					"turns_taken": 26
+				},
+				{
+					"bias": {
+						"ownership": 1.4,
+						"production": 1.0,
+						"trade": 1.0
+					},
+					"did_something": false,
+					"first_claim_round": 3,
+					"first_upgrade_round": 0,
+					"id": "gold",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 6.0,
+						"prestige": 0
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 1,
+						"wood": 0
+					},
+					"turns_taken": 28
+				}
+			],
+			"locale": "clayless_valley",
+			"market": {
+				"brick": 0,
+				"clay": 1,
+				"furniture": 0,
+				"grain": 3,
+				"luxury": 0,
+				"pop": 0,
+				"wood": 0
+			},
+			"metrics": {
+				"actions": {
+					"activate": 23,
+					"build_market": 1,
+					"buy_brick": 1,
+					"claim": 2,
+					"pass": 43,
+					"secure_clay_contract": 1,
+					"take": 10,
+					"upgrade": 1
+				},
+				"decisions": 82,
+				"failures": [],
+				"invariant_checks": 82,
+				"max_built": 8,
+				"owner_fee_activations": 0,
+				"owner_recognition_activations": 0,
+				"rounds_closed": 9
+			},
+			"milestones": [
+				{
+					"house": "blue",
+					"kind": "market",
+					"prestige": 2,
+					"round": 1,
+					"sequence": 4
+				},
+				{
+					"house": "red",
+					"kind": "clay_contract",
+					"prestige": 3,
+					"round": 5,
+					"sequence": 47
+				},
+				{
+					"house": "blue",
+					"kind": "brick_house",
+					"prestige": 5,
+					"round": 10,
+					"sequence": 82
+				}
+			],
+			"result": "completed",
+			"round": 10,
+			"scenario": {
+				"caravan": {
+					"bricks_left": 0,
+					"first_round": 2,
+					"present": false,
+					"visits": 3
+				},
+				"clay_deliveries": 1,
+				"committed_pops": 1,
+				"end_reason": "clay_import_and_brick_house",
+				"ended": true,
+				"houses": [
+					{
+						"bias": {
+							"ownership": 1.2,
+							"production": 1.3,
+							"trade": 0.7
+						},
+						"did_something": true,
+						"first_claim_round": 5,
+						"first_upgrade_round": 10,
+						"id": "blue",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 0.0,
+							"prestige": 7
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 0,
+							"wood": 0
+						},
+						"turns_taken": 28
+					},
+					{
+						"bias": {
+							"ownership": 0.8,
+							"production": 0.9,
+							"trade": 1.5
+						},
+						"did_something": false,
+						"first_claim_round": 0,
+						"first_upgrade_round": 0,
+						"id": "red",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 4,
+							"prestige": 3
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 1,
+							"wood": 0
+						},
+						"turns_taken": 26
+					},
+					{
+						"bias": {
+							"ownership": 1.4,
+							"production": 1.0,
+							"trade": 1.0
+						},
+						"did_something": false,
+						"first_claim_round": 3,
+						"first_upgrade_round": 0,
+						"id": "gold",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 6.0,
+							"prestige": 0
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 1,
+							"wood": 0
+						},
+						"turns_taken": 28
+					}
+				],
+				"lumber_link": false,
+				"market_round": 1,
+				"milestones": [
+					{
+						"house": "blue",
+						"kind": "market",
+						"prestige": 2,
+						"round": 1,
+						"sequence": 4
+					},
+					{
+						"house": "red",
+						"kind": "clay_contract",
+						"prestige": 3,
+						"round": 5,
+						"sequence": 47
+					},
+					{
+						"house": "blue",
+						"kind": "brick_house",
+						"prestige": 5,
+						"round": 10,
+						"sequence": 82
+					}
+				],
+				"pop_reserve": 3,
+				"public_stock": {
+					"brick": 0,
+					"clay": 1,
+					"furniture": 0,
+					"grain": 3,
+					"luxury": 0,
+					"pop": 0,
+					"wood": 0
+				},
+				"round": 10,
+				"sequence": 82
+			},
+			"seed": 7,
+			"sequence": 82,
+			"timeline": [
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 3
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 3
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 3
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 4,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 2
+					},
+					"round": 2,
+					"sequence": 9
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 7
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 7
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 7
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 4,
+					"public_stock": {
+						"brick": 1,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 3,
+					"sequence": 21
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 10
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 10
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 11
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 4,
+					"sequence": 31
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 2
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 14
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 14
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 15
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 5,
+					"sequence": 43
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 2
+					},
+					"clay_deliveries": 1,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 5,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 17
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 17
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 18
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "red",
+							"kind": "clay_contract",
+							"prestige": 3,
+							"round": 5,
+							"sequence": 47
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 1,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 6,
+					"sequence": 52
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 2
+					},
+					"clay_deliveries": 1,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 5,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 20
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 20
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 21
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "red",
+							"kind": "clay_contract",
+							"prestige": 3,
+							"round": 5,
+							"sequence": 47
+						}
+					],
+					"pop_reserve": 2,
+					"public_stock": {
+						"brick": 0,
+						"clay": 1,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 7,
+					"sequence": 61
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 3
+					},
+					"clay_deliveries": 1,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 5,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 23
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 23
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 24
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "red",
+							"kind": "clay_contract",
+							"prestige": 3,
+							"round": 5,
+							"sequence": 47
+						}
+					],
+					"pop_reserve": 2,
+					"public_stock": {
+						"brick": 0,
+						"clay": 1,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 8,
+					"sequence": 70
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 3
+					},
+					"clay_deliveries": 1,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 5,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 24
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 24
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 25
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "red",
+							"kind": "clay_contract",
+							"prestige": 3,
+							"round": 5,
+							"sequence": 47
+						}
+					],
+					"pop_reserve": 2,
+					"public_stock": {
+						"brick": 0,
+						"clay": 1,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 9,
+					"sequence": 73
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 3
+					},
+					"clay_deliveries": 1,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 5,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 4.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 27
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 4,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 26
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 28
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "red",
+							"kind": "clay_contract",
+							"prestige": 3,
+							"round": 5,
+							"sequence": 47
+						}
+					],
+					"pop_reserve": 2,
+					"public_stock": {
+						"brick": 0,
+						"clay": 1,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 10,
+					"sequence": 81
+				}
+			]
+		},
+		{
+			"access": {
+				"bricks_bartered": 1,
+				"building_uses": 1,
+				"cap_overflow": 0,
+				"chapel_activations": 5,
+				"emergency_units": 1,
+				"furniture_exported": 2,
+				"hut_fallbacks": 0,
+				"idle_pass_rewards": 4,
+				"influence_transferred": 5,
+				"lumber_delivered": 7,
+				"missed_clay_shipments": 0,
+				"paid_free_actions": 1,
+				"prestige_conversions": 0,
+				"reentries": 0,
+				"reserved_units_used": 2,
+				"rural_fallbacks": 0,
+				"rural_free_activations": 2,
+				"stockpile_takes": 11,
+				"working_passes": 17
+			},
+			"buildings": {
+				"carpenter": {
+					"built": true,
+					"definition": "carpenter",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				},
+				"chapel": {
+					"built": true,
+					"definition": "chapel",
+					"level": 1,
+					"owner": "",
+					"plot": "special"
+				},
+				"grain_farm": {
+					"built": true,
+					"definition": "grain_farm",
+					"level": 1,
+					"owner": "",
+					"plot": "field"
+				},
+				"hut_1": {
+					"built": true,
+					"definition": "hut",
+					"level": 1,
+					"owner": "red",
+					"plot": "urban"
+				},
+				"hut_2": {
+					"built": true,
+					"definition": "hut",
+					"level": 2,
+					"owner": "blue",
+					"plot": "urban"
+				},
+				"hut_3": {
+					"built": true,
+					"definition": "hut",
+					"level": 1,
+					"owner": "gold",
+					"plot": "urban"
+				},
+				"lumber_camp": {
+					"built": true,
+					"definition": "lumber_camp",
+					"level": 1,
+					"owner": "",
+					"plot": "forest"
+				},
+				"marketplace": {
+					"built": true,
+					"definition": "marketplace",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				}
+			},
+			"failure": "",
+			"houses": [
+				{
+					"bias": {
+						"ownership": 1.2,
+						"production": 1.3,
+						"trade": 0.7
+					},
+					"did_something": true,
+					"first_claim_round": 4,
+					"first_upgrade_round": 7,
+					"id": "blue",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 3.0,
+						"prestige": 7
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"turns_taken": 20
+				},
+				{
+					"bias": {
+						"ownership": 0.8,
+						"production": 0.9,
+						"trade": 1.5
+					},
+					"did_something": false,
+					"first_claim_round": 2,
+					"first_upgrade_round": 0,
+					"id": "red",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 1.0,
+						"prestige": 3
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 1,
+						"wood": 1
+					},
+					"turns_taken": 20
+				},
+				{
+					"bias": {
+						"ownership": 1.4,
+						"production": 1.0,
+						"trade": 1.0
+					},
+					"did_something": false,
+					"first_claim_round": 6,
+					"first_upgrade_round": 0,
+					"id": "gold",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 1.0,
+						"prestige": 0
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 1,
+						"wood": 1
+					},
+					"turns_taken": 19
+				}
+			],
+			"locale": "clayless_valley",
+			"market": {
+				"brick": 0,
+				"clay": 1,
+				"furniture": 0,
+				"grain": 1,
+				"luxury": 0,
+				"pop": 0,
+				"wood": 0
+			},
+			"metrics": {
+				"actions": {
+					"activate": 16,
+					"build_market": 1,
+					"buy_brick": 1,
+					"claim": 3,
+					"pass": 26,
+					"secure_clay_contract": 1,
+					"take": 11,
+					"upgrade": 1
+				},
+				"decisions": 60,
+				"failures": [],
+				"invariant_checks": 60,
+				"max_built": 8,
+				"owner_fee_activations": 0,
+				"owner_recognition_activations": 0,
+				"rounds_closed": 6
+			},
+			"milestones": [
+				{
+					"house": "blue",
+					"kind": "market",
+					"prestige": 2,
+					"round": 1,
+					"sequence": 4
+				},
+				{
+					"house": "red",
+					"kind": "clay_contract",
+					"prestige": 3,
+					"round": 5,
+					"sequence": 36
+				},
+				{
+					"house": "blue",
+					"kind": "brick_house",
+					"prestige": 5,
+					"round": 7,
+					"sequence": 60
+				}
+			],
+			"result": "completed",
+			"round": 7,
+			"scenario": {
+				"caravan": {
+					"bricks_left": 0,
+					"first_round": 2,
+					"present": false,
+					"visits": 2
+				},
+				"clay_deliveries": 1,
+				"committed_pops": 2,
+				"end_reason": "clay_import_and_brick_house",
+				"ended": true,
+				"houses": [
+					{
+						"bias": {
+							"ownership": 1.2,
+							"production": 1.3,
+							"trade": 0.7
+						},
+						"did_something": true,
+						"first_claim_round": 4,
+						"first_upgrade_round": 7,
+						"id": "blue",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 3.0,
+							"prestige": 7
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 0,
+							"wood": 0
+						},
+						"turns_taken": 20
+					},
+					{
+						"bias": {
+							"ownership": 0.8,
+							"production": 0.9,
+							"trade": 1.5
+						},
+						"did_something": false,
+						"first_claim_round": 2,
+						"first_upgrade_round": 0,
+						"id": "red",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 1.0,
+							"prestige": 3
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 1,
+							"wood": 1
+						},
+						"turns_taken": 20
+					},
+					{
+						"bias": {
+							"ownership": 1.4,
+							"production": 1.0,
+							"trade": 1.0
+						},
+						"did_something": false,
+						"first_claim_round": 6,
+						"first_upgrade_round": 0,
+						"id": "gold",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 1.0,
+							"prestige": 0
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 1,
+							"wood": 1
+						},
+						"turns_taken": 19
+					}
+				],
+				"lumber_link": true,
+				"market_round": 1,
+				"milestones": [
+					{
+						"house": "blue",
+						"kind": "market",
+						"prestige": 2,
+						"round": 1,
+						"sequence": 4
+					},
+					{
+						"house": "red",
+						"kind": "clay_contract",
+						"prestige": 3,
+						"round": 5,
+						"sequence": 36
+					},
+					{
+						"house": "blue",
+						"kind": "brick_house",
+						"prestige": 5,
+						"round": 7,
+						"sequence": 60
+					}
+				],
+				"pop_reserve": 2,
+				"public_stock": {
+					"brick": 0,
+					"clay": 1,
+					"furniture": 0,
+					"grain": 1,
+					"luxury": 0,
+					"pop": 0,
+					"wood": 0
+				},
+				"round": 7,
+				"sequence": 60
+			},
+			"seed": 7,
+			"sequence": 60,
+			"timeline": [
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 3
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 2
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 2
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 5,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 5,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 4
+					},
+					"round": 2,
+					"sequence": 7
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 7
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 2,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 7
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 6
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 2,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 5
+					},
+					"round": 3,
+					"sequence": 20
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 10
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 2,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 10
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 10
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 2,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 4
+					},
+					"round": 4,
+					"sequence": 30
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 2
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 12
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 2,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 12
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 11
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 2,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 5
+					},
+					"round": 5,
+					"sequence": 35
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 2
+					},
+					"clay_deliveries": 1,
+					"committed_pops": 2,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 16
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 2,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 17
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 15
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "red",
+							"kind": "clay_contract",
+							"prestige": 3,
+							"round": 5,
+							"sequence": 36
+						}
+					],
+					"pop_reserve": 1,
+					"public_stock": {
+						"brick": 0,
+						"clay": 1,
+						"furniture": 0,
+						"grain": 1,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 6,
+					"sequence": 49
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 2
+					},
+					"clay_deliveries": 1,
+					"committed_pops": 2,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 19
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 2,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 20
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 6,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 19
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "red",
+							"kind": "clay_contract",
+							"prestige": 3,
+							"round": 5,
+							"sequence": 36
+						}
+					],
+					"pop_reserve": 1,
+					"public_stock": {
+						"brick": 0,
+						"clay": 1,
+						"furniture": 0,
+						"grain": 1,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 7,
+					"sequence": 59
+				}
+			]
+		},
+		{
+			"access": {
+				"bricks_bartered": 3,
+				"building_uses": 2,
+				"cap_overflow": 0,
+				"chapel_activations": 8,
+				"emergency_units": 1,
+				"furniture_exported": 4,
+				"hut_fallbacks": 3,
+				"idle_pass_rewards": 26,
+				"influence_transferred": 11,
+				"lumber_delivered": 0,
+				"missed_clay_shipments": 0,
+				"paid_free_actions": 2,
+				"prestige_conversions": 4,
+				"reentries": 6,
+				"reserved_units_used": 7,
+				"rural_fallbacks": 0,
+				"rural_free_activations": 18,
+				"stockpile_takes": 13,
+				"working_passes": 45
+			},
+			"buildings": {
+				"carpenter": {
+					"built": true,
+					"definition": "carpenter",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				},
+				"chapel": {
+					"built": true,
+					"definition": "chapel",
+					"level": 1,
+					"owner": "",
+					"plot": "special"
+				},
+				"grain_farm": {
+					"built": true,
+					"definition": "grain_farm",
+					"level": 1,
+					"owner": "",
+					"plot": "field"
+				},
+				"hut_1": {
+					"built": true,
+					"definition": "hut",
+					"level": 1,
+					"owner": "blue",
+					"plot": "urban"
+				},
+				"hut_2": {
+					"built": true,
+					"definition": "hut",
+					"level": 2,
+					"owner": "gold",
+					"plot": "urban"
+				},
+				"hut_3": {
+					"built": true,
+					"definition": "hut",
+					"level": 2,
+					"owner": "red",
+					"plot": "urban"
+				},
+				"lumber_camp": {
+					"built": true,
+					"definition": "lumber_camp",
+					"level": 1,
+					"owner": "",
+					"plot": "forest"
+				},
+				"marketplace": {
+					"built": true,
+					"definition": "marketplace",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				}
+			},
+			"failure": "",
+			"houses": [
+				{
+					"bias": {
+						"ownership": 1.2,
+						"production": 1.3,
+						"trade": 0.7
+					},
+					"did_something": false,
+					"first_claim_round": 8,
+					"first_upgrade_round": 0,
+					"id": "blue",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 5.0,
+						"prestige": 3
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 1,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 1,
+						"wood": 0
+					},
+					"turns_taken": 49
+				},
+				{
+					"bias": {
+						"ownership": 0.8,
+						"production": 0.9,
+						"trade": 1.5
+					},
+					"did_something": true,
+					"first_claim_round": 4,
+					"first_upgrade_round": 10,
+					"id": "red",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 5.0,
+						"prestige": 9
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"turns_taken": 50
+				},
+				{
+					"bias": {
+						"ownership": 1.4,
+						"production": 1.0,
+						"trade": 1.0
+					},
+					"did_something": false,
+					"first_claim_round": 3,
+					"first_upgrade_round": 3,
+					"id": "gold",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 3.0,
+						"prestige": 7
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 1,
+						"wood": 0
+					},
+					"turns_taken": 50
+				}
+			],
+			"locale": "clayless_valley",
+			"market": {
+				"brick": 0,
+				"clay": 1,
+				"furniture": 0,
+				"grain": 3,
+				"luxury": 0,
+				"pop": 0,
+				"wood": 0
+			},
+			"metrics": {
+				"actions": {
+					"activate": 40,
+					"build_market": 1,
+					"buy_brick": 3,
+					"claim": 3,
+					"convert_prestige": 4,
+					"pass": 84,
+					"secure_clay_contract": 1,
+					"take": 13,
+					"upgrade": 2
+				},
+				"decisions": 151,
+				"failures": [],
+				"invariant_checks": 151,
+				"max_built": 8,
+				"owner_fee_activations": 0,
+				"owner_recognition_activations": 0,
+				"rounds_closed": 19
+			},
+			"milestones": [
+				{
+					"house": "blue",
+					"kind": "market",
+					"prestige": 2,
+					"round": 1,
+					"sequence": 4
+				},
+				{
+					"house": "gold",
+					"kind": "brick_house",
+					"prestige": 5,
+					"round": 3,
+					"sequence": 27
+				},
+				{
+					"house": "red",
+					"kind": "brick_house",
+					"prestige": 5,
+					"round": 10,
+					"sequence": 81
+				},
+				{
+					"house": "red",
+					"kind": "clay_contract",
+					"prestige": 3,
+					"round": 20,
+					"sequence": 151
+				}
+			],
+			"result": "completed",
+			"round": 20,
+			"scenario": {
+				"caravan": {
+					"bricks_left": 2,
+					"first_round": 2,
+					"present": true,
+					"visits": 7
+				},
+				"clay_deliveries": 1,
+				"committed_pops": 1,
+				"end_reason": "clay_import_and_brick_house",
+				"ended": true,
+				"houses": [
+					{
+						"bias": {
+							"ownership": 1.2,
+							"production": 1.3,
+							"trade": 0.7
+						},
+						"did_something": false,
+						"first_claim_round": 8,
+						"first_upgrade_round": 0,
+						"id": "blue",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 5.0,
+							"prestige": 3
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 1,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 1,
+							"wood": 0
+						},
+						"turns_taken": 49
+					},
+					{
+						"bias": {
+							"ownership": 0.8,
+							"production": 0.9,
+							"trade": 1.5
+						},
+						"did_something": true,
+						"first_claim_round": 4,
+						"first_upgrade_round": 10,
+						"id": "red",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 5.0,
+							"prestige": 9
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 0,
+							"wood": 0
+						},
+						"turns_taken": 50
+					},
+					{
+						"bias": {
+							"ownership": 1.4,
+							"production": 1.0,
+							"trade": 1.0
+						},
+						"did_something": false,
+						"first_claim_round": 3,
+						"first_upgrade_round": 3,
+						"id": "gold",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 3.0,
+							"prestige": 7
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 1,
+							"wood": 0
+						},
+						"turns_taken": 50
+					}
+				],
+				"lumber_link": false,
+				"market_round": 1,
+				"milestones": [
+					{
+						"house": "blue",
+						"kind": "market",
+						"prestige": 2,
+						"round": 1,
+						"sequence": 4
+					},
+					{
+						"house": "gold",
+						"kind": "brick_house",
+						"prestige": 5,
+						"round": 3,
+						"sequence": 27
+					},
+					{
+						"house": "red",
+						"kind": "brick_house",
+						"prestige": 5,
+						"round": 10,
+						"sequence": 81
+					},
+					{
+						"house": "red",
+						"kind": "clay_contract",
+						"prestige": 3,
+						"round": 20,
+						"sequence": 151
+					}
+				],
+				"pop_reserve": 3,
+				"public_stock": {
+					"brick": 0,
+					"clay": 1,
+					"furniture": 0,
+					"grain": 3,
+					"luxury": 0,
+					"pop": 0,
+					"wood": 0
+				},
+				"round": 20,
+				"sequence": 151
+			},
+			"seed": 42,
+			"sequence": 151,
+			"timeline": [
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 3
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 3
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 3
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 5,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 4,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 3
+					},
+					"round": 2,
+					"sequence": 9
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 6
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 7
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 7
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 4,
+					"public_stock": {
+						"brick": 1,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 3,
+					"sequence": 20
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 11
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 12
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 13
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						}
+					],
+					"pop_reserve": 4,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 4,
+					"sequence": 36
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 2
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 15
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 15
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 16
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 5,
+					"sequence": 46
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 2
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 17
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 17
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 18
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 6,
+					"sequence": 52
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 2
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 21
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 20
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 22
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 7,
+					"sequence": 63
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 3
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 23
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 22
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 4.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 23
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 8,
+					"sequence": 68
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 3
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 8,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 25
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 25
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 4.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 26
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 9,
+					"sequence": 76
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 3
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 8,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 26
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 4.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 26
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 5.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 27
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 10,
+					"sequence": 79
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 4
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 8,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 4.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 30
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 10,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 30
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3.0,
+								"prestige": 6
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 30
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						},
+						{
+							"house": "red",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 10,
+							"sequence": 81
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 11,
+					"sequence": 90
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 4
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 8,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 5.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 31
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 10,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 32
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 4.0,
+								"prestige": 6
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 31
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						},
+						{
+							"house": "red",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 10,
+							"sequence": 81
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 12,
+					"sequence": 94
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 4
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 8,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 6.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 32
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 10,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 33
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 4.0,
+								"prestige": 6
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 33
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						},
+						{
+							"house": "red",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 10,
+							"sequence": 81
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 13,
+					"sequence": 98
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 5
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 8,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 7.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 33
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 10,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 34
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 5.0,
+								"prestige": 6
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 34
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						},
+						{
+							"house": "red",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 10,
+							"sequence": 81
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 14,
+					"sequence": 101
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 5
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 8,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 7.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 36
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 10,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 4.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 37
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 4.0,
+								"prestige": 6
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 37
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						},
+						{
+							"house": "red",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 10,
+							"sequence": 81
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 15,
+					"sequence": 111
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 5
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 8,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 8.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 37
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 10,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 5.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 38
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 4.0,
+								"prestige": 6
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 39
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						},
+						{
+							"house": "red",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 10,
+							"sequence": 81
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 16,
+					"sequence": 115
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 6
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 8,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3.0,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 40
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 10,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 6.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 40
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 5.0,
+								"prestige": 6
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 41
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						},
+						{
+							"house": "red",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 10,
+							"sequence": 81
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 17,
+					"sequence": 122
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 6
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 8,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 5.0,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 42
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 10,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 7.0,
+								"prestige": 5
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 42
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 6.0,
+								"prestige": 6
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 43
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						},
+						{
+							"house": "red",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 10,
+							"sequence": 81
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 18,
+					"sequence": 128
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 6
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 8,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3.0,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 46
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 10,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 4.0,
+								"prestige": 6
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 46
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 7.0,
+								"prestige": 6
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 47
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						},
+						{
+							"house": "red",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 10,
+							"sequence": 81
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"round": 19,
+					"sequence": 141
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 7
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 0,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 8,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 5.0,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 49
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 10,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 5.0,
+								"prestige": 6
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 49
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 3,
+							"first_upgrade_round": 3,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3.0,
+								"prestige": 7
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 50
+						}
+					],
+					"lumber_link": false,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "gold",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 3,
+							"sequence": 27
+						},
+						{
+							"house": "red",
+							"kind": "brick_house",
+							"prestige": 5,
+							"round": 10,
+							"sequence": 81
+						}
+					],
+					"pop_reserve": 3,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 3,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 20,
+					"sequence": 150
+				}
+			]
+		},
+		{
+			"access": {
+				"bricks_bartered": 1,
+				"building_uses": 0,
+				"cap_overflow": 0,
+				"chapel_activations": 5,
+				"emergency_units": 1,
+				"furniture_exported": 2,
+				"hut_fallbacks": 0,
+				"idle_pass_rewards": 3,
+				"influence_transferred": 4,
+				"lumber_delivered": 7,
+				"missed_clay_shipments": 0,
+				"paid_free_actions": 0,
+				"prestige_conversions": 0,
+				"reentries": 0,
+				"reserved_units_used": 2,
+				"rural_fallbacks": 0,
+				"rural_free_activations": 2,
+				"stockpile_takes": 11,
+				"working_passes": 20
+			},
+			"buildings": {
+				"carpenter": {
+					"built": true,
+					"definition": "carpenter",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				},
+				"chapel": {
+					"built": true,
+					"definition": "chapel",
+					"level": 1,
+					"owner": "",
+					"plot": "special"
+				},
+				"grain_farm": {
+					"built": true,
+					"definition": "grain_farm",
+					"level": 1,
+					"owner": "",
+					"plot": "field"
+				},
+				"hut_1": {
+					"built": true,
+					"definition": "hut",
+					"level": 2,
+					"owner": "blue",
+					"plot": "urban"
+				},
+				"hut_2": {
+					"built": true,
+					"definition": "hut",
+					"level": 1,
+					"owner": "red",
+					"plot": "urban"
+				},
+				"hut_3": {
+					"built": true,
+					"definition": "hut",
+					"level": 1,
+					"owner": "gold",
+					"plot": "urban"
+				},
+				"lumber_camp": {
+					"built": true,
+					"definition": "lumber_camp",
+					"level": 1,
+					"owner": "",
+					"plot": "forest"
+				},
+				"marketplace": {
+					"built": true,
+					"definition": "marketplace",
+					"level": 1,
+					"owner": "",
+					"plot": "urban"
+				}
+			},
+			"failure": "",
+			"houses": [
+				{
+					"bias": {
+						"ownership": 1.2,
+						"production": 1.3,
+						"trade": 0.7
+					},
+					"did_something": true,
+					"first_claim_round": 4,
+					"first_upgrade_round": 7,
+					"id": "blue",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 1.0,
+						"prestige": 7
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 0
+					},
+					"turns_taken": 20
+				},
+				{
+					"bias": {
+						"ownership": 0.8,
+						"production": 0.9,
+						"trade": 1.5
+					},
+					"did_something": false,
+					"first_claim_round": 2,
+					"first_upgrade_round": 0,
+					"id": "red",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 1.0,
+						"prestige": 3
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 1,
+						"wood": 1
+					},
+					"turns_taken": 19
+				},
+				{
+					"bias": {
+						"ownership": 1.4,
+						"production": 1.0,
+						"trade": 1.0
+					},
+					"did_something": false,
+					"first_claim_round": 5,
+					"first_upgrade_round": 0,
+					"id": "gold",
+					"idle_rewarded": false,
+					"inventory": {
+						"influence": 2.0,
+						"prestige": 0
+					},
+					"passed_last": false,
+					"stockpile": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 0,
+						"luxury": 0,
+						"pop": 1,
+						"wood": 1
+					},
+					"turns_taken": 19
+				}
+			],
+			"locale": "clayless_valley",
+			"market": {
+				"brick": 0,
+				"clay": 1,
+				"furniture": 0,
+				"grain": 1,
+				"luxury": 0,
+				"pop": 0,
+				"wood": 0
+			},
+			"metrics": {
+				"actions": {
+					"activate": 16,
+					"build_market": 1,
+					"buy_brick": 1,
+					"claim": 3,
+					"pass": 24,
+					"secure_clay_contract": 1,
+					"take": 11,
+					"upgrade": 1
+				},
+				"decisions": 58,
+				"failures": [],
+				"invariant_checks": 58,
+				"max_built": 8,
+				"owner_fee_activations": 0,
+				"owner_recognition_activations": 0,
+				"rounds_closed": 6
+			},
+			"milestones": [
+				{
+					"house": "blue",
+					"kind": "market",
+					"prestige": 2,
+					"round": 1,
+					"sequence": 4
+				},
+				{
+					"house": "red",
+					"kind": "clay_contract",
+					"prestige": 3,
+					"round": 5,
+					"sequence": 36
+				},
+				{
+					"house": "blue",
+					"kind": "brick_house",
+					"prestige": 5,
+					"round": 7,
+					"sequence": 58
+				}
+			],
+			"result": "completed",
+			"round": 7,
+			"scenario": {
+				"caravan": {
+					"bricks_left": 0,
+					"first_round": 2,
+					"present": false,
+					"visits": 2
+				},
+				"clay_deliveries": 1,
+				"committed_pops": 2,
+				"end_reason": "clay_import_and_brick_house",
+				"ended": true,
+				"houses": [
+					{
+						"bias": {
+							"ownership": 1.2,
+							"production": 1.3,
+							"trade": 0.7
+						},
+						"did_something": true,
+						"first_claim_round": 4,
+						"first_upgrade_round": 7,
+						"id": "blue",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 1.0,
+							"prestige": 7
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 0,
+							"wood": 0
+						},
+						"turns_taken": 20
+					},
+					{
+						"bias": {
+							"ownership": 0.8,
+							"production": 0.9,
+							"trade": 1.5
+						},
+						"did_something": false,
+						"first_claim_round": 2,
+						"first_upgrade_round": 0,
+						"id": "red",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 1.0,
+							"prestige": 3
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 1,
+							"wood": 1
+						},
+						"turns_taken": 19
+					},
+					{
+						"bias": {
+							"ownership": 1.4,
+							"production": 1.0,
+							"trade": 1.0
+						},
+						"did_something": false,
+						"first_claim_round": 5,
+						"first_upgrade_round": 0,
+						"id": "gold",
+						"idle_rewarded": false,
+						"inventory": {
+							"influence": 2.0,
+							"prestige": 0
+						},
+						"passed_last": false,
+						"stockpile": {
+							"brick": 0,
+							"clay": 0,
+							"furniture": 0,
+							"grain": 0,
+							"luxury": 0,
+							"pop": 1,
+							"wood": 1
+						},
+						"turns_taken": 19
+					}
+				],
+				"lumber_link": true,
+				"market_round": 1,
+				"milestones": [
+					{
+						"house": "blue",
+						"kind": "market",
+						"prestige": 2,
+						"round": 1,
+						"sequence": 4
+					},
+					{
+						"house": "red",
+						"kind": "clay_contract",
+						"prestige": 3,
+						"round": 5,
+						"sequence": 36
+					},
+					{
+						"house": "blue",
+						"kind": "brick_house",
+						"prestige": 5,
+						"round": 7,
+						"sequence": 58
+					}
+				],
+				"pop_reserve": 2,
+				"public_stock": {
+					"brick": 0,
+					"clay": 1,
+					"furniture": 0,
+					"grain": 1,
+					"luxury": 0,
+					"pop": 0,
+					"wood": 0
+				},
+				"round": 7,
+				"sequence": 58
+			},
+			"seed": 42,
+			"sequence": 58,
+			"timeline": [
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 3
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 2
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 0,
+								"wood": 0
+							},
+							"turns_taken": 2
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 5,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 5,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 4
+					},
+					"round": 2,
+					"sequence": 7
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 7
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 2,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 7
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 6
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 2,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 5
+					},
+					"round": 3,
+					"sequence": 20
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 1
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 3,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 10
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 2,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 10
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 10
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 2,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 4
+					},
+					"round": 4,
+					"sequence": 30
+				},
+				{
+					"caravan": {
+						"bricks_left": 2,
+						"first_round": 2,
+						"present": true,
+						"visits": 2
+					},
+					"clay_deliveries": 0,
+					"committed_pops": 1,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 1,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 12
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 2,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 12
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 0,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 11
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						}
+					],
+					"pop_reserve": 2,
+					"public_stock": {
+						"brick": 0,
+						"clay": 0,
+						"furniture": 0,
+						"grain": 2,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 5
+					},
+					"round": 5,
+					"sequence": 35
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 2
+					},
+					"clay_deliveries": 1,
+					"committed_pops": 2,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 0
+							},
+							"turns_taken": 17
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 2,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 18
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 5,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 0.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 17
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "red",
+							"kind": "clay_contract",
+							"prestige": 3,
+							"round": 5,
+							"sequence": 36
+						}
+					],
+					"pop_reserve": 1,
+					"public_stock": {
+						"brick": 0,
+						"clay": 1,
+						"furniture": 0,
+						"grain": 1,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 6,
+					"sequence": 52
+				},
+				{
+					"caravan": {
+						"bricks_left": 0,
+						"first_round": 2,
+						"present": false,
+						"visits": 2
+					},
+					"clay_deliveries": 1,
+					"committed_pops": 2,
+					"end_reason": "",
+					"ended": false,
+					"houses": [
+						{
+							"bias": {
+								"ownership": 1.2,
+								"production": 1.3,
+								"trade": 0.7
+							},
+							"did_something": false,
+							"first_claim_round": 4,
+							"first_upgrade_round": 0,
+							"id": "blue",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 2
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 1,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 19
+						},
+						{
+							"bias": {
+								"ownership": 0.8,
+								"production": 0.9,
+								"trade": 1.5
+							},
+							"did_something": false,
+							"first_claim_round": 2,
+							"first_upgrade_round": 0,
+							"id": "red",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 1.0,
+								"prestige": 3
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 19
+						},
+						{
+							"bias": {
+								"ownership": 1.4,
+								"production": 1.0,
+								"trade": 1.0
+							},
+							"did_something": false,
+							"first_claim_round": 5,
+							"first_upgrade_round": 0,
+							"id": "gold",
+							"idle_rewarded": false,
+							"inventory": {
+								"influence": 2.0,
+								"prestige": 0
+							},
+							"passed_last": false,
+							"stockpile": {
+								"brick": 0,
+								"clay": 0,
+								"furniture": 0,
+								"grain": 0,
+								"luxury": 0,
+								"pop": 1,
+								"wood": 1
+							},
+							"turns_taken": 19
+						}
+					],
+					"lumber_link": true,
+					"market_round": 1,
+					"milestones": [
+						{
+							"house": "blue",
+							"kind": "market",
+							"prestige": 2,
+							"round": 1,
+							"sequence": 4
+						},
+						{
+							"house": "red",
+							"kind": "clay_contract",
+							"prestige": 3,
+							"round": 5,
+							"sequence": 36
+						}
+					],
+					"pop_reserve": 1,
+					"public_stock": {
+						"brick": 0,
+						"clay": 1,
+						"furniture": 0,
+						"grain": 1,
+						"luxury": 0,
+						"pop": 0,
+						"wood": 1
+					},
+					"round": 7,
+					"sequence": 57
+				}
+			]
+		}
+	],
+	"max_rounds": 40,
+	"total_decisions": 486
+}

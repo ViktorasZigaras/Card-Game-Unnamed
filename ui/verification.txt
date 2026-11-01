@@ -1,0 +1,8 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+
+v0.60 UI checks passed: 83 states, all selections, tabs, previews, manual action, AI step, exact save/load; minimum (1590.0, 1061.0)
+
+Regression:
+
+
+{"checks":82,"failures":[],"games":6,"total_decisions":486}
