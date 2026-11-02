@@ -1,0 +1,44 @@
+[
+	{
+		"checked": 806,
+		"error": "",
+		"linked": false,
+		"round": 81,
+		"seed": 1
+	},
+	{
+		"checked": 854,
+		"error": "",
+		"linked": true,
+		"round": 81,
+		"seed": 1
+	},
+	{
+		"checked": 846,
+		"error": "",
+		"linked": false,
+		"round": 81,
+		"seed": 7
+	},
+	{
+		"checked": 845,
+		"error": "",
+		"linked": true,
+		"round": 81,
+		"seed": 7
+	},
+	{
+		"checked": 647,
+		"error": "",
+		"linked": false,
+		"round": 81,
+		"seed": 42
+	},
+	{
+		"checked": 808,
+		"error": "",
+		"linked": true,
+		"round": 81,
+		"seed": 42
+	}
+]

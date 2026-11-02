@@ -1,0 +1,239 @@
+[
+	{
+		"bridge": false,
+		"failure": "",
+		"free_land": 1,
+		"goal_met": true,
+		"imports": {
+			"brick": 0,
+			"clay": 2,
+			"furniture": 0,
+			"grain": 0,
+			"luxury": 0,
+			"planks": 0,
+			"pop": 0,
+			"stone": 1,
+			"wood": 0
+		},
+		"replay": {
+			"checked": 20,
+			"ok": true
+		},
+		"routes": [],
+		"save_exact": true,
+		"seed": 1,
+		"steps": 20
+	},
+	{
+		"bridge": true,
+		"failure": "",
+		"free_land": 1,
+		"goal_met": true,
+		"imports": {
+			"brick": 0,
+			"clay": 4,
+			"furniture": 0,
+			"grain": 0,
+			"luxury": 0,
+			"planks": 0,
+			"pop": 0,
+			"stone": 0,
+			"wood": 0
+		},
+		"replay": {
+			"checked": 77,
+			"ok": true
+		},
+		"routes": [
+			{
+				"access": "public",
+				"active": false,
+				"delivered": 4,
+				"financial_origin": {
+					"cash": 4,
+					"delivered": 0,
+					"observation": {
+						"cargo_resource": 0,
+						"missing_homes": 2,
+						"physical_brick": 0,
+						"physical_resource": 0
+					},
+					"owner": "blue",
+					"round": 3
+				},
+				"id": 1,
+				"misses": 0,
+				"next_round": 8,
+				"owner": "blue",
+				"price": 5,
+				"quantity": 1,
+				"resource": "clay",
+				"sponsor": "blue",
+				"town_reward_eligible": true,
+				"trip": 1,
+				"unit_price": 1
+			}
+		],
+		"save_exact": true,
+		"seed": 1,
+		"steps": 77
+	},
+	{
+		"bridge": false,
+		"failure": "",
+		"free_land": 1,
+		"goal_met": true,
+		"imports": {
+			"brick": 0,
+			"clay": 2,
+			"furniture": 0,
+			"grain": 0,
+			"luxury": 0,
+			"planks": 0,
+			"pop": 0,
+			"stone": 1,
+			"wood": 0
+		},
+		"replay": {
+			"checked": 20,
+			"ok": true
+		},
+		"routes": [],
+		"save_exact": true,
+		"seed": 7,
+		"steps": 20
+	},
+	{
+		"bridge": true,
+		"failure": "",
+		"free_land": 1,
+		"goal_met": true,
+		"imports": {
+			"brick": 0,
+			"clay": 4,
+			"furniture": 0,
+			"grain": 0,
+			"luxury": 0,
+			"planks": 0,
+			"pop": 0,
+			"stone": 0,
+			"wood": 0
+		},
+		"replay": {
+			"checked": 89,
+			"ok": true
+		},
+		"routes": [
+			{
+				"access": "public",
+				"active": false,
+				"delivered": 4,
+				"financial_origin": {
+					"cash": 4,
+					"delivered": 0,
+					"observation": {
+						"cargo_resource": 0,
+						"missing_homes": 2,
+						"physical_brick": 0,
+						"physical_resource": 0
+					},
+					"owner": "blue",
+					"round": 3
+				},
+				"id": 1,
+				"misses": 0,
+				"next_round": 8,
+				"owner": "blue",
+				"price": 5,
+				"quantity": 1,
+				"resource": "clay",
+				"sponsor": "blue",
+				"town_reward_eligible": true,
+				"trip": 1,
+				"unit_price": 1
+			}
+		],
+		"save_exact": true,
+		"seed": 7,
+		"steps": 89
+	},
+	{
+		"bridge": false,
+		"failure": "",
+		"free_land": 1,
+		"goal_met": true,
+		"imports": {
+			"brick": 0,
+			"clay": 2,
+			"furniture": 0,
+			"grain": 0,
+			"luxury": 0,
+			"planks": 0,
+			"pop": 0,
+			"stone": 1,
+			"wood": 0
+		},
+		"replay": {
+			"checked": 16,
+			"ok": true
+		},
+		"routes": [],
+		"save_exact": true,
+		"seed": 42,
+		"steps": 16
+	},
+	{
+		"bridge": true,
+		"failure": "",
+		"free_land": 1,
+		"goal_met": true,
+		"imports": {
+			"brick": 0,
+			"clay": 4,
+			"furniture": 0,
+			"grain": 0,
+			"luxury": 0,
+			"planks": 0,
+			"pop": 0,
+			"stone": 0,
+			"wood": 0
+		},
+		"replay": {
+			"checked": 80,
+			"ok": true
+		},
+		"routes": [
+			{
+				"access": "public",
+				"active": false,
+				"delivered": 4,
+				"financial_origin": {
+					"cash": 4,
+					"delivered": 0,
+					"observation": {
+						"cargo_resource": 0,
+						"missing_homes": 2,
+						"physical_brick": 0,
+						"physical_resource": 0
+					},
+					"owner": "blue",
+					"round": 3
+				},
+				"id": 1,
+				"misses": 0,
+				"next_round": 8,
+				"owner": "blue",
+				"price": 5,
+				"quantity": 1,
+				"resource": "clay",
+				"sponsor": "blue",
+				"town_reward_eligible": true,
+				"trip": 1,
+				"unit_price": 1
+			}
+		],
+		"save_exact": true,
+		"seed": 42,
+		"steps": 80
+	}
+]

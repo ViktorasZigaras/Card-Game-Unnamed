@@ -1,0 +1,726 @@
+[
+	{
+		"access": "public",
+		"blue_access_paid": 2,
+		"blue_access_received": 0,
+		"failure": "",
+		"first_delivery_round": 5,
+		"gold_spent": 2,
+		"home_round": 5,
+		"invariants": [],
+		"payments": [
+			{
+				"amount": 2,
+				"cap_overflow": 2,
+				"credited": 0,
+				"from": "blue",
+				"to": "red",
+				"type": "direct_use_payment"
+			}
+		],
+		"planner_recommendation": {
+			"access": "public",
+			"offer": 0,
+			"type": "expedition_contract"
+		},
+		"red_stored_clay": 0,
+		"replay": {
+			"checked": 19,
+			"ok": true
+		},
+		"route": {
+			"access": "public",
+			"active": false,
+			"delivered": 1,
+			"financial_origin": {
+				"cash": 11,
+				"delivered": 0,
+				"observation": {
+					"cargo_resource": 0,
+					"missing_homes": 3,
+					"physical_brick": 0,
+					"physical_resource": 0
+				},
+				"owner": "blue",
+				"round": 3
+			},
+			"id": 1,
+			"misses": 0,
+			"next_round": 6,
+			"owner": "blue",
+			"price": 5,
+			"quantity": 1,
+			"resource": "clay",
+			"sponsor": "blue",
+			"town_reward_eligible": true,
+			"trip": 1,
+			"unit_price": 1
+		},
+		"save_exact": true,
+		"seed": 1,
+		"steps": 19,
+		"style": "store"
+	},
+	{
+		"access": "priority",
+		"blue_access_paid": 0,
+		"blue_access_received": 0,
+		"failure": "",
+		"first_delivery_round": 5,
+		"gold_spent": 2,
+		"home_round": 5,
+		"invariants": [],
+		"payments": [],
+		"planner_recommendation": {
+			"access": "public",
+			"offer": 0,
+			"type": "expedition_contract"
+		},
+		"red_stored_clay": 0,
+		"replay": {
+			"checked": 19,
+			"ok": true
+		},
+		"route": {
+			"access": "priority",
+			"active": false,
+			"delivered": 1,
+			"financial_origin": {
+				"cash": 11,
+				"delivered": 0,
+				"observation": {
+					"cargo_resource": 0,
+					"missing_homes": 3,
+					"physical_brick": 0,
+					"physical_resource": 0
+				},
+				"owner": "blue",
+				"round": 3
+			},
+			"id": 1,
+			"misses": 0,
+			"next_round": 6,
+			"owner": "blue",
+			"price": 5,
+			"quantity": 1,
+			"resource": "clay",
+			"sponsor": "blue",
+			"town_reward_eligible": true,
+			"trip": 1,
+			"unit_price": 1
+		},
+		"save_exact": true,
+		"seed": 1,
+		"steps": 19,
+		"style": "store"
+	},
+	{
+		"access": "public",
+		"blue_access_paid": 1,
+		"blue_access_received": 0,
+		"failure": "",
+		"first_delivery_round": 5,
+		"gold_spent": 2,
+		"home_round": 5,
+		"invariants": [],
+		"payments": [
+			{
+				"amount": 1,
+				"cap_overflow": 1,
+				"credited": 0,
+				"from": "blue",
+				"to": "red",
+				"type": "direct_use_payment"
+			}
+		],
+		"planner_recommendation": {
+			"access": "public",
+			"offer": 0,
+			"type": "expedition_contract"
+		},
+		"red_stored_clay": 0,
+		"replay": {
+			"checked": 16,
+			"ok": true
+		},
+		"route": {
+			"access": "public",
+			"active": false,
+			"delivered": 1,
+			"financial_origin": {
+				"cash": 11,
+				"delivered": 0,
+				"observation": {
+					"cargo_resource": 0,
+					"missing_homes": 3,
+					"physical_brick": 0,
+					"physical_resource": 0
+				},
+				"owner": "blue",
+				"round": 3
+			},
+			"id": 1,
+			"misses": 0,
+			"next_round": 6,
+			"owner": "blue",
+			"price": 5,
+			"quantity": 1,
+			"resource": "clay",
+			"sponsor": "blue",
+			"town_reward_eligible": true,
+			"trip": 1,
+			"unit_price": 1
+		},
+		"save_exact": true,
+		"seed": 1,
+		"steps": 16,
+		"style": "process"
+	},
+	{
+		"access": "priority",
+		"blue_access_paid": 1,
+		"blue_access_received": 1,
+		"failure": "",
+		"first_delivery_round": 5,
+		"gold_spent": 2,
+		"home_round": 5,
+		"invariants": [],
+		"payments": [
+			{
+				"amount": 1,
+				"cap_overflow": 0,
+				"credited": 1,
+				"from": "red",
+				"to": "blue",
+				"type": "direct_use_payment"
+			},
+			{
+				"amount": 1,
+				"cap_overflow": 0,
+				"credited": 1,
+				"from": "blue",
+				"to": "red",
+				"type": "direct_use_payment"
+			}
+		],
+		"planner_recommendation": {
+			"access": "public",
+			"offer": 0,
+			"type": "expedition_contract"
+		},
+		"red_stored_clay": 0,
+		"replay": {
+			"checked": 16,
+			"ok": true
+		},
+		"route": {
+			"access": "priority",
+			"active": false,
+			"delivered": 1,
+			"financial_origin": {
+				"cash": 11,
+				"delivered": 0,
+				"observation": {
+					"cargo_resource": 0,
+					"missing_homes": 3,
+					"physical_brick": 0,
+					"physical_resource": 0
+				},
+				"owner": "blue",
+				"round": 3
+			},
+			"id": 1,
+			"misses": 0,
+			"next_round": 6,
+			"owner": "blue",
+			"price": 5,
+			"quantity": 1,
+			"resource": "clay",
+			"sponsor": "blue",
+			"town_reward_eligible": true,
+			"trip": 1,
+			"unit_price": 1
+		},
+		"save_exact": true,
+		"seed": 1,
+		"steps": 16,
+		"style": "process"
+	},
+	{
+		"access": "public",
+		"blue_access_paid": 2,
+		"blue_access_received": 0,
+		"failure": "",
+		"first_delivery_round": 5,
+		"gold_spent": 3,
+		"home_round": 6,
+		"invariants": [],
+		"payments": [
+			{
+				"amount": 2,
+				"cap_overflow": 2,
+				"credited": 0,
+				"from": "blue",
+				"to": "red",
+				"type": "direct_use_payment"
+			}
+		],
+		"planner_recommendation": {
+			"access": "public",
+			"offer": 0,
+			"type": "expedition_contract"
+		},
+		"red_stored_clay": 1,
+		"replay": {
+			"checked": 21,
+			"ok": true
+		},
+		"route": {
+			"access": "public",
+			"active": false,
+			"delivered": 2,
+			"financial_origin": {
+				"cash": 11,
+				"delivered": 0,
+				"observation": {
+					"cargo_resource": 0,
+					"missing_homes": 3,
+					"physical_brick": 0,
+					"physical_resource": 0
+				},
+				"owner": "blue",
+				"round": 3
+			},
+			"id": 1,
+			"misses": 0,
+			"next_round": 7,
+			"owner": "blue",
+			"price": 5,
+			"quantity": 1,
+			"resource": "clay",
+			"sponsor": "blue",
+			"town_reward_eligible": true,
+			"trip": 1,
+			"unit_price": 1
+		},
+		"save_exact": true,
+		"seed": 7,
+		"steps": 21,
+		"style": "store"
+	},
+	{
+		"access": "priority",
+		"blue_access_paid": 0,
+		"blue_access_received": 0,
+		"failure": "",
+		"first_delivery_round": 5,
+		"gold_spent": 3,
+		"home_round": 6,
+		"invariants": [],
+		"payments": [],
+		"planner_recommendation": {
+			"access": "public",
+			"offer": 0,
+			"type": "expedition_contract"
+		},
+		"red_stored_clay": 1,
+		"replay": {
+			"checked": 21,
+			"ok": true
+		},
+		"route": {
+			"access": "priority",
+			"active": false,
+			"delivered": 2,
+			"financial_origin": {
+				"cash": 11,
+				"delivered": 0,
+				"observation": {
+					"cargo_resource": 0,
+					"missing_homes": 3,
+					"physical_brick": 0,
+					"physical_resource": 0
+				},
+				"owner": "blue",
+				"round": 3
+			},
+			"id": 1,
+			"misses": 0,
+			"next_round": 7,
+			"owner": "blue",
+			"price": 5,
+			"quantity": 1,
+			"resource": "clay",
+			"sponsor": "blue",
+			"town_reward_eligible": true,
+			"trip": 1,
+			"unit_price": 1
+		},
+		"save_exact": true,
+		"seed": 7,
+		"steps": 21,
+		"style": "store"
+	},
+	{
+		"access": "public",
+		"blue_access_paid": 0,
+		"blue_access_received": 0,
+		"failure": "",
+		"first_delivery_round": 5,
+		"gold_spent": 3,
+		"home_round": 6,
+		"invariants": [],
+		"payments": [],
+		"planner_recommendation": {
+			"access": "public",
+			"offer": 0,
+			"type": "expedition_contract"
+		},
+		"red_stored_clay": 0,
+		"replay": {
+			"checked": 19,
+			"ok": true
+		},
+		"route": {
+			"access": "public",
+			"active": false,
+			"delivered": 2,
+			"financial_origin": {
+				"cash": 11,
+				"delivered": 0,
+				"observation": {
+					"cargo_resource": 0,
+					"missing_homes": 3,
+					"physical_brick": 0,
+					"physical_resource": 0
+				},
+				"owner": "blue",
+				"round": 3
+			},
+			"id": 1,
+			"misses": 0,
+			"next_round": 7,
+			"owner": "blue",
+			"price": 5,
+			"quantity": 1,
+			"resource": "clay",
+			"sponsor": "blue",
+			"town_reward_eligible": true,
+			"trip": 1,
+			"unit_price": 1
+		},
+		"save_exact": true,
+		"seed": 7,
+		"steps": 19,
+		"style": "process"
+	},
+	{
+		"access": "priority",
+		"blue_access_paid": 0,
+		"blue_access_received": 1,
+		"failure": "",
+		"first_delivery_round": 5,
+		"gold_spent": 3,
+		"home_round": 6,
+		"invariants": [],
+		"payments": [
+			{
+				"amount": 1,
+				"cap_overflow": 0,
+				"credited": 1,
+				"from": "red",
+				"to": "blue",
+				"type": "direct_use_payment"
+			}
+		],
+		"planner_recommendation": {
+			"access": "public",
+			"offer": 0,
+			"type": "expedition_contract"
+		},
+		"red_stored_clay": 0,
+		"replay": {
+			"checked": 19,
+			"ok": true
+		},
+		"route": {
+			"access": "priority",
+			"active": false,
+			"delivered": 2,
+			"financial_origin": {
+				"cash": 11,
+				"delivered": 0,
+				"observation": {
+					"cargo_resource": 0,
+					"missing_homes": 3,
+					"physical_brick": 0,
+					"physical_resource": 0
+				},
+				"owner": "blue",
+				"round": 3
+			},
+			"id": 1,
+			"misses": 0,
+			"next_round": 7,
+			"owner": "blue",
+			"price": 5,
+			"quantity": 1,
+			"resource": "clay",
+			"sponsor": "blue",
+			"town_reward_eligible": true,
+			"trip": 1,
+			"unit_price": 1
+		},
+		"save_exact": true,
+		"seed": 7,
+		"steps": 19,
+		"style": "process"
+	},
+	{
+		"access": "public",
+		"blue_access_paid": 2,
+		"blue_access_received": 0,
+		"failure": "",
+		"first_delivery_round": 5,
+		"gold_spent": 2,
+		"home_round": 5,
+		"invariants": [],
+		"payments": [
+			{
+				"amount": 2,
+				"cap_overflow": 2,
+				"credited": 0,
+				"from": "blue",
+				"to": "red",
+				"type": "direct_use_payment"
+			}
+		],
+		"planner_recommendation": {
+			"access": "public",
+			"offer": 0,
+			"type": "expedition_contract"
+		},
+		"red_stored_clay": 0,
+		"replay": {
+			"checked": 19,
+			"ok": true
+		},
+		"route": {
+			"access": "public",
+			"active": false,
+			"delivered": 1,
+			"financial_origin": {
+				"cash": 11,
+				"delivered": 0,
+				"observation": {
+					"cargo_resource": 0,
+					"missing_homes": 3,
+					"physical_brick": 0,
+					"physical_resource": 0
+				},
+				"owner": "blue",
+				"round": 3
+			},
+			"id": 1,
+			"misses": 0,
+			"next_round": 6,
+			"owner": "blue",
+			"price": 5,
+			"quantity": 1,
+			"resource": "clay",
+			"sponsor": "blue",
+			"town_reward_eligible": true,
+			"trip": 1,
+			"unit_price": 1
+		},
+		"save_exact": true,
+		"seed": 42,
+		"steps": 19,
+		"style": "store"
+	},
+	{
+		"access": "priority",
+		"blue_access_paid": 0,
+		"blue_access_received": 0,
+		"failure": "",
+		"first_delivery_round": 5,
+		"gold_spent": 2,
+		"home_round": 5,
+		"invariants": [],
+		"payments": [],
+		"planner_recommendation": {
+			"access": "public",
+			"offer": 0,
+			"type": "expedition_contract"
+		},
+		"red_stored_clay": 0,
+		"replay": {
+			"checked": 19,
+			"ok": true
+		},
+		"route": {
+			"access": "priority",
+			"active": false,
+			"delivered": 1,
+			"financial_origin": {
+				"cash": 11,
+				"delivered": 0,
+				"observation": {
+					"cargo_resource": 0,
+					"missing_homes": 3,
+					"physical_brick": 0,
+					"physical_resource": 0
+				},
+				"owner": "blue",
+				"round": 3
+			},
+			"id": 1,
+			"misses": 0,
+			"next_round": 6,
+			"owner": "blue",
+			"price": 5,
+			"quantity": 1,
+			"resource": "clay",
+			"sponsor": "blue",
+			"town_reward_eligible": true,
+			"trip": 1,
+			"unit_price": 1
+		},
+		"save_exact": true,
+		"seed": 42,
+		"steps": 19,
+		"style": "store"
+	},
+	{
+		"access": "public",
+		"blue_access_paid": 1,
+		"blue_access_received": 0,
+		"failure": "",
+		"first_delivery_round": 5,
+		"gold_spent": 2,
+		"home_round": 5,
+		"invariants": [],
+		"payments": [
+			{
+				"amount": 1,
+				"cap_overflow": 1,
+				"credited": 0,
+				"from": "blue",
+				"to": "red",
+				"type": "direct_use_payment"
+			}
+		],
+		"planner_recommendation": {
+			"access": "public",
+			"offer": 0,
+			"type": "expedition_contract"
+		},
+		"red_stored_clay": 0,
+		"replay": {
+			"checked": 16,
+			"ok": true
+		},
+		"route": {
+			"access": "public",
+			"active": false,
+			"delivered": 1,
+			"financial_origin": {
+				"cash": 11,
+				"delivered": 0,
+				"observation": {
+					"cargo_resource": 0,
+					"missing_homes": 3,
+					"physical_brick": 0,
+					"physical_resource": 0
+				},
+				"owner": "blue",
+				"round": 3
+			},
+			"id": 1,
+			"misses": 0,
+			"next_round": 6,
+			"owner": "blue",
+			"price": 5,
+			"quantity": 1,
+			"resource": "clay",
+			"sponsor": "blue",
+			"town_reward_eligible": true,
+			"trip": 1,
+			"unit_price": 1
+		},
+		"save_exact": true,
+		"seed": 42,
+		"steps": 16,
+		"style": "process"
+	},
+	{
+		"access": "priority",
+		"blue_access_paid": 1,
+		"blue_access_received": 1,
+		"failure": "",
+		"first_delivery_round": 5,
+		"gold_spent": 2,
+		"home_round": 5,
+		"invariants": [],
+		"payments": [
+			{
+				"amount": 1,
+				"cap_overflow": 0,
+				"credited": 1,
+				"from": "red",
+				"to": "blue",
+				"type": "direct_use_payment"
+			},
+			{
+				"amount": 1,
+				"cap_overflow": 0,
+				"credited": 1,
+				"from": "blue",
+				"to": "red",
+				"type": "direct_use_payment"
+			}
+		],
+		"planner_recommendation": {
+			"access": "public",
+			"offer": 0,
+			"type": "expedition_contract"
+		},
+		"red_stored_clay": 0,
+		"replay": {
+			"checked": 16,
+			"ok": true
+		},
+		"route": {
+			"access": "priority",
+			"active": false,
+			"delivered": 1,
+			"financial_origin": {
+				"cash": 11,
+				"delivered": 0,
+				"observation": {
+					"cargo_resource": 0,
+					"missing_homes": 3,
+					"physical_brick": 0,
+					"physical_resource": 0
+				},
+				"owner": "blue",
+				"round": 3
+			},
+			"id": 1,
+			"misses": 0,
+			"next_round": 6,
+			"owner": "blue",
+			"price": 5,
+			"quantity": 1,
+			"resource": "clay",
+			"sponsor": "blue",
+			"town_reward_eligible": true,
+			"trip": 1,
+			"unit_price": 1
+		},
+		"save_exact": true,
+		"seed": 42,
+		"steps": 16,
+		"style": "process"
+	}
+]

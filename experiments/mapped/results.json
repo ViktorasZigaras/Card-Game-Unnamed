@@ -1,0 +1,1184 @@
+[
+	{
+		"actions": {
+			"activate": 72,
+			"bulk_exchange": 15,
+			"buy_contract": 7,
+			"buy_prestige": 7,
+			"buy_stone": 5,
+			"claim": 6,
+			"claim_rural": 4,
+			"claim_site": 6,
+			"contribute_upgrade": 9,
+			"convert_prestige": 21,
+			"expedition_buy": 8,
+			"expedition_sell": 13,
+			"export_brick": 15,
+			"hall_work": 14,
+			"launch_expedition": 18,
+			"pass": 419,
+			"redevelop_rural": 2,
+			"return": 40,
+			"return_expedition": 17,
+			"secure_clay_contract": 1,
+			"secure_contract": 3,
+			"supply_site": 13,
+			"supply_town": 5,
+			"supply_wood": 4,
+			"take": 92,
+			"upgrade": 4
+		},
+		"all_goals_round": 34,
+		"all_halls_round": 55,
+		"failure": "",
+		"halls": 3,
+		"imports": {
+			"brick": 0,
+			"clay": 4,
+			"furniture": 0,
+			"grain": 2,
+			"luxury": 0,
+			"planks": 0,
+			"pop": 0,
+			"stone": 2,
+			"wood": 0
+		},
+		"linked": false,
+		"replay": {
+			"checked": 820,
+			"ok": true
+		},
+		"routes": [],
+		"save_exact": true,
+		"seed": 1,
+		"steps": 820,
+		"town_map": {
+			"cells": [
+				{
+					"active": true,
+					"building": "hut_1",
+					"column": 1,
+					"id": "U1",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hut_2",
+					"column": 2,
+					"id": "U2",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hut_3",
+					"column": 3,
+					"id": "U3",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "carpenter",
+					"column": 1,
+					"id": "U4",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "marketplace",
+					"column": 2,
+					"id": "U5",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_gold",
+					"column": 3,
+					"id": "U6",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "lumber_camp",
+					"column": 0,
+					"id": "F1",
+					"row": 0,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_blue",
+					"column": 0,
+					"id": "F2",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "grain_farm",
+					"column": 1,
+					"id": "D1",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_red",
+					"column": 2,
+					"id": "D2",
+					"row": 2,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "chapel",
+					"column": 4,
+					"id": "S1",
+					"row": 0,
+					"terrain": "special",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 0,
+					"id": "N1",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 3,
+					"id": "N2",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "small_sawmill",
+					"column": 4,
+					"id": "N3",
+					"row": 1,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 4,
+					"id": "N4",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				}
+			],
+			"columns": 5,
+			"rows": 3,
+			"version": 1
+		},
+		"trips": 18
+	},
+	{
+		"actions": {
+			"activate": 68,
+			"bulk_exchange": 19,
+			"buy_contract": 8,
+			"buy_prestige": 6,
+			"buy_stone": 7,
+			"claim": 6,
+			"claim_rural": 4,
+			"claim_site": 6,
+			"contribute_upgrade": 10,
+			"convert_prestige": 25,
+			"expedition_buy": 4,
+			"expedition_sell": 7,
+			"export_brick": 17,
+			"hall_work": 13,
+			"launch_expedition": 23,
+			"pass": 411,
+			"redevelop_rural": 2,
+			"return": 31,
+			"return_expedition": 22,
+			"secure_clay_contract": 1,
+			"secure_contract": 2,
+			"supply_site": 11,
+			"supply_town": 4,
+			"supply_wood": 4,
+			"take": 91,
+			"upgrade": 4
+		},
+		"all_goals_round": 24,
+		"all_halls_round": 51,
+		"failure": "",
+		"halls": 3,
+		"imports": {
+			"brick": 0,
+			"clay": 2,
+			"furniture": 0,
+			"grain": 2,
+			"luxury": 0,
+			"planks": 0,
+			"pop": 0,
+			"stone": 0,
+			"wood": 0
+		},
+		"linked": true,
+		"replay": {
+			"checked": 806,
+			"ok": true
+		},
+		"routes": [],
+		"save_exact": true,
+		"seed": 1,
+		"steps": 806,
+		"town_map": {
+			"cells": [
+				{
+					"active": true,
+					"building": "hut_1",
+					"column": 1,
+					"id": "U1",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hut_2",
+					"column": 2,
+					"id": "U2",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hut_3",
+					"column": 3,
+					"id": "U3",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "carpenter",
+					"column": 1,
+					"id": "U4",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "marketplace",
+					"column": 2,
+					"id": "U5",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_blue",
+					"column": 3,
+					"id": "U6",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "lumber_camp",
+					"column": 0,
+					"id": "F1",
+					"row": 0,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_red",
+					"column": 0,
+					"id": "F2",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "grain_farm",
+					"column": 1,
+					"id": "D1",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_gold",
+					"column": 2,
+					"id": "D2",
+					"row": 2,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "chapel",
+					"column": 4,
+					"id": "S1",
+					"row": 0,
+					"terrain": "special",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 0,
+					"id": "N1",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "small_sawmill",
+					"column": 3,
+					"id": "N2",
+					"row": 2,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 4,
+					"id": "N3",
+					"row": 1,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 4,
+					"id": "N4",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				}
+			],
+			"columns": 5,
+			"rows": 3,
+			"version": 1
+		},
+		"trips": 23
+	},
+	{
+		"actions": {
+			"activate": 72,
+			"bulk_exchange": 19,
+			"buy_contract": 8,
+			"buy_prestige": 6,
+			"buy_stone": 7,
+			"claim": 6,
+			"claim_rural": 4,
+			"claim_site": 6,
+			"contribute_upgrade": 10,
+			"convert_prestige": 26,
+			"expedition_buy": 5,
+			"expedition_sell": 8,
+			"export_brick": 17,
+			"hall_work": 15,
+			"launch_expedition": 15,
+			"pass": 446,
+			"redevelop_rural": 2,
+			"return": 36,
+			"return_expedition": 15,
+			"secure_clay_contract": 1,
+			"secure_contract": 3,
+			"supply_site": 14,
+			"supply_town": 4,
+			"supply_wood": 3,
+			"take": 100,
+			"upgrade": 4
+		},
+		"all_goals_round": 29,
+		"all_halls_round": 51,
+		"failure": "",
+		"halls": 3,
+		"imports": {
+			"brick": 0,
+			"clay": 3,
+			"furniture": 0,
+			"grain": 2,
+			"luxury": 0,
+			"planks": 0,
+			"pop": 0,
+			"stone": 0,
+			"wood": 0
+		},
+		"linked": false,
+		"replay": {
+			"checked": 852,
+			"ok": true
+		},
+		"routes": [],
+		"save_exact": true,
+		"seed": 7,
+		"steps": 852,
+		"town_map": {
+			"cells": [
+				{
+					"active": true,
+					"building": "hut_1",
+					"column": 1,
+					"id": "U1",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hut_2",
+					"column": 2,
+					"id": "U2",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hut_3",
+					"column": 3,
+					"id": "U3",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "carpenter",
+					"column": 1,
+					"id": "U4",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "marketplace",
+					"column": 2,
+					"id": "U5",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_blue",
+					"column": 3,
+					"id": "U6",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "lumber_camp",
+					"column": 0,
+					"id": "F1",
+					"row": 0,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_red",
+					"column": 0,
+					"id": "F2",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "grain_farm",
+					"column": 1,
+					"id": "D1",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_gold",
+					"column": 2,
+					"id": "D2",
+					"row": 2,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "chapel",
+					"column": 4,
+					"id": "S1",
+					"row": 0,
+					"terrain": "special",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "small_sawmill",
+					"column": 0,
+					"id": "N1",
+					"row": 2,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 3,
+					"id": "N2",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 4,
+					"id": "N3",
+					"row": 1,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 4,
+					"id": "N4",
+					"row": 2,
+					"terrain": "forest",
+					"vegetation": false
+				}
+			],
+			"columns": 5,
+			"rows": 3,
+			"version": 1
+		},
+		"trips": 15
+	},
+	{
+		"actions": {
+			"activate": 74,
+			"bulk_exchange": 17,
+			"buy_contract": 8,
+			"buy_prestige": 7,
+			"buy_stone": 6,
+			"claim": 6,
+			"claim_rural": 4,
+			"claim_site": 6,
+			"contribute_upgrade": 9,
+			"convert_prestige": 26,
+			"expedition_buy": 4,
+			"expedition_sell": 9,
+			"export_brick": 18,
+			"hall_work": 16,
+			"launch_expedition": 20,
+			"pass": 439,
+			"redevelop_rural": 2,
+			"return": 24,
+			"return_expedition": 20,
+			"secure_clay_contract": 1,
+			"secure_contract": 2,
+			"supply_site": 13,
+			"supply_town": 4,
+			"supply_wood": 4,
+			"take": 84,
+			"upgrade": 4
+		},
+		"all_goals_round": 21,
+		"all_halls_round": 50,
+		"failure": "",
+		"halls": 3,
+		"imports": {
+			"brick": 0,
+			"clay": 3,
+			"furniture": 0,
+			"grain": 0,
+			"luxury": 0,
+			"planks": 0,
+			"pop": 0,
+			"stone": 1,
+			"wood": 0
+		},
+		"linked": true,
+		"replay": {
+			"checked": 827,
+			"ok": true
+		},
+		"routes": [],
+		"save_exact": true,
+		"seed": 7,
+		"steps": 827,
+		"town_map": {
+			"cells": [
+				{
+					"active": true,
+					"building": "hut_1",
+					"column": 1,
+					"id": "U1",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hut_2",
+					"column": 2,
+					"id": "U2",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hut_3",
+					"column": 3,
+					"id": "U3",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "carpenter",
+					"column": 1,
+					"id": "U4",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "marketplace",
+					"column": 2,
+					"id": "U5",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_gold",
+					"column": 3,
+					"id": "U6",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "lumber_camp",
+					"column": 0,
+					"id": "F1",
+					"row": 0,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_blue",
+					"column": 0,
+					"id": "F2",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "grain_farm",
+					"column": 1,
+					"id": "D1",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_red",
+					"column": 2,
+					"id": "D2",
+					"row": 2,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "chapel",
+					"column": 4,
+					"id": "S1",
+					"row": 0,
+					"terrain": "special",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "small_sawmill",
+					"column": 0,
+					"id": "N1",
+					"row": 2,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 3,
+					"id": "N2",
+					"row": 2,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 4,
+					"id": "N3",
+					"row": 1,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 4,
+					"id": "N4",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				}
+			],
+			"columns": 5,
+			"rows": 3,
+			"version": 1
+		},
+		"trips": 20
+	},
+	{
+		"actions": {
+			"activate": 70,
+			"bulk_exchange": 12,
+			"buy_contract": 7,
+			"buy_prestige": 5,
+			"buy_stone": 7,
+			"claim": 6,
+			"claim_rural": 4,
+			"claim_site": 6,
+			"contribute_upgrade": 9,
+			"convert_prestige": 16,
+			"expedition_buy": 3,
+			"expedition_sell": 8,
+			"export_brick": 13,
+			"hall_work": 12,
+			"launch_expedition": 12,
+			"pass": 354,
+			"redevelop_rural": 2,
+			"return": 12,
+			"return_expedition": 12,
+			"secure_clay_contract": 1,
+			"secure_contract": 3,
+			"supply_site": 12,
+			"supply_town": 4,
+			"supply_wood": 4,
+			"take": 53,
+			"upgrade": 4
+		},
+		"all_goals_round": 59,
+		"all_halls_round": 64,
+		"failure": "",
+		"halls": 3,
+		"imports": {
+			"brick": 0,
+			"clay": 2,
+			"furniture": 0,
+			"grain": 0,
+			"luxury": 0,
+			"planks": 0,
+			"pop": 0,
+			"stone": 0,
+			"wood": 0
+		},
+		"linked": false,
+		"replay": {
+			"checked": 651,
+			"ok": true
+		},
+		"routes": [],
+		"save_exact": true,
+		"seed": 42,
+		"steps": 651,
+		"town_map": {
+			"cells": [
+				{
+					"active": true,
+					"building": "hut_1",
+					"column": 1,
+					"id": "U1",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hut_2",
+					"column": 2,
+					"id": "U2",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hut_3",
+					"column": 3,
+					"id": "U3",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "carpenter",
+					"column": 1,
+					"id": "U4",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "marketplace",
+					"column": 2,
+					"id": "U5",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_blue",
+					"column": 3,
+					"id": "U6",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "lumber_camp",
+					"column": 0,
+					"id": "F1",
+					"row": 0,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_gold",
+					"column": 0,
+					"id": "F2",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "grain_farm",
+					"column": 1,
+					"id": "D1",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_red",
+					"column": 2,
+					"id": "D2",
+					"row": 2,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "chapel",
+					"column": 4,
+					"id": "S1",
+					"row": 0,
+					"terrain": "special",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "small_sawmill",
+					"column": 0,
+					"id": "N1",
+					"row": 2,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 3,
+					"id": "N2",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 4,
+					"id": "N3",
+					"row": 1,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 4,
+					"id": "N4",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				}
+			],
+			"columns": 5,
+			"rows": 3,
+			"version": 1
+		},
+		"trips": 12
+	},
+	{
+		"actions": {
+			"activate": 75,
+			"bulk_exchange": 18,
+			"buy_contract": 9,
+			"buy_prestige": 5,
+			"buy_stone": 6,
+			"claim": 6,
+			"claim_rural": 4,
+			"claim_site": 6,
+			"contribute_upgrade": 10,
+			"convert_prestige": 26,
+			"expedition_buy": 8,
+			"expedition_sell": 11,
+			"export_brick": 15,
+			"hall_work": 13,
+			"launch_expedition": 24,
+			"pass": 445,
+			"redevelop_rural": 2,
+			"return": 24,
+			"return_expedition": 24,
+			"secure_clay_contract": 1,
+			"secure_contract": 2,
+			"supply_site": 14,
+			"supply_town": 5,
+			"supply_wood": 4,
+			"take": 76,
+			"upgrade": 4
+		},
+		"all_goals_round": 32,
+		"all_halls_round": 51,
+		"failure": "",
+		"halls": 3,
+		"imports": {
+			"brick": 0,
+			"clay": 1,
+			"furniture": 0,
+			"grain": 6,
+			"luxury": 0,
+			"planks": 0,
+			"pop": 0,
+			"stone": 1,
+			"wood": 0
+		},
+		"linked": true,
+		"replay": {
+			"checked": 837,
+			"ok": true
+		},
+		"routes": [],
+		"save_exact": true,
+		"seed": 42,
+		"steps": 837,
+		"town_map": {
+			"cells": [
+				{
+					"active": true,
+					"building": "hut_1",
+					"column": 1,
+					"id": "U1",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hut_2",
+					"column": 2,
+					"id": "U2",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hut_3",
+					"column": 3,
+					"id": "U3",
+					"row": 0,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "carpenter",
+					"column": 1,
+					"id": "U4",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "marketplace",
+					"column": 2,
+					"id": "U5",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_red",
+					"column": 3,
+					"id": "U6",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "lumber_camp",
+					"column": 0,
+					"id": "F1",
+					"row": 0,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_gold",
+					"column": 0,
+					"id": "F2",
+					"row": 1,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "grain_farm",
+					"column": 1,
+					"id": "D1",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "hall_blue",
+					"column": 2,
+					"id": "D2",
+					"row": 2,
+					"terrain": "urban",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "chapel",
+					"column": 4,
+					"id": "S1",
+					"row": 0,
+					"terrain": "special",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 0,
+					"id": "N1",
+					"row": 2,
+					"terrain": "field",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "small_sawmill",
+					"column": 3,
+					"id": "N2",
+					"row": 2,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 4,
+					"id": "N3",
+					"row": 1,
+					"terrain": "forest",
+					"vegetation": false
+				},
+				{
+					"active": true,
+					"building": "",
+					"column": 4,
+					"id": "N4",
+					"row": 2,
+					"terrain": "forest",
+					"vegetation": false
+				}
+			],
+			"columns": 5,
+			"rows": 3,
+			"version": 1
+		},
+		"trips": 24
+	}
+]
