@@ -20,7 +20,10 @@ func run() -> void:
 		ui._draw()
 		await process_frame
 		biggest = biggest.max(ui.root_box.get_minimum_size()+Vector2(32,32))
-		assert(biggest.x <= 1920 and biggest.y <= 1080,"Live contract layout overflow")
+		if biggest.x > 1920 or biggest.y > 1080:
+			print("OVERFLOW ",biggest," ",action," round ",sim.state.round)
+			quit(1)
+			return
 	assert(kinds.has("secure_contract") and kinds.has("bulk_exchange"),"New UI actions not exercised")
 	assert(ui.session.save_game() == OK)
 	var saved = TownSimulation.canonical(ui.session.sim.snapshot())

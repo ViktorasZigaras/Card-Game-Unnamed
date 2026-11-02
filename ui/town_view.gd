@@ -53,16 +53,20 @@ func redraw() -> void:
 		label.position = button.position+Vector2(-5,footprint.y-20)
 		label.size.x = footprint.x+10
 		layer.add_child(label)
-	if current.buildings.has("kiln") and current.buildings.kiln.built:
+	var extra_ids = ["kiln","small_sawmill","hall_blue","hall_red","hall_gold"]
+	for i in extra_ids.size():
+		var id = extra_ids[i]
+		if not current.buildings.has(id): continue
+		var b: Dictionary = current.buildings[id]
+		if not b.built and not current.get("houseworks",{}).get("sites",{}).has(id): continue
 		var marker := Button.new()
-		marker.text = "Kiln"
-		marker.icon = Art.sprite("brick")
-		marker.expand_icon = true
-		marker.add_theme_constant_override("icon_max_width",30)
-		marker.position = Vector2(size.x*.43,size.y*.41)
-		marker.size = Vector2(155,44)
-		marker.tooltip_text = "Kiln — temporary marker"
-		marker.pressed.connect(func(): object_selected.emit("kiln"))
+		marker.text = id.replace("_"," ").capitalize()+(" · site" if not b.built else "")
+		marker.add_theme_font_size_override("font_size",14)
+		marker.clip_text = true
+		marker.position = Vector2(i*size.x/5,size.y*.41)
+		marker.size = Vector2(size.x/5-5,44)
+		marker.tooltip_text = marker.text+" — temporary marker"
+		marker.pressed.connect(func(): object_selected.emit(id))
 		layer.add_child(marker)
 	if current.caravan.present:
 		var wagon := Art.picture(layer,"caravan",Vector2(120,90))

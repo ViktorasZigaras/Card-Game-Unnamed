@@ -1,6 +1,10 @@
 # Proposed next issue: partial construction, plot reservation and forced overbuilding
 
-Status: proposal, not implemented in v0.901. Intended next version: v0.902.
+Status: partly implemented in v0.903 for House Halls and the sawmill. Marketplace/kiln partial construction and general forced replacement remain deferred.
+
+Experiment 013 now demonstrates demand for expanded urban land: two hall sites per town compete for the two extra slots. The immediate AI follow-up is to stop manufacturing planks for a third hall that cannot secure land. See HOUSE_HALLS_AND_SAWMILL_013.md.
+
+The v0.902 stockade experiment now opens two extra urban slots, which stayed vacant in the matched games. Give that capacity a concrete economic use while implementing partial new construction. Separately test AI brick allocation: legal exports and town demand still strand unfinished homes. See STOCKADE_AND_LAND_TEST_012.md.
 
 Partial upgrades now work and improve completion in matched tests. New buildings still appear only after a complete payment, so unfinished construction cannot reserve land, compete for it or be deliberately replaced. Complete that part of the agreed design before adding another economic subsystem.
 

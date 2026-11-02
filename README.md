@@ -1,48 +1,62 @@
-# Card Game — Town and Houses · v0.901
+# Card Game — Town and Houses · v0.905
 
-A native 2D Godot prototype of a cashless medieval town. Three houses pursue a brick home, an owned industry, and then prestige through influence, labour, production, public works and caravan trade.
+A native 2D Godot prototype of competing noble/merchant houses in one developing town. The current AI pursues a good home, an owned industry, a House Hall, then further opportunities. This is a planner's economy with persistent goods, scarce labour, shared cards and consequential access rights.
 
 ## Run
 
-1. Use Godot 4.5 or newer (standard edition).
-2. Download and extract the repository, then import `project.godot`.
-3. Press F5. Use F11/fullscreen on a 1080p display; the minimum window is 1920 × 1080.
+1. Use Godot 4.5 or newer, standard edition.
+2. Extract the source ZIP and import `project.godot`.
+3. Press F5. The interface targets 1920 × 1080; F11 toggles fullscreen.
 
-This is an editor-playable source project, not an exported Windows executable. Art is included; no external plugins are needed.
+This is an editor-playable source project. Art is included; external plugins are not required. Source version: 0.905.
 
-## Current prototype
+## New financing policy
 
-- Shared four-card hand, cycling discard, turns until consecutive passes, rotating round starter.
-- Urban/rural plots, three houses, three-token stockpiles, finite labour capacity and paid access to reserved goods.
-- Production, ownership, upgrades, standing contracts, prestige-bought contract priority and increasingly expensive takeovers.
-- A wood token permanently backing clay imports, a public kiln, brick demand from the town, and caravan brick exports for gold.
-- Caravan prestige and stone purchases; an unownable catch-up chapel upgraded from two to three influence.
-- Partial home/chapel upgrades: contributions are consumed into persistent progress and project cards cycle until completion.
-- Native manual play, AI step/play, replay/history, exact saves, logging and diagnostic scripts.
+The AI compares finite cargo with a limited, prefunded standing route. It counts cargo already returning, requires operating gold and cancellation prestige, protects those budgets and pays for exit when its bounded delivery target is reached. Contract previews show an advisory funding assessment; human legal choices remain available.
 
-General partial construction, plot reservations for unfinished new buildings, and forced overbuilding remain design work. See [the proposed next issue](docs/NEXT_ISSUE_012.md). Version increments now use 0.9xx.
+No prices, legal moves or delivery rules changed. Schema 16 adds saved acquisition observations so the policy can reconstruct its budget after loading. Ordinary route funding has an economic ceiling: the cheapest import spends one gold each round while the entire town's caravan export order earns only one gold every three rounds.
 
-## Controls
+[Experiment 015](docs/ROUTE_FINANCING_TEST_015.md) compares twelve towns. The financing policy imported 31 units versus 20, selected no standing routes in the ordinary sample, and had zero route misses versus 37. All eighteen houses per policy completed Halls. Three separately funded cases show that the AI can take a real four-unit contract, deliver without misses and pay to release transport; three finite-cargo cases avoid binding transport.
 
-Select a town building, asset, resource, house or hand card. Preview an available action, then Execute. The tester controls the current house; AI step/play can substitute for any turns. Pause AI before inspecting live choices.
+All 9,532 ordinary and 299 directed decisions replay exactly. The new financing suite has 52 checks, alongside the previous 93 expedition checks and older regressions. These small samples do not establish optimal play or permanent-route profitability.
 
-Caravan contains current trade offers. Links contains contracts, standing town demand and committed capacity. Building inspection shows paid upgrade contributions and remaining requirements. Gold appears on house panels. The kiln has a temporary labelled marker and stone is text-only; their final sprites are not yet supplied.
+## Core mechanics carried forward
 
-New, Save, Load, Laboratory and Replay/live are available in the header. Saves preserve the simulation and RNG; a load starts a new journal. The historical recording is v0.60 material, not evidence of the current rules. Housing/industry milestones are recorded while live play continues.
+- Social clearing/claiming and material construction are separate actions. Paid sites reserve land and are protected while unfinished. Partial construction covers marketplace, kiln, sawmill and Halls; demolished completed sites can be rebuilt without stale progress records.
+- Eligible occupied rural plots can be cleared and converted, including cancellation costs for dependent legacy contracts. The combined cancellation rule is deliberately provisional.
+- Recipe unlocks are global and permanent. Rural claims roll the woodland biome's provisional 65% forest / 35% field distribution.
+- Each completed Hall supplies one land transport capacity.
+- An expedition consumes one grain, holds one real labour token as crew, travels for six future normal town actions, then presents two buying/contracting offers and two selling offers to its sponsor.
+- Goods are selected from the known material catalogue. Each direct offer has two finite units; the sponsor's trading window lasts at most six normal actions. The expedition also needs six normal actions to return.
+- Purchases travel as cargo and are delivered on return into private storage if space exists, otherwise unreserved public supply. Sales use ordinary legal input access, including influence fees to rival holders.
+- A standing route is owned at establishment and has automatic one-token output priority. It keeps transport committed after crew return and attempts one paid import each round. Independent routes can bind the same good. Missed payments produce missed deliveries, not free goods.
+- A useful first clay expedition contract can earn a one-time town prestige reward. Route buyouts transfer both priority and transport obligations; costly cancellation releases route capacity.
 
-## Latest validation
+The AI now distinguishes a future replacement route from readiness to execute it, gathers Hall inputs before clearing the kiln, avoids idle storage reversals that formerly prevented round closure, and reserves some gold for route operation. It remains a bounded rule-based player, not a general strategic search engine.
 
-[Experiment 011](docs/PARTIAL_UPGRADES_AND_STONE_CHAPEL_011.md) compares twelve matched towns: partial home upgrades completed both house goals in six of six, atomic controls in four of six. All chapels upgraded. All 4,244 decisions replayed exactly; all twelve saves restored exactly. This small, hand-scored-AI sample is not a balance guarantee.
+## Controls and inspection
 
-31 project checks, 22 trade checks and 47 ownership/priority checks pass. Native interface checks cover 83 archived states plus live preview/execute, partial contributions, stone purchases, chapel completion and exact save/load.
+Select a town object, asset, house or resource; preview its legal action and execute it. **Links** contains site claims, protected construction and land development. **Caravan** also contains expedition launch/trade/return and route actions. Travel status, finite offers, cargo, ownership and route commitments are shown there. AI step/play can substitute for manual turns; pause it before inspecting choices.
+
+The header tracks home → industry → Hall progression. Sawmill/Halls/kiln use labelled temporary markers; stone and planks are text-only. Save/load preserves RNG, journeys, cargo, commitments and project progress. The historical replay is older material, not a recording of the current expedition rules.
+
+## Validation and limits
+
+See [the financing report](docs/ROUTE_FINANCING_TEST_015.md) and [the earlier expedition report](docs/LAND_EXPEDITIONS_AND_DEVELOPMENT_014.md) and compact results under `experiments/expeditions/results.json`. Full journals are generated locally and omitted from normal source packages.
 
 ```sh
 godot --headless --editor --import --quit
-godot --headless --path . --script res://tests/project_checks.gd
-godot --headless --path . --script res://tests/trade_checks.gd
-godot --headless --path . --script res://tests/priority_checks.gd
-godot --headless --path . --script res://tests/project_experiment.gd
+godot --headless --path . --script res://tests/financing_checks.gd
+godot --headless --path . --script res://tests/financing_experiment.gd
+godot --headless --path . --script res://tests/expedition_checks.gd
+godot --headless --path . --script res://tests/expedition_experiment.gd
+godot --headless --path . --script res://tests/expedition_ui_check.gd
 godot --headless --path . --script res://tests/contract_ui_check.gd
+godot --headless --path . -- --ui-check
 ```
 
-Compact results are included under `experiments/`. New full journals/checkpoints/saves are generated by the scripts and omitted from normal source uploads. Earlier experiment reports remain in `docs/`; their assumptions describe those historical versions. `tools/run_checks.py` defaults to the older marketplace regression; use the commands above for the latest model.
+The current financing suite has 52 checks; the expedition suite retains 93. Older Hall/stockade/project/trade/priority suites remain available for regressions. Replay correctness validates recorded paths; it does not prove balance or optimal play.
+
+Local standing contracts still use the older one-per-resource representation. Quantity-aware bindings are implemented for separate expedition routes, not yet for every local manufacturing chain. General duplicate industry construction, specialist/class systems, sea transport, broader exploration, terrain-clearing/drainage work, research, privileges, business/guild institutions and final victory conditions remain future development. Partial supply establishment also remains pending. Unlimited town brick demand remains an intentional testing outlet.
+
+The authoritative November 2 clarification snapshots are preserved as `docs/CONFIRMED_ISSUES_AND_QUESTIONS.md` and `docs/CONFIRMED_Medieval_Town_Design_Synthesis_and_Next_Test.md`; dated earlier reports describe historical assumptions.

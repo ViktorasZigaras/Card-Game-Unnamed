@@ -1,3 +1,5 @@
+> Historical snapshot. For the November 2 answers use CONFIRMED_ISSUES_AND_QUESTIONS.md; for executable v0.904 changes use LAND_EXPEDITIONS_AND_DEVELOPMENT_014.md.
+
 # Medieval Town — issues and questions
 
 Updated: 2026-10-31. Current prototype: 0.5.0, marketplace/import/brick-house scenario. Later core decisions are implemented with documented temporary defaults.

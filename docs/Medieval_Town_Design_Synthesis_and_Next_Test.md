@@ -1,3 +1,5 @@
+> Historical snapshot. For the November 2 answers use CONFIRMED_Medieval_Town_Design_Synthesis_and_Next_Test.md; for executable v0.904 changes use LAND_EXPEDITIONS_AND_DEVELOPMENT_014.md.
+
 # Medieval Town — design synthesis and the next useful test
 
 **31 October 2026 · discussion synthesis, not a final specification**

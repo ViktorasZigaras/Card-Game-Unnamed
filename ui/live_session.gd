@@ -1,12 +1,12 @@
 extends RefCounted
 ## Presentation adapter. Commands and previews use the existing authoritative simulation.
-var sim: ProjectSimulation
+var sim: FinancingSimulation
 var probe: GameProbe
 var frames: Array = []
 var run_path := ""
 
 func start(seed_value: int = 7, linked: bool = false) -> void:
-	sim = ProjectSimulation.new()
+	sim = FinancingSimulation.new()
 	sim.batch = 3
 	sim.scenario_lumber_link = linked
 	sim.start(seed_value)
@@ -14,7 +14,7 @@ func start(seed_value: int = 7, linked: bool = false) -> void:
 
 func _attach(reason: String) -> void:
 	probe = GameProbe.new()
-	probe.policy = ProjectAI.new()
+	probe.policy = FinancingAI.new()
 	run_path = "user://runs/ui_%s_%s_%d" % [reason,Time.get_datetime_string_from_system().replace(":","-"),Time.get_ticks_usec()]
 	probe.attach(sim,run_path+"/decisions.jsonl")
 	frames = [project()]
@@ -56,9 +56,58 @@ func preview(action: Dictionary) -> Dictionary:
 		"contribute_upgrade":
 			p.inputs = action.bundle.duplicate(true)
 			p.plan = sim.payment_plan(sim.current_house().id,p.inputs)
+		"claim_site":
+			p.inputs = {"influence":sim.site_social(action.building)}
+			if action.replace != "": p.inputs.prestige = sim.clear_price(action.replace)
+			p.timing = "Social claim reserves a protected site; physical construction is a separate later action."
+		"redevelop_occupied":
+			p.inputs = sim.rules.redevelopment_cost.duplicate(true)
+			p.plan = sim.payment_plan(sim.current_house().id,p.inputs)
+			p.inputs.prestige = sim.clear_price(action.building)
+		"launch_expedition":
+			p.inputs = sim.rules.expedition_cost.duplicate(true)
+			p.plan = sim.payment_plan(sim.current_house().id,p.inputs)
+			p.commitments = {"pop":1,"land_transport":1}
+			p.timing = "One grain consumed; one crew held until return. Outbound and return each take six future normal town actions."
+		"expedition_buy", "expedition_sell", "expedition_contract":
+			var trip = sim.trip_for(sim.current_house().id)
+			var offer: Dictionary = trip.sell[int(action.offer)] if action.type == "expedition_sell" else trip.buy[int(action.offer)]
+			if action.type == "expedition_sell":
+				p.inputs = {offer.resource:1}
+				p.outputs = {"gold":offer.price}
+				p.plan = sim.payment_plan(sim.current_house().id,p.inputs)
+			else:
+				p.inputs = {"gold":offer.price}
+				if action.type == "expedition_buy":
+					p.outputs = {offer.resource:1}
+					p.timing = "Purchased cargo arrives on return: private store if space, otherwise public supply."
+				else:
+					p.inputs.prestige = sim.rules.expedition_contract_prestige
+					p.commitments = {"land_transport":1}
+					p.recurring = {"resource":offer.resource,"quantity":1,"gold_each_round":offer.price,"owned_priority":true,"first_delivery":"refresh after return"}
+					var f = FinancingAI.new().assess_offer(sim,offer)
+					p.financing_note = "AI funding assessment: %s. %d-round operation: %d gold; setup: %d gold; cancellation: %d prestige. Shared caravan orders are uncertain income, not guaranteed funding." % [f.choice,f.forecast_rounds,f.operating_gold,f.setup_gold,f.exit_prestige]
+		"return_expedition": p.timing = "Return takes six future normal town actions. Crew and finite cargo arrive at home; any standing route keeps transport committed."
+		"buy_route", "cancel_route":
+			var route = sim.route_by_id(int(action.route))
+			p.inputs = {"prestige":int(route.price)+(3 if action.type == "cancel_route" else 0)}
+			p.timing = "Buyout transfers the route's land-transport obligation and output priority." if action.type == "buy_route" else "Release route transport; an expedition still travelling must finish its return."
+		"start_site", "supply_site":
+			p.inputs = action.bundle.duplicate(true)
+			p.plan = sim.payment_plan(sim.current_house().id,p.inputs)
+			if action.type == "start_site" and action.building.begins_with("hall_"): p.inputs.influence = sim.rules.hall_influence_cost
+		"hall_work":
+			p.inputs = sim.rules.hall_recipes[action.recipe].inputs
+			p.outputs = sim.rules.hall_recipes[action.recipe].outputs
+			p.plan = sim.payment_plan(sim.current_house().id,p.inputs)
 		"buy_stone":
 			p.inputs = {"gold":sim.rules.stone_gold_price}
 			p.outputs = {"stone":1}
+		"supply_wood", "redevelop_rural", "claim_rural":
+			p.inputs = {"wood":1} if action.type == "supply_wood" else sim.rules.redevelopment_cost if action.type == "redevelop_rural" else sim.rules.rural_claim_cost
+			p.plan = sim.payment_plan(sim.current_house().id,p.inputs)
+			if action.type == "supply_wood": p.outputs = {"influence":1}
+			if action.type == "claim_rural": p.prestige = 1
 		"supply_town", "export_brick":
 			p.inputs = {"brick":1}
 			p.plan = sim.payment_plan(sim.current_house().id,p.inputs)

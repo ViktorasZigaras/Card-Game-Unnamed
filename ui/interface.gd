@@ -11,6 +11,7 @@ var assets: VBoxContainer
 var pile: HBoxContainer
 var hand: HBoxContainer
 var inspector: VBoxContainer
+var action_list: VBoxContainer
 var detail: RichTextLabel
 var goal: Label
 var land: Label
@@ -171,6 +172,13 @@ func _build() -> void:
 	detail.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	detail.custom_minimum_size = Vector2(360,300)
 	inspector.add_child(detail)
+	var action_scroll := ScrollContainer.new()
+	action_scroll.custom_minimum_size.y = 160
+	action_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	inspector.add_child(action_scroll)
+	action_list = VBoxContainer.new()
+	action_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	action_scroll.add_child(action_list)
 	var footer := HBoxContainer.new()
 	root_box.add_child(footer)
 	recent = _label(footer,"")
@@ -207,7 +215,8 @@ func _draw() -> void:
 	var s := _s()
 	status.text = "   Round %d  ·  %s to act  ·  Pass chain %d/3  ·  Action %d" % [s.round,_name(s.houses[int(s.actor)].id),s.consecutive_passes,s.sequence]
 	goal.text = "TOWN GOAL: clay import delivered + one owned brick house\nMarket +2 prestige  ·  Clay link +3  ·  Brick house +5  |  " + ("COMPLETE" if s.ended else "In progress")
-	land.text = "Urban %d/6 · Forest %d/2 · Field %d/2 · Chapel outside plot budget" % [6-int(s.terrain_free.urban),2-int(s.terrain_free.forest),2-int(s.terrain_free.field)]
+	var capacities = _land_capacities(s)
+	land.text = "Urban %d/%d · Forest %d/%d · Field %d/%d · Special projects outside plot budget" % [capacities.urban-int(s.terrain_free.urban),capacities.urban,capacities.forest-int(s.terrain_free.forest),capacities.forest,capacities.field-int(s.terrain_free.field),capacities.field]
 	_clear(houses)
 	var stored_pop := 0
 	for h in s.houses:
@@ -225,7 +234,7 @@ func _draw() -> void:
 	_label(houses,"Pop reserve %d / %d\nPublic %d · Stored %d\nCommitted %d" % [int(s.pop_limit)-int(s.committed_pops)-int(s.market.pop)-stored_pop,s.pop_limit,s.market.pop,stored_pop,s.committed_pops],18)
 	_clear(assets)
 	for id in s.buildings:
-		if s.buildings[id].built: _button(assets,_name(id),_select.bind("building",id))
+		if s.buildings[id].built or s.get("houseworks",{}).get("sites",{}).has(id): _button(assets,_name(id),_select.bind("building",id))
 	_clear(pile)
 	for r in s.market:
 		var reserved := 0
@@ -246,15 +255,14 @@ func _draw() -> void:
 	_draw_detail()
 func _card(id: String) -> String:
 	var b: Dictionary = _s().buildings[id]
+	if not b.built and _s().get("houseworks",{}).get("sites",{}).has(id):
+		return _name(id)+"\nConstruction site · not functional\nPaid: "+_bundle(_s().houseworks.sites[id].paid)
 	var text := "%s\n\nLevel %d\n%s\n\n" % [_name(id),b.level,"Public" if b.owner == "" else _name(b.owner)]
 	for mode in _m().modes.get(id,[]): text += "%s\n%s\n→ %s\n" % [_name(mode.name),_bundle(mode.inputs),_bundle(mode.outputs)]
 	return text
 func _draw_detail() -> void:
 	# Retain a single detail/action region, independently of town art.
-	for child in inspector.get_children():
-		if child is Button:
-			inspector.remove_child(child)
-			child.queue_free()
+	_clear(action_list)
 	var s := _s()
 	var text := "[b]%s[/b]\n\n" % tab
 	if tab == "Caravan":
@@ -277,13 +285,33 @@ func _draw_detail() -> void:
 	var count := 0
 	for entry in _m().legal:
 		var a: Dictionary = entry.action
-		var show: bool = (tab == "Links" and a.type in ["secure_contract","cancel_contract","bulk_exchange","buy_contract","build_kiln","supply_town"]) or (tab == "Caravan" and a.type in ["secure_clay_contract","buy_brick","export_brick","buy_prestige","buy_stone"]) or (tab == "Selected" and ((selected_kind == "building" and (a.get("building","") == selected or (selected == "marketplace" and a.type in ["build_market","build_kiln"]))) or (selected_kind == "resource" and a.get("resource","") == selected)))
+		var show: bool = (tab == "Links" and a.type in ["secure_contract","cancel_contract","bulk_exchange","buy_contract","build_kiln","supply_town","supply_wood","redevelop_rural","claim_rural","start_site","supply_site","hall_work","claim_site","redevelop_occupied"]) or (tab == "Caravan" and a.type in ["secure_clay_contract","buy_brick","export_brick","buy_prestige","buy_stone","launch_expedition","expedition_buy","expedition_sell","expedition_contract","return_expedition","buy_route","cancel_route"]) or (tab == "Selected" and ((selected_kind == "building" and (a.get("building","") == selected or (selected == "marketplace" and a.type in ["build_market","build_kiln"]))) or (selected_kind == "resource" and a.get("resource","") == selected)))
 		if show:
-			_button(inspector,"Preview " + _name(a.type) + " " + str(a.get("resource",a.get("mode",""))) + (" " + JSON.stringify(a.bundle) if a.has("bundle") else ""),_preview.bind(entry))
+			var label = "Preview " + _name(a.type)+"\n"+_name(str(a.get("building",a.get("resource",""))))+" "+str(a.get("recipe",a.get("terrain",a.get("mode",""))))
+			if a.has("bundle"): label += " · "+_bundle(a.bundle)
+			if a.get("replace","") != "": label += " · replace "+_name(a.replace)
+			if a.has("offer"):
+				label += " · offer "+str(int(a.offer)+1)
+				for trip in s.get("exploration",{}).get("trips",[]):
+					if trip.owner == s.houses[int(s.actor)].id and trip.status == "trading":
+						var offer: Dictionary = trip.sell[int(a.offer)] if a.type == "expedition_sell" else trip.buy[int(a.offer)]
+						label += " · "+_name(offer.resource)+" · "+str(int(offer.price))+" gold"
+			if a.has("route"): label += " · route "+str(int(a.route))
+			var button = _button(action_list,label,_preview.bind(entry))
+			button.clip_text = true
+			button.tooltip_text = label
 			count += 1
 	if tab == "Selected" and count == 0:
 		detail.append_text("\n\nNo matching legal actions for the current actor.")
-		if selected_kind == "building" and selected not in s.revealed and selected != "marketplace": detail.append_text("\nActivation/upgrade unavailable: card is outside the current hand.")
+		if selected_kind == "building" and selected not in s.revealed and selected != "marketplace" and not selected.begins_with("hall_"): detail.append_text("\nActivation/upgrade unavailable: card is outside the current hand.")
 		if selected == "marketplace" and s.buildings.marketplace.built: detail.append_text("\nAlready built; passive public infrastructure.")
 func _preview(entry: Dictionary) -> void:
 	detail.text = "[b]Action preview · recorded state[/b]\n\n%s\n\n%s\n\nInputs: %s\nOutputs: %s\nPrestige: %d\n\nSource allocation and influence payments\n%s\n\nReplay only: this action will not execute." % [JSON.stringify(entry.action,"  "),"Free action; normal turn retained" if entry.free else "One normal action",_bundle(entry.inputs),_bundle(entry.outputs),entry.prestige,JSON.stringify(entry.plan,"  ")]
+
+func _land_capacities(s: Dictionary) -> Dictionary:
+	var caps = {"urban":6,"forest":2,"field":2}
+	if s.has("town"):
+		for terrain in ["forest","field"]:
+			caps.urban += int(s.town.converted[terrain])
+			caps[terrain] += int(s.town.claimed[terrain])-int(s.town.converted[terrain])
+	return caps
