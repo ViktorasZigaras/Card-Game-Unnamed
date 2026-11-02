@@ -1,5 +1,5 @@
 extends "res://ui/interface.gd"
-## v0.905: themed native play, recorded inspection, and the same authoritative logging tool.
+## v0.909: themed native play, recorded inspection, and the same authoritative logging tool.
 const Art = preload("res://ui/artwork.gd")
 const Session = preload("res://ui/live_session.gd")
 var session = Session.new()
@@ -61,7 +61,7 @@ func _build() -> void:
 	inspector.add_child(hero)
 	inspector.move_child(hero,1)
 	var header = status.get_parent()
-	header.get_child(0).text = "CARD GAME  ·  v0.905"
+	header.get_child(0).text = "CARD GAME  ·  v0.909"
 	_button(header,"New",_new_game)
 	_button(header,"Save",_save)
 	_button(header,"Load",_load_save)
@@ -220,7 +220,7 @@ func _draw_detail() -> void:
 				detail.append_text("Sell:\n")
 				for offer in trip.sell: detail.append_text("• %s: %d gold · %d orders left\n" % [_name(offer.resource),offer.price,offer.left])
 		for route in x.routes:
-			if route.active: detail.append_text("\nRoute %d: %s → %s · %d gold/round\nDelivered %d · Missed %d · One land capacity committed.\n" % [route.id,_name(route.resource),_name(route.owner),route.unit_price,route.delivered,route.misses])
+			if route.active: detail.append_text("\nRoute %d: %s → %s · %d gold/round\nDelivered %d · Missed %d · One land capacity committed · %s access.\n" % [route.id,_name(route.resource),_name(route.owner),route.unit_price,route.delivered,route.misses,route.get("access","priority")])
 	if tab == "Caravan" and _s().has("projects"):
 		detail.append_text("\nStone: 1 gold each; %d left this visit.\nChapel upgrade: 2 stone + 1 wood + 1 pop.\nCompleted chapel produces 3 influence." % _s().caravan.stone_left)
 	if tab == "Selected" and selected_kind == "building" and _s().get("projects",{}).has(selected):
@@ -404,7 +404,7 @@ func _check_ui() -> void:
 	await get_tree().process_frame
 	largest = largest.max(root_box.get_minimum_size())
 	assert(largest.x+32 <= 1920 and largest.y+32 <= 1080,"Layout exceeds 1080p: "+str(largest))
-	print("v0.905 UI checks passed: 83 states, all selections, tabs, previews, manual action, AI step, exact save/load; minimum ",largest+Vector2(32,32))
+	print("v0.909 UI checks passed: 83 states, all selections, tabs, previews, manual action, AI step, exact save/load; minimum ",largest+Vector2(32,32))
 	get_tree().quit()
 
 func _fullscreen() -> void:

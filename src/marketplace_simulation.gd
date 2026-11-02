@@ -259,7 +259,7 @@ func apply(action: Dictionary) -> Dictionary:
 		state.consecutive_passes = 0
 		state.passed = []
 	match action.type:
-		"secure_contract", "cancel_contract", "demolish", "bulk_exchange", "buy_contract", "build_kiln", "supply_town", "export_brick", "buy_prestige", "buy_stone", "contribute_upgrade", "supply_wood", "redevelop_rural", "claim_rural", "start_site", "supply_site", "hall_work", "claim_site", "redevelop_occupied", "launch_expedition", "expedition_buy", "expedition_sell", "expedition_contract", "return_expedition", "buy_route", "cancel_route":
+		"secure_contract", "cancel_contract", "demolish", "bulk_exchange", "buy_contract", "build_kiln", "supply_town", "export_brick", "buy_prestige", "buy_stone", "contribute_upgrade", "supply_wood", "redevelop_rural", "claim_rural", "start_site", "supply_site", "hall_work", "claim_site", "redevelop_occupied", "launch_expedition", "expedition_buy", "expedition_sell", "expedition_contract", "return_expedition", "buy_route", "cancel_route", "own_route":
 			_experimental_action(action,h,events)
 		"pass":
 			if not h.did_something and not h.idle_rewarded:
@@ -377,7 +377,7 @@ func _check_end() -> void:
 		state.end_reason = "clay_import_and_every_house" if all_houses else "clay_import_and_brick_house"
 
 func restore(saved: Dictionary) -> void:
-	assert(int(saved.state.schema_version) in [5,6,7,8,9,10,11,12,13,14,15,16],"Unsupported marketplace save schema")
+	assert(int(saved.state.schema_version) in [5,6,7,8,9,10,11,12,13,14,15,16,17,18],"Unsupported marketplace save schema")
 	rules = saved.rules.duplicate(true)
 	definitions.clear()
 	for d in rules.buildings: definitions[d.id] = d

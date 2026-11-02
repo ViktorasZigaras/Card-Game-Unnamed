@@ -6,7 +6,7 @@ var frames: Array = []
 var run_path := ""
 
 func start(seed_value: int = 7, linked: bool = false) -> void:
-	sim = FinancingSimulation.new()
+	sim = MappedTownSimulation.new()
 	sim.batch = 3
 	sim.scenario_lumber_link = linked
 	sim.start(seed_value)
@@ -14,7 +14,7 @@ func start(seed_value: int = 7, linked: bool = false) -> void:
 
 func _attach(reason: String) -> void:
 	probe = GameProbe.new()
-	probe.policy = FinancingAI.new()
+	probe.policy = PlannerAI.new()
 	run_path = "user://runs/ui_%s_%s_%d" % [reason,Time.get_datetime_string_from_system().replace(":","-"),Time.get_ticks_usec()]
 	probe.attach(sim,run_path+"/decisions.jsonl")
 	frames = [project()]
@@ -82,16 +82,20 @@ func preview(action: Dictionary) -> Dictionary:
 					p.outputs = {offer.resource:1}
 					p.timing = "Purchased cargo arrives on return: private store if space, otherwise public supply."
 				else:
-					p.inputs.prestige = sim.rules.expedition_contract_prestige
+					p.inputs.prestige = sim.rules.public_route_prestige
+					if action.get("access","priority") == "priority": p.inputs.influence = sim.rules.route_priority_influence
 					p.commitments = {"land_transport":1}
-					p.recurring = {"resource":offer.resource,"quantity":1,"gold_each_round":offer.price,"owned_priority":true,"first_delivery":"refresh after return"}
-					var f = FinancingAI.new().assess_offer(sim,offer)
+					p.timing = "Useful first clay supply earns its town reward on the first real delivery, not signing."
+					p.recurring = {"resource":offer.resource,"quantity":1,"gold_each_round":offer.price,"owned_priority":action.get("access","priority") == "priority","first_delivery":"refresh after return"}
+					var f = PlannerAI.new().assess_offer(sim,offer,action.get("access","priority"))
 					p.financing_note = "AI funding assessment: %s. %d-round operation: %d gold; setup: %d gold; cancellation: %d prestige. Shared caravan orders are uncertain income, not guaranteed funding." % [f.choice,f.forecast_rounds,f.operating_gold,f.setup_gold,f.exit_prestige]
 		"return_expedition": p.timing = "Return takes six future normal town actions. Crew and finite cargo arrive at home; any standing route keeps transport committed."
-		"buy_route", "cancel_route":
+		"buy_route", "cancel_route", "own_route":
 			var route = sim.route_by_id(int(action.route))
-			p.inputs = {"prestige":int(route.price)+(3 if action.type == "cancel_route" else 0)}
-			p.timing = "Buyout transfers the route's land-transport obligation and output priority." if action.type == "buy_route" else "Release route transport; an expedition still travelling must finish its return."
+			if action.type == "own_route": p.inputs = {"influence":sim.rules.route_priority_influence}
+			elif action.type == "cancel_route": p.inputs = {"prestige":sim.route_cancel_price(route,sim.current_house().id)}
+			else: p.inputs = {"prestige":int(route.price),"influence":sim.rules.route_priority_influence}
+			p.timing = "Buyout transfers the route's land-transport obligation and output priority." if action.type == "buy_route" else "Influence buys future priority; existing public goods remain public." if action.type == "own_route" else "Release route transport; a travelling expedition still has to return."
 		"start_site", "supply_site":
 			p.inputs = action.bundle.duplicate(true)
 			p.plan = sim.payment_plan(sim.current_house().id,p.inputs)
@@ -123,7 +127,7 @@ func preview(action: Dictionary) -> Dictionary:
 			p.inputs = spec.setup
 			p.plan = sim.payment_plan(sim.current_house().id,p.inputs)
 			p.recurring = spec.duplicate(true)
-		"buy_contract": p.inputs = {"prestige":int(sim.title(action.resource).price)}
+		"buy_contract": p.inputs = {"prestige":int(sim.title(action.resource).price),"influence":sim.rules.route_priority_influence}
 		"cancel_contract": p.inputs = {"prestige":sim.cancel_price(action.resource)}
 		"demolish": p.inputs = {"prestige":1 if sim.state.buildings[action.building].plot in ["field","forest"] else 3}
 		"bulk_exchange":

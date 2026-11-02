@@ -285,7 +285,7 @@ func _draw_detail() -> void:
 	var count := 0
 	for entry in _m().legal:
 		var a: Dictionary = entry.action
-		var show: bool = (tab == "Links" and a.type in ["secure_contract","cancel_contract","bulk_exchange","buy_contract","build_kiln","supply_town","supply_wood","redevelop_rural","claim_rural","start_site","supply_site","hall_work","claim_site","redevelop_occupied"]) or (tab == "Caravan" and a.type in ["secure_clay_contract","buy_brick","export_brick","buy_prestige","buy_stone","launch_expedition","expedition_buy","expedition_sell","expedition_contract","return_expedition","buy_route","cancel_route"]) or (tab == "Selected" and ((selected_kind == "building" and (a.get("building","") == selected or (selected == "marketplace" and a.type in ["build_market","build_kiln"]))) or (selected_kind == "resource" and a.get("resource","") == selected)))
+		var show: bool = (tab == "Links" and a.type in ["secure_contract","cancel_contract","bulk_exchange","buy_contract","build_kiln","supply_town","supply_wood","redevelop_rural","claim_rural","start_site","supply_site","hall_work","claim_site","redevelop_occupied"]) or (tab == "Caravan" and a.type in ["secure_clay_contract","buy_brick","export_brick","buy_prestige","buy_stone","launch_expedition","expedition_buy","expedition_sell","expedition_contract","return_expedition","buy_route","cancel_route","own_route"]) or (tab == "Selected" and ((selected_kind == "building" and (a.get("building","") == selected or (selected == "marketplace" and a.type in ["build_market","build_kiln"]))) or (selected_kind == "resource" and a.get("resource","") == selected)))
 		if show:
 			var label = "Preview " + _name(a.type)+"\n"+_name(str(a.get("building",a.get("resource",""))))+" "+str(a.get("recipe",a.get("terrain",a.get("mode",""))))
 			if a.has("bundle"): label += " · "+_bundle(a.bundle)
@@ -296,6 +296,7 @@ func _draw_detail() -> void:
 					if trip.owner == s.houses[int(s.actor)].id and trip.status == "trading":
 						var offer: Dictionary = trip.sell[int(a.offer)] if a.type == "expedition_sell" else trip.buy[int(a.offer)]
 						label += " · "+_name(offer.resource)+" · "+str(int(offer.price))+" gold"
+			if a.has("access"): label += " · "+_name(a.access)
 			if a.has("route"): label += " · route "+str(int(a.route))
 			var button = _button(action_list,label,_preview.bind(entry))
 			button.clip_text = true

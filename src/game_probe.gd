@@ -105,6 +105,8 @@ static func replay_journal(path: String) -> Dictionary:
 		14: replay = DevelopmentSimulation.new()
 		15: replay = ExpeditionSimulation.new()
 		16: replay = FinancingSimulation.new()
+		17: replay = FlexibleContractSimulation.new()
+		18: replay = MappedTownSimulation.new()
 		11: replay = ProjectSimulation.new()
 		10: replay = TradeSimulation.new()
 		9: replay = CapacitySimulation.new()
