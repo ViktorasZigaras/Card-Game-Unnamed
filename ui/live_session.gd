@@ -24,6 +24,7 @@ func step(action: Dictionary = {}) -> Dictionary:
 	var economic_action = action.duplicate(true)
 	economic_action.erase("plot")
 	if not action.is_empty() and economic_action not in sim.legal_actions(): return {"ok":false,"error":"Action is no longer legal"}
+	if action.has("plot") and not sim.placement_cells(action).any(func(c): return c.id == action.plot): return {"ok":false,"error":"Site is no longer eligible"}
 	var result := probe.step(action)
 	if result.ok: frames.append(project())
 	return result
@@ -129,6 +130,7 @@ func preview(action: Dictionary) -> Dictionary:
 			p.inputs = spec.setup
 			p.plan = sim.payment_plan(sim.current_house().id,p.inputs)
 			p.recurring = spec.duplicate(true)
+			if int(spec.get("commit",0)) > 0: p.commitments = {"pop":int(spec.commit)}
 		"buy_contract": p.inputs = {"prestige":int(sim.title(action.resource).price),"influence":sim.rules.route_priority_influence}
 		"cancel_contract": p.inputs = {"prestige":sim.cancel_price(action.resource)}
 		"demolish": p.inputs = {"prestige":1 if sim.state.buildings[action.building].plot in ["field","forest"] else 3}
@@ -144,7 +146,9 @@ func preview(action: Dictionary) -> Dictionary:
 		"pass":
 			var h = sim.current_house()
 			if not h.did_something and not h.idle_rewarded: p.outputs = {"influence":1}
-	if action.type == "secure_clay_contract": p.commitments = {"wood":1,"pop":1}
+	if action.type == "secure_clay_contract":
+		p.commitments = {"wood":1,"pop":1}
+		p.timing = "Wood remains held as export backing, rather than spent every round. One labour remains committed while the link is active."
 	return p
 
 func project() -> Dictionary:
