@@ -21,7 +21,9 @@ func _attach(reason: String) -> void:
 
 func step(action: Dictionary = {}) -> Dictionary:
 	if sim.state.ended: return {"ok":false,"error":"Scenario complete"}
-	if not action.is_empty() and action not in sim.legal_actions(): return {"ok":false,"error":"Action is no longer legal"}
+	var economic_action = action.duplicate(true)
+	economic_action.erase("plot")
+	if not action.is_empty() and economic_action not in sim.legal_actions(): return {"ok":false,"error":"Action is no longer legal"}
 	var result := probe.step(action)
 	if result.ok: frames.append(project())
 	return result

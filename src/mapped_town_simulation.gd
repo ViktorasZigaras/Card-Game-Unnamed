@@ -1,6 +1,24 @@
 class_name MappedTownSimulation
 extends FlexibleContractSimulation
 ## Saved visual bookkeeping; no road, adjacency or distance economy.
+var requested_plot := ""
+func placement_cells(action: Dictionary) -> Array:
+	if action.get("type", "") != "claim_site": return []
+	var base = action.duplicate(true)
+	base.erase("plot")
+	if base not in legal_actions(): return []
+	var terrain: String = definition(base.building).terrain
+	return state.town_map.cells.filter(func(c): return c.active and c.terrain == terrain and (c.building == "" if base.replace == "" else c.building == base.replace))
+func apply(action: Dictionary) -> Dictionary:
+	var base = action.duplicate(true)
+	requested_plot = str(base.get("plot", ""))
+	base.erase("plot")
+	if requested_plot != "" and not placement_cells(base).any(func(c): return c.id == requested_plot):
+		requested_plot = ""
+		return {"ok":false,"error":"That site is no longer eligible"}
+	var result = super.apply(base)
+	requested_plot = ""
+	return result
 func _init() -> void:
 	super._init()
 	rules.schema_version = 18
@@ -41,6 +59,13 @@ func _experimental_action(action: Dictionary,h: Dictionary,events: Array) -> voi
 	elif action.type == "claim_site" and not target.is_empty():
 		target.building = action.building
 		target.vegetation = false
+	if action.type == "claim_site" and requested_plot != "":
+		for cell in state.town_map.cells:
+			if cell.building == action.building: cell.building = ""
+		for cell in state.town_map.cells:
+			if cell.id == requested_plot:
+				cell.building = action.building
+				cell.vegetation = false
 	ensure_map()
 func _after_action(event: Dictionary) -> void:
 	super._after_action(event)

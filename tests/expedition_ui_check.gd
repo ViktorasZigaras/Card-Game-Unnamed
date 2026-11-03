@@ -12,7 +12,7 @@ func execute(action: Dictionary,force_blue: bool = true) -> void:
 	assert(before == TownSimulation.canonical(s.snapshot()),"Preview mutated simulation")
 	ui._execute_pending()
 	assert(ui.session.probe.failure == "")
-	ui.tab = "Caravan"
+	ui.category = "Trade"
 	ui._draw()
 	await process_frame
 	largest = largest.max(ui.root_box.get_minimum_size()+Vector2(32,32))
