@@ -33,3 +33,7 @@ The remaining design issues are longer-term ownership value, business institutio
 ![Static layout study from recovered game states](docs/images/town_layout_0_909.png)
 
 The image is a data-driven layout study, not a game screenshot. Motion is available in Godot.
+
+## Repository upload check
+
+4 November 2026: this single-file documentation checkpoint tests repository uploads on `dev/ui-0.910` after an interrupted upload attempt. It does not change the game version or gameplay.
