@@ -4,6 +4,7 @@ signal resource_selected(resource: String)
 const TOKEN_LIMIT = 12
 var displayed_units = 0
 var represented_units = 0
+var expanded_groups: Dictionary = {}
 static func groups(state: Dictionary) -> Array:
 	var buckets: Dictionary = {}
 	for lot in state.lots:
@@ -54,16 +55,22 @@ func set_state(state: Dictionary) -> void:
 		tokens.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		row.add_child(tokens)
 		represented_units += int(group.count)
-		for i in mini(TOKEN_LIMIT,int(group.count)):
+		var group_key: String = group.scope+":"+group.resource
+		for i in (int(group.count) if expanded_groups.has(group_key) else mini(TOKEN_LIMIT,int(group.count))):
 			var token = Button.new()
 			token.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 			var icon = Art.sprite(group.resource)
 			if icon != null:
 				token.icon = icon
 				token.expand_icon = true
-				token.add_theme_constant_override("icon_max_width",28)
+				token.add_theme_constant_override("icon_max_width",36)
 			else: token.text = str(group.resource).left(2).to_upper()
-			token.custom_minimum_size = Vector2(34,34)
+			token.custom_minimum_size = Vector2(38,38)
+			for style in ["normal","hover","pressed","focus"]:
+				var skin = StyleBoxFlat.new()
+				skin.bg_color = Color(1, .85, .5, .12) if style != "normal" else Color(0,0,0,0)
+				skin.set_content_margin_all(1)
+				token.add_theme_stylebox_override(style,skin)
 			token.tooltip_text = "1 %s · %s\n%s" % [group.resource,group.scope,"Private goods: immediate rival use can cost 2 influence; cannot be taken into another store." if group.private else "Reserved goods: immediate rival use can cost 1 influence; cannot be hoarded by rivals." if group.holder != "" else "Public goods: no holder's access fee."]
 			token.pressed.connect(func(): resource_selected.emit(group.resource))
 			if group.holder != "":
@@ -75,9 +82,10 @@ func set_state(state: Dictionary) -> void:
 				token.add_child(crest)
 			tokens.add_child(token)
 			displayed_units += 1
-		if group.count > TOKEN_LIMIT:
-			var extra = Label.new()
-			extra.text = "+%d more" % (int(group.count)-TOKEN_LIMIT)
+		if group.count > TOKEN_LIMIT and not expanded_groups.has(group_key):
+			var extra = Button.new()
+			extra.text = "+%d · show all" % (int(group.count)-TOKEN_LIMIT)
+			extra.pressed.connect(func(): expanded_groups[group_key] = true;set_state(state))
 			tokens.add_child(extra)
 	if represented_units == 0:
 		var empty = Label.new()
