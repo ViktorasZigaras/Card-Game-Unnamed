@@ -9,6 +9,7 @@ var eligible_plots: Array = []
 var layer: Control
 var ambience: Control
 var signature = ""
+var project_costs: Dictionary = {}
 var background: Texture2D = preload("res://art/valley_0910.png")
 const OWNER_COLORS = {"blue":Color("72a6d5"),"red":Color("c86f55"),"gold":Color("d9bc57"),"":Color("a79970")}
 # Stable plot addresses under a less regular picturesque composition.
@@ -77,10 +78,10 @@ func redraw() -> void:
 			var cost: Dictionary = {}
 			var paid: Dictionary = {}
 			if not project.is_empty() and not project.completed:
-				cost = {"wood":3,"pop":1} if id == "marketplace" else {"wood":2,"pop":1} if id in ["kiln","small_sawmill"] else {"planks":3,"stone":1,"pop":1}
+				cost = project_costs.get(id,{})
 				paid = project.paid
 			elif not upgrade.is_empty() and not upgrade.get("completed",false):
-				cost = {"stone":2,"wood":1,"pop":1} if id == "chapel" else {"wood":2,"brick":1,"pop":1}
+				cost = project_costs.get(id,{})
 				paid = upgrade.get("paid",{})
 			if not cost.is_empty():
 				var panel = PanelContainer.new();panel.z_index = 4;panel.position = rect.position+Vector2(-5,rect.size.y-8);panel.size = Vector2(rect.size.x+10,29)
