@@ -39,10 +39,10 @@ func _build() -> void:
 	root_box.add_theme_constant_override("separation",8)
 	margin.add_child(root_box)
 	var header = HBoxContainer.new()
-	header.custom_minimum_size.y = 158
+	header.custom_minimum_size.y = 154
 	root_box.add_child(header)
 	var brand = _panel(header,268)
-	_label(brand,"MEDIEVAL\nTOWN",29)
+	_label(brand,"MEDIEVAL TOWN",24)
 	status = _label(brand,"",16)
 	status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	hand = HBoxContainer.new()
@@ -99,8 +99,14 @@ func _build() -> void:
 	town_view.plot_selected.connect(func(id): _map_choice("plot",id))
 	selection_hint = _label(centre,"Select a building to inspect it, or choose Build to begin.",16)
 	selection_hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	inspector = _panel(columns,380)
-	inspector.custom_minimum_size.x = 380
+	var inspector_frame = _panel(columns,390)
+	var inspector_scroll = ScrollContainer.new()
+	inspector_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	inspector_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	inspector_frame.add_child(inspector_scroll)
+	inspector = VBoxContainer.new()
+	inspector.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	inspector_scroll.add_child(inspector)
 	var categories = HBoxContainer.new()
 	inspector.add_child(categories)
 	for title in ["Build","Upgrade","Contracts","Trade"]:
@@ -110,16 +116,18 @@ func _build() -> void:
 	hero = TextureRect.new()
 	hero.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	hero.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	hero.custom_minimum_size.y = 116
+	hero.custom_minimum_size.y = 104
 	inspector.add_child(hero)
 	detail = RichTextLabel.new()
 	detail.bbcode_enabled = true
-	detail.custom_minimum_size = Vector2(330,90)
+	detail.custom_minimum_size = Vector2(330,120)
+	detail.fit_content = true
+	detail.scroll_active = false
 	detail.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	inspector.add_child(detail)
 	context_tokens = VBoxContainer.new();inspector.add_child(context_tokens)
 	var actions_scroll = ScrollContainer.new()
-	actions_scroll.custom_minimum_size.y = 212
+	actions_scroll.custom_minimum_size.y = 180
 	actions_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	inspector.add_child(actions_scroll)
 	action_list = VBoxContainer.new()
@@ -257,7 +265,7 @@ func _show_deck(discard := false) -> void:
 	if keys.is_empty(): _label(deck_content,"No cards here.",20)
 	deck_window.popup_centered()
 func _tokens(parent: Node,bundle: Dictionary,supplied: Dictionary,context: String) -> Node:
-	var strip = Tokens.new();parent.add_child(strip);strip.show_bundle(bundle,supplied,context);return strip
+	var strip = Tokens.new();strip.size_flags_horizontal = Control.SIZE_EXPAND_FILL;parent.add_child(strip);strip.show_bundle(bundle,supplied,context);return strip
 func _available(bundle: Dictionary,building := "") -> Dictionary:
 	var found = {}
 	var sim = session.sim
@@ -291,7 +299,8 @@ func _action_button(parent: Node,entry: Dictionary) -> Button:
 	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	button.disabled = not _live()
 	button.tooltip_text = label+"\nCost: "+_bundle(entry.inputs)+"\nOutput: "+_bundle(entry.outputs)+"\n"+entry.get("timing","One action")
-	if not entry.inputs.is_empty(): _tokens(parent,entry.inputs,entry.inputs,"Pays now")
+	if not entry.inputs.is_empty():
+		_label(parent,"Pays now",14);_tokens(parent,entry.inputs,entry.inputs,"Pays now")
 	var payments: Dictionary = entry.get("plan",{}).get("payments",{})
 	for owner in payments:
 		_label(parent,"Access fee → "+owner.capitalize(),14)
@@ -337,7 +346,7 @@ func _choose(entry: Dictionary) -> void:
 		return
 	if safe_actions:
 		confirmation_entry = entry.duplicate(true)
-		confirm_dialog.dialog_text = _action_name(entry.action)+"\n\nPay: "+_bundle(entry.inputs)+"\nReceive: "+_bundle(entry.outputs)+"\n"+entry.get("timing","One action; displayed access fees also apply.")
+		confirm_dialog.dialog_text = _confirmation_text(entry)
 		confirm_dialog.popup_centered(Vector2i(620,290))
 	else: _perform(entry)
 func _perform(entry: Dictionary) -> void:
@@ -345,9 +354,8 @@ func _perform(entry: Dictionary) -> void:
 	var label = _action_name(pending)
 	var result = session.step(pending)
 	pending = {};placement_entry = {};confirmation_entry = {};town_view.eligible_plots = []
-	notice = label if result.ok else str(result.get("error","Action rejected"))
-	if result.ok:
-		if event_log.size() > 64: event_log.pop_front()
+	notice = label+" · paid "+_bundle(entry.inputs)+" · output "+_bundle(entry.outputs) if result.ok else "Action unavailable: requirements or target changed. Inspect the current options."
+	
 	cursor = session.frames.size()-1;_draw()
 func _review_type(type: String) -> void:
 	for entry in _m().legal:
@@ -372,7 +380,7 @@ func _draw() -> void:
 	_clear(hand)
 	for id in s.revealed:
 		var button = _button(hand,"",_select.bind("building",id))
-		button.custom_minimum_size = Vector2(150,148);button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		button.custom_minimum_size = Vector2(150,138);button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		button.tooltip_text = _card(id)
 		var card = VBoxContainer.new();card.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		card.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);card.offset_left = 8;card.offset_right = -8;card.offset_top = 5;button.add_child(card)
@@ -384,6 +392,9 @@ func _draw() -> void:
 	if s.revealed.is_empty(): _label(hand,"No shared cards remain this round.\nOther legal actions and Skip remain available.",20)
 	deck_button.text = "Deck · %d" % s.deck.size();discard_button.text = "Discard · %d" % s.discard.size()
 	goods_view.set_state(s)
+	town_view.project_costs = {}
+	for id in s.houseworks.sites: town_view.project_costs[id] = session.sim.site_cost(id)
+	for id in s.get("projects",{}): town_view.project_costs[id] = session.sim.cost_for(id)
 	town_view.set_state(s,selected if selected_kind in ["building","plot"] else "")
 	_draw_trade()
 	if placement_entry.is_empty(): selection_hint.text = "Select a building to inspect it, or choose Build to begin. Stockade progress is below the town."
@@ -393,7 +404,9 @@ func _draw() -> void:
 	if last_event_sequence != int(s.sequence) and int(s.sequence) > 0:
 		last_event_sequence = int(s.sequence)
 		var event: Dictionary = _m().event
-		if event.has("action"): event_log.append("Round %d · %s" % [s.round,_action_name(event.action)])
+		if event.has("action"):
+			event_log.append("Round %d · %s" % [s.round,_action_name(event.action)])
+			if event_log.size() > 64: event_log.pop_front()
 	_draw_detail()
 func _draw_trade() -> void:
 	_clear(trade_cards)
@@ -403,10 +416,10 @@ func _draw_trade() -> void:
 	if not s.caravan.present:
 		_label(box,"Build the marketplace" if not s.buildings.marketplace.built else "Returns on its scheduled round",16)
 	else:
+		_label(box,"Shared visit stock; act before it leaves.",14)
 		for entry in _m().legal:
-			if entry.action.type in ["export_brick","buy_stone","buy_prestige"]:
-				var b = _button(box,_action_name(entry.action),func(): _choose(entry));b.add_theme_font_size_override("font_size",14);b.custom_minimum_size.y = 28
-				b.tooltip_text = "Pay: "+_bundle(entry.inputs)+" → "+_bundle(entry.outputs)
+			if entry.action.type in ["export_brick","buy_stone","buy_prestige"]: _trade_offer(entry)
+
 	var links = _panel(trade_cards,250)
 	_label(links,"Supply & expeditions",20)
 	var active_routes = s.exploration.routes.filter(func(r): return r.active).size()
@@ -418,7 +431,10 @@ func _draw_trade() -> void:
 		_label(trip_card,trip.owner.capitalize()+" expedition",19)
 		_label(trip_card,_name(trip.status),17)
 		if trip.status != "trading": _label(trip_card,"%d actions until arrival" % maxi(0,int(trip.due)-int(s.exploration.clock)),15)
-		else: _button(trip_card,"View offers",func(): _category("Trade"))
+		else:
+			_button(trip_card,"View offers",func(): _category("Trade"))
+	for entry in _m().legal:
+		if entry.action.type in ["expedition_buy","expedition_sell","expedition_contract"]: _trade_offer(entry)
 func _draw_detail() -> void:
 	if detail == null: return
 	_clear(action_list);_clear(context_tokens);hero.hide();pending = {}
@@ -427,6 +443,8 @@ func _draw_detail() -> void:
 		detail.text = "[b]"+_action_name(preview_card.action)+"[/b]\n"+preview_card.get("timing","One action")
 		_label(context_tokens,"Pays now",16);_tokens(context_tokens,preview_card.inputs,preview_card.inputs,"Required inputs")
 		_action_button(action_list,preview_card);return
+	if archive and category != "Inspect":
+		detail.text = "Historical recording: select existing cards, goods and buildings to inspect this version. Return to Live to build or trade.";return
 	if category == "Build": _draw_catalogue();return
 	if category in ["Contracts","Trade","Upgrade"]:
 		detail.text = "[b]"+category+"[/b]\n"+{"Upgrade":"Select a building below or on the map to inspect its benefit and full requirement.","Contracts":"Establish supply, purchase priority or end an obligation. Material setup and rights are distinct.","Trade":"Real caravan and expedition opportunities. Cargo is unavailable until return."}[category]
@@ -448,8 +466,10 @@ func _draw_detail() -> void:
 		detail.text = "[b]%s[/b]\n%s · %s\n" % [_name(selected),"Public" if b.owner == "" else b.owner.capitalize()+" house","Built" if b.built else "Protected construction site"]
 		for mode in _m().modes.get(selected,[]):
 			_label(context_tokens,_name(mode.name)+" · inputs → output",14)
-			var flow = HBoxContainer.new();context_tokens.add_child(flow)
-			_tokens(flow,mode.inputs,mode.inputs,"Recipe inputs");_label(flow,"→",18);_tokens(flow,mode.outputs,mode.outputs,"Recipe output")
+			_label(context_tokens,"Inputs",14)
+			_tokens(context_tokens,mode.inputs,mode.inputs,"Recipe inputs")
+			_label(context_tokens,"Produces",14)
+			_tokens(context_tokens,mode.outputs,mode.outputs,"Recipe output")
 		if selected.begins_with("hut_") or selected == "chapel":
 			var cost: Dictionary = session.sim.rules.chapel_upgrade_cost if selected == "chapel" else session.sim.rules.housing_upgrade_cost
 			if int(b.level) < 2:
@@ -464,7 +484,7 @@ func _draw_detail() -> void:
 		var count = 0
 		for entry in _m().legal:
 			if entry.action.get("building","") == selected: _action_button(action_list,entry);count += 1
-		if count == 0: detail.append_text("\n\nNo legal work now: card, inputs, ownership, capacity or round use may prevent it. Inspect Build/Upgrade for broader options.")
+		if count == 0: detail.append_text("\n\n"+_building_blocked(selected))
 	elif selected_kind == "resource":
 		hero.texture = Art.sprite(selected);hero.show()
 		detail.text = "[b]%s[/b]\nPublic and reserved supply: %d\n\nCrest = temporary output priority; lock = private store. Rival reserved input use costs 1 influence; private input use costs 2. Fees transfer to the holder. Paid use cannot hoard a rival's token." % [_name(selected),s.market.get(selected,0)]
@@ -502,11 +522,82 @@ func _draw_catalogue() -> void:
 		if entry.action.get("building","") == id and entry.action.type in ["claim_site","supply_site"]:
 			_action_button(action_list,entry);count += 1
 	if count == 0:
-		var b: Dictionary = s.buildings[id]
-		detail.append_text("\n\nUnavailable: "+("already built." if b.built else "site already claimed; select it to inspect contributions." if s.houseworks.sites.has(id) else "need influence, an eligible plot and no other unfinished sponsored site. Protected/private properties cannot be replaced."))
+		detail.append_text("\n\n"+_build_blocked(id))
 	_button(action_list,"Back to catalogue",func(): catalogue_building = "";_draw_detail())
 func _trade_description() -> void:
 	for route in _s().exploration.routes:
 		if route.active: detail.append_text("\n%s supply: %s pays %d gold/round · %s access · %d deliveries, %d missed." % [_name(route.resource),route.owner.capitalize(),route.unit_price,route.get("access","priority"),route.delivered,route.misses])
 	for trip in _s().exploration.trips:
 		if trip.status != "home": detail.append_text("\n%s expedition: %s. Cargo: %s. Crew returns with the expedition." % [trip.owner.capitalize(),trip.status,_bundle(trip.cargo)])
+
+func _confirmation_text(entry: Dictionary) -> String:
+	var text = _action_name(entry.action)+"\n\nConsumed now: "+_bundle(entry.inputs)
+	text += "\nOutput: "+_bundle(entry.outputs)
+	var payments: Dictionary = entry.get("plan",{}).get("payments",{})
+	for owner in payments: text += "\nAccess fee: %d influence to %s house" % [int(payments[owner]),owner.capitalize()]
+	if not entry.get("commitments",{}).is_empty(): text += "\nHeld, unavailable for spending: "+_bundle(entry.commitments)
+	var recurring: Dictionary = entry.get("recurring",{})
+	if not recurring.is_empty():
+		text += "\nOngoing: %d gold per round" % int(recurring.gold_each_round) if recurring.has("gold_each_round") else "\nOngoing upkeep: "+_bundle(recurring.get("upkeep",{}))
+		if recurring.has("cadence"): text += " · "+str(recurring.cadence).replace("_"," ")
+	if entry.get("prestige",0) > 0: text += "\nCompletion reward: %d prestige" % int(entry.prestige)
+	return text+"\n\n"+entry.get("timing","One action; ordinary turn rules apply.")
+
+func _build_blocked(id: String) -> String:
+	var sim = session.sim
+	var b: Dictionary = _s().buildings[id]
+	if b.built: return "Already built. Select the building to inspect its work."
+	if _s().houseworks.sites.has(id): return "Site already claimed. Select it to inspect the outstanding materials; contributions need its shared card."
+	if sim.has_unfinished_site(sim.current_house().id): return "Finish your existing sponsored construction site before claiming another."
+	if sim.current_house().inventory.influence < sim.site_social(id): return "Site claim needs %d influence; your house has %d. A first idle Skip can earn influence." % [sim.site_social(id),sim.current_house().inventory.influence]
+	return "No eligible affordable site. Existing private properties and ongoing projects are protected; clearance also needs prestige."
+
+func _building_blocked(id: String) -> String:
+	var s = _s()
+	var b: Dictionary = s.buildings[id]
+	if not _live(): return "Viewing history. Return to the latest live state to act."
+	if not b.built: return "Construction is unfinished. Its shared card must appear before supplying available materials."
+	if id in s.used: return "Already worked this round. Wait for the next round."
+	if id not in s.revealed and not id.begins_with("hall_"): return "Its shared card is not available this round. Inspect the remaining deck."
+	return "No affordable legal action. Inspect the required inputs and access fees; committed goods cannot be spent."
+
+func _reset_choices() -> void:
+	pending = {};placement_entry = {};confirmation_entry = {};preview_card = {}
+	confirm_dialog.hide();town_view.eligible_plots = [];event_log.clear();last_event_sequence = -1
+func _new_game() -> void:
+	_reset_choices();super._new_game()
+func _load_save() -> void:
+	_reset_choices();super._load_save()
+func _toggle_archive() -> void:
+	_reset_choices();super._toggle_archive()
+func _ai_step() -> void:
+	if not _live(): auto_timer.stop();return
+	var result: Dictionary = session.step()
+	notice = "AI: "+_action_name(session.probe.last_decision.chosen) if result.ok else "AI stopped. Open developer diagnostics for the recorded failure."
+	if not result.ok: auto_timer.stop()
+	cursor = session.frames.size()-1;_draw()
+
+func _trade_offer(entry: Dictionary) -> void:
+	var card = _panel(trade_cards,205)
+	var action = _button(card,_action_name(entry.action),func(): _choose(entry))
+	action.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	action.add_theme_font_size_override("font_size",15)
+	action.tooltip_text = _confirmation_text(entry)
+	_label(card,"Pays → receives",13)
+	var exchange = HBoxContainer.new();card.add_child(exchange)
+	var cost = Tokens.new();cost.size_flags_horizontal = Control.SIZE_EXPAND_FILL;exchange.add_child(cost);cost.show_bundle(entry.inputs,entry.inputs,"Pays now",28)
+	_label(exchange,"→",16)
+	var output = Tokens.new();output.size_flags_horizontal = Control.SIZE_EXPAND_FILL;exchange.add_child(output);output.show_bundle(entry.outputs,entry.outputs,"Receives",28)
+	if entry.has("recurring"): _label(card,"Recurring · inspect terms",13)
+
+func _s() -> Dictionary:
+	var state: Dictionary = _m().state
+	if not archive: return state
+	# Historical recordings predate Halls, stockades and expeditions. Supply display
+	# defaults on a copy, never rewrite the historical save or infer new mechanics.
+	var view = state.duplicate(true)
+	if not view.has('houseworks'): view.houseworks = {'sites':{},'hall_rounds':{}}
+	if not view.has('town'): view.town = {'wall_wood':0,'wall_complete':false}
+	if not view.has('exploration'): view.exploration = {'routes':[],'trips':[],'clock':0}
+	if not view.has('projects'): view.projects = {}
+	return view
