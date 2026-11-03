@@ -10,3 +10,5 @@ build/
 experiments/**/decisions.jsonl
 experiments/**/checkpoint.json
 experiments/**/save.json
+
+experiments/mapped_checks/initial_state.json
