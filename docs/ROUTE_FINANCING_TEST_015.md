@@ -1,3 +1,5 @@
+> **Historical document.** Retained for its original version/experiment; its recommendations and missing-feature claims may be superseded. For current v0.909 rules, decisions and next work, start with [THREAD_HANDOFF.md](THREAD_HANDOFF.md). Historical results below are not relabelled as current validation.
+
 # Route financing — experiment 015, v0.905
 
 **2 November 2026 · local source version 0.905 · schema 16**

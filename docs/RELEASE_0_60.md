@@ -1,3 +1,5 @@
+> **Historical document.** Retained for its original version/experiment; its recommendations and missing-feature claims may be superseded. For current v0.909 rules, decisions and next work, start with [THREAD_HANDOFF.md](THREAD_HANDOFF.md). Historical results below are not relabelled as current validation.
+
 # v0.60 — the town becomes visible and playable
 
 The approved Colonization–Anno pixel-art reference now appears throughout the native Godot interface: eight building/vehicle sprites, nine goods/labour/influence/prestige sprites, town ground, illustrated cards, shared pile and an earthy timber/parchment theme. The map shows actual ownership and activated buildings; improving a hut changes its sprite. A caravan appears during visits. These are presentation changes; the map does not add adjacency or transport rules.

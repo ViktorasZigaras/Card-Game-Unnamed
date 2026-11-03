@@ -1,236 +1,140 @@
-> Historical snapshot. For the November 2 answers use CONFIRMED_Medieval_Town_Design_Synthesis_and_Next_Test.md; for executable v0.904 changes use LAND_EXPEDITIONS_AND_DEVELOPMENT_014.md.
+# Medieval Town — consolidated design ideas
 
-# Medieval Town — design synthesis and the next useful test
+Updated 3 November 2026. **Executable baseline v0.909 / schema 18**; code commit `30514b0228bafc34aa37aaa8d8027db6c207fdb9`. This is the retained design record, not a claim that every idea works. [Current inventory](CURRENT_GAME.md) describes executable details; [AI](PLAYER_AI.md) describes actual reasoning; [decisions](ISSUES_AND_QUESTIONS.md) preserves all twelve answers and open work.
 
-**31 October 2026 · discussion synthesis, not a final specification**
+## Intended experience and status
 
-This document consolidates the user's proposals and explains how they can form one game. Core clarifications are distinguished from future design concepts and proposed experiment defaults. This synthesis originally preceded the 0.5.0 marketplace test. The clarified core and the user's new marketplace/import/brick-house scenario have now been implemented and tested in six games. See **MARKETPLACE_EXPERIMENT_004.md** for current executable rules, results and limits. The original experiment proposal below is retained as design history; future systems remain provisional.
+Noble/merchant houses compete and cooperate in a developing town. A house should establish itself, secure dependencies, gain a recognised headquarters and acquire capabilities that let it become more. Rivals may obtain important opportunities first. The town's interests sometimes align with private development and sometimes compete for goods, labour and land.
 
-## 1. The game emerging from these ideas
+The designer is the primary intended player. This is a planner's thinking game: recognise possibilities, arrange a smart consequential plan and understand what the house can become. Immediate rewards, rapid prestige, equal progress or universal AI completion are not automatic improvements. Simulations help expose consequences; personal satisfaction and UI/art direction need actual play.
 
-Several houses compete and cooperate inside **one developing town**. They share a physical economy, gain different forms of access to it, and pursue increasingly specialised ambitions. The town also has interests of its own.
+Cards vary current opportunities while physical resources, ownership, supply commitments, projects and land persist. Owning a source, accessing it, using a current token, reserving a future output and knowing a recipe are distinct advantages. A possible arc is operate → secure → commit → specialise → restructure → achieve; this is not a compulsory identical ladder or a settled victory condition.
 
-The domestic game centres on **materials, labour, limited space and influence**. Money has a more specific later role in external trade and possibly specialist work. Owning something, being able to use it, having its output available, and being able to secure that output are different advantages.
+**Implemented** means executable in this version, with the inventory's restrictions. **Confirmed direction** means an explicit designer instruction, possibly not fully implemented. **Provisional** marks test prices/yields/restrictions and uncertain interpretations. **Deferred** means recorded for later and not permission to invent the missing system now. Replayed actions establish reproducibility, not strategy or enjoyment.
 
-A promising progression is:
+## Original fifteen ideas — preserved with current status
 
-- **Early:** operate buildings, feed housing, obtain labour, secure supplies and improve a modest portfolio.
-- **Middle:** turn selected repeated operations into standing supply links; develop a business and then a guild; invest in specialists, knowledge and transport that support distinct capabilities.
-- **Late:** use institutions, advanced networks and consequential town development to pursue a house victory or a town victory. Reorganise scarce land as old local supply arrangements become redundant.
-
-This is an interpretation of the proposed direction. It does not set victory conditions, require every house to follow an identical ladder, or commit development to every future system.
-
-## 2. The core rules most recently described
-
-### Buildings, plots and the shared hand
-
-- Urban plots and rural/resource plots serve different uses. The current discussion refers to **ten normal plots**, with a special chapel space outside that budget. The urban/rural split needs to be explicit in the next test.
-- A shared cycling deck makes particular buildings available. A round corresponds to one hand refresh.
-- Every building, owned or public, activates at most once per round. Activation immediately moves its card from the available hand to discard; the physical building remains in town.
-- Houses alternate normal actions. Passing skips a turn; a house may act again while others continue. **Consecutive passes by all houses** end the round.
-- Whether claiming/upgrading a building also requires its card to be in hand remains inherited prototype scaffolding, not a separately discussed final rule. In particular, immediate activation/discard now makes that availability question consequential.
-
-### Production and labour
-
-- Basic rural buildings produce **one unit without requiring a pop**. An upgraded rural producer can use **one pop for two units**, while retaining the lower-input option.
-- Basic housing consumes **one grain for one pop**. Upgraded housing can consume **one grain plus one minor luxury for two pops**, or fall back to the grain-only recipe.
-- Workshops use resources and labour. Exact industrial recipes and how partial-input operation scales beyond the explicit housing/rural examples remain provisional.
-- Pops are labour tokens drawn from a **finite local maximum**, not named residents assigned to individual huts. Spending a pop removes it from usable labour and returns it to the available token reserve for later regeneration. Housing cannot issue tokens already occupied elsewhere in that finite pool.
-- Unused physical goods persist. The latest test also preserved unused pops; their finite maximum is a subsequent clarification. Counts must include public stock, reserved output and private stores; future committed tokens need equally explicit accounting.
-
-### Access, influence and safekeeping
-
-- Output initially belongs in the general pile with a temporary first-use reservation for its activator. The tested convention was through the end of that house's next normal action; precise free-action interaction still deserves explicit verification.
-- Each house can take tokens into a **three-token total stockpile**, one taking action per token. Ordinary public access excludes that protected stock.
-- Ordinary rival-building use costs **one influence**. Direct use of a rival's reserved resource costs **one influence per token**. Payment transfers to the relevant house; it is permission to use the thing outright, without bidding.
-- Paid rival-building activation is a **free action**. It still consumes the building's one activation for that round.
-- The user subsequently added a **two-influence override** for a resource inaccessible this turn or generally deadlocked, applying to **all stockpiles**. This supersedes absolute private protection. Exact eligibility, how this fee combines with ordinary charges, and a payment destination for unowned resources remain open.
-- A house that has already done something during the round gains no influence on a later pass. With passing now allowing re-entry, repeated idle-pass rewards need an explicit rule; the earlier withdrawal model never had that situation.
-- Influence is capped at **ten per house**.
-- An ordinary turn action can convert a provisional **five influence into prestige**. One prestige per conversion is a proposed test denomination, not a final reward scale. Prestige's varied future uses remain undesigned.
-
-### The chapel
-
-The chapel is **special and unownable**, occupies free urban space outside the ten ordinary plots, and is intended to help lagging houses catch up. It provides two influence when used. Its intended purpose is clear; the precise definition of lagging or any priority/eligibility rule has not been specified.
-
-## 3. Future concepts and the jobs they would do
-
-These are design candidates for later implementation, testing, revision or removal.
-
-| Concept | User's proposed form | What it contributes |
-|---|---|---|
-| Contracts | Resource-backed, automatic, binding links or boons; a supplied token establishes an ongoing capability or supply contribution | Converts repeated operations into infrastructure and makes dependency choices consequential |
-| Specialists | Social class and training are separate traits that can overlap; specialists can still do basic field work | Makes scarce people, upkeep and access matter by unlocking more advanced activities |
-| Transportation | Land/sea capacity for standing links and individual deliveries; scarce, costly and committed elsewhere when used | Gives links an opportunity cost and makes distant supply different from local supply |
-| Foreign trade | Priced import and export decks, themed visitors, barter and expedition-unlocked opportunities, possibly coexisting | Creates alternative supply sources and external opportunities without pricing every domestic action in cash |
-| Money and treasury | Money mostly belongs to houses; a town treasury may fund shared expansion | Supports private external ambitions and a possible public-development budget |
-| Research | Practical upgrades through sophisticated industry and ships; local work, wider networks and acquired knowledge; varied participating roles | Expands what the town can meaningfully attempt and who can attempt it |
-| Privileges | Situational rewards, permanent or timed, transferable or restricted | Recognises achievements and allegiances with particular rights or better terms when story/balance justify them |
-| Institutions | Business → guild → institution as a possible development arc; individual or town victory | Provides progression and eventual purpose beyond accumulating stocks |
-| Town agency | A town authority identifies needs, offers increasingly attractive milestone rewards and acts itself when houses cannot or will not | Gives public development direction without relying on random quests |
-| Overbuilding | Replacement or repurposing as land becomes scarce and old supplies become redundant | Lets an evolving economy change its physical footprint rather than only add upgrades |
-
-### Contracts are infrastructure abstractions
-
-The example is paying a pop once to secure a constant lumber contribution from a lumber yard to the total supply. The Steam-style delivered-cube analogy is about establishing an industry link: the ongoing boon becomes the important state to manage.
-
-This is not a request for a recurring manual delivery task. It might remove routine card handling and support a tree of interdependent capabilities, both locally and in foreign trade.
-
-However, “constant one lumber” could mean a standing available unit, production capacity, or a flow over time. Those are mechanically different. Likewise, a paid pop might be permanently committed, consumed, or replaceable. Neither timing nor token commitment should be silently finalised. Cancellation, when an AI should pursue a link, and transport requirements were expressly left for later.
-
-### Research, specialists and institutions form a capability layer
-
-A specialist's importance is not merely producing a larger number. Its class, training, upkeep and privileged availability can enable something strategically different. A merchant, squire or professor may participate in different forms of advancement. Some knowledge must be developed locally before wider networks become accessible; some advanced mechanical knowledge must be acquired.
-
-Examples of research range from a level-two lumber mill to a steel mill or capable ocean-trade ship. Privileges may reward building something, researching something or choosing a winning side, with duration and transferability determined case by case.
-
-Research creates possibilities; specialists and supported roles help operate them; institutions give sustained specialised activity a direction. Privileges can be added where a specific achievement or political context deserves one. These concepts need not become four independent currencies or four large upgrade trees.
-
-### External connections provide alternatives
-
-Several foreign channels may operate simultaneously: rotating goods for sale at stated prices, rotating export offers paying stated prices, themed caravans or ships with semi-random selections, goods-for-goods exchanges, and opportunities unlocked by a house-sponsored expedition. Visitors may require town conditions or supplied requirements. Land/sea transport capacity can support a standing link or a particular delivery, with expense, scarcity and competing uses. Money mostly belongs to houses; a town treasury might fund shared expansion while houses pursue other things.
-
-### The town provides public purpose
-
-The town assesses what is needed and currently possible, announces a meaningful objective such as a sawmill, and makes delivering it increasingly attractive. If houses remain unable or unwilling, the town can pursue progress itself.
-
-This is a potential mechanism for aligning private ambition with public development. It still needs a budget, action rules and limits: a town that can conjure resources or automatically solve every obstacle would erase the houses' decisions. That is an implementation concern, not a reason to discard the idea.
-
-## 4. What overbuilding adds
-
-Overbuilding is **economic restructuring under land pressure**. It is not yet a rule permitting extra buildings above a plot limit.
-
-A local raw or intermediate source may be replaced by another crop, a reliable import, or a better production arrangement. Existing workshops, businesses or homes can then become candidates for replacement. A field previously needed for grain might become attractive for a cash crop or raw-material plantation.
-
-An illustrative sequence, combining the user's concepts, is:
-
-1. Local grain supports housing and labour.
-2. A dependable external supply offers another way to obtain grain.
-3. Transport capacity and money or trade goods must support that alternative.
-4. Land becomes more valuable for a different crop or enterprise.
-5. Redevelopment improves another capability while making the town more dependent on the import route.
-
-This example is not a specified mechanic. In particular, replacement costs, permissions, compensation, ownership, housing consequences and the fate of existing links are open. “Reliable import” must eventually have a mechanical meaning before an AI can safely reason about replacing local food production.
-
-## 5. Why the bucket can make sense as one game
-
-The connecting theme is **changing dependencies**.
-
-| Stage of play | Typical decision |
+| Original topic | Status and retained direction |
 |---|---|
-| Operate | Which available building should I use with today's stock and labour? |
-| Secure | Which resources or access rights are worth protecting or paying for? |
-| Commit | Which repeated operation deserves a standing link, and what scarce capacity does that tie up? |
-| Specialise | Which knowledge, people and facilities let my house do something distinctive? |
-| Restructure | Which old use of land or capacity can be replaced, and what new dependence does that create? |
-| Achieve | Which private ambition or shared milestone gives this development a purpose? |
+| 1. Passing and re-entry | Implemented: passing skips an opportunity; consecutive passes close the round. An eligible idle house can collect one influence once a round, then re-enter. |
+| 2. Paid access | Implemented: one influence for a rival building/reserved input, two for a stored input; transfers buy immediate use of real goods, never consumed progress or permission to hoard a rival token. |
+| 3. Building/card availability | Implemented ordinary shared-hand activation once per round, with explicit automated-source, partial-project and owner-only Hall exceptions. Cards are an opportunity system, not the whole persistent economy. |
+| 4. Finite labour | Implemented physical pool and commitments; work frees manufacture capacity. Six is a test cap. Individual residents/demographic growth remain future design. |
+| 5. Catch-up chapel | Implemented unownable special asset, currently gated by fewest upgraded homes; output two influence, upgraded three. Single-metric eligibility is provisional. |
+| 6. Influence/prestige | Implemented capped influence, one-way conversion, social ownership costs, titles, buyouts, cancellation and clearance. A final victory use/general price schedule is unsettled. |
+| 7. Contracts | Partly implemented material setup, recurring supply, labour/backing commitments, priority, public external routes and escalating interference. General local quantity bindings, alternative sources and partial establishment remain gaps. |
+| 8. Specialists | Deferred. Class and training are separate and may overlap; enable qualitatively different work. Tokens and ongoing supported roles are possible forms. Specialists may still perform basic work if appropriate. |
+| 9. Transportation | Partly implemented: Hall grants one land capacity, expeditions travel with crew and routes retain capacity. Land/sea fleets, broader logistics, visitor conditions and other capacity providers remain deferred. |
+| 10. Money and foreign trade | Partly implemented: house gold, finite caravan orders, stone/prestige purchases, random expedition deals, finite cargo and funded routes. Treasury, rotating/themed visitors, wider barter/cities and fleets remain future. |
+| 11. Research | Deferred apart from globally permanent recipe-unlock hooks. Local development, network knowledge and sophisticated machinery can be different routes; scholars, merchants, squires and professors may contribute differently. |
+| 12. Privileges | Deferred: situational rights/rewards, timed/permanent and transferable/restricted as appropriate. Add a concrete privilege for its purpose, not an arbitrary universal catalogue. |
+| 13. Institutions | Deferred: business → guild → institution is a possible trajectory. A Hall is a house's seat before its real business phase; prerequisites, obligations and achievements are unsettled. |
+| 14. Town agency | Partly implemented standing brick demand, wall, automatic unused public wood use and shared land expansion. Need assessment, reward escalation, treasury and a general town planner remain future. |
+| 15. Overbuilding/restructuring | Implemented for supported eligible unowned sites: consequential social clearance/claim followed by full material construction; occupied rural conversion includes loss/cancellation costs. Broad strategic valuation and arbitrary replacement are not complete. |
 
-The shared town means private success can create common benefits and common vulnerabilities. An automated lumber source helps rivals too; a ship assigned to one route cannot serve every other route; a specialist can work a field but may be more valuable elsewhere; imported food can free land while creating exposure to trade access.
+The early documents' entirely-future transport, money, cancellation and town-action descriptions are superseded. Working Hall/route demonstrations do not imply specialists, technologies, businesses or a complete logistics network.
 
-These are useful consequences to aim for. The current small prototype has not demonstrated all of them.
+## Later additions and the decisions they embody
 
-There is a distinctive balance to preserve: ordinary production should remain understandable and recoverable, while ambitious arrangements should create opportunity costs and dependencies. Adding many resource names alone will not establish that balance.
+### Earlier foundation brief — ideas retained beyond the fifteen-topic audit
 
-## 6. Historical implementation status when this synthesis was written
+The original `medieval_town_card_game.md` contains broader examples not fully repeated in the fifteen-topic review. Its historical text is preserved in [the foundation archive](archive/FOUNDATION_DESIGN_2026_10_29.md). Later explicit decisions override its then-open timing/access questions; the illustrative content below remains deferred, not a newly authorised content expansion.
 
-The tested 0.4.0 baseline supported flexible housing/rural recipes, persistent stocks and pops, three-token stores, paid direct access, an influence cap and a built chapel. Its six forty-round games produced an upgraded hut for every house in rounds three to nine and maintained economic activity through round forty. It passed sixty-nine checks.
-
-**Those 0.4.0 results did not validate the later clarified rules.** The table below records the implementation gap at that time; these core changes are now tested in 0.5.0 with explicitly provisional defaults:
-
-| Later clarification | Required change from 0.4.0 |
+| Foundation idea | Retained meaning/status |
 |---|---|
-| Passing means skip/re-enter | Replace withdrawal with consecutive-pass round ending |
-| Activated card immediately enters discard | Remove the card from the available hand immediately, not only mark it used |
-| Two-influence blocked-resource override | Add a controlled direct-use path, including private stockpiles |
-| Finite pop-token supply | Account for unused, usable, stored and any committed labour tokens |
-| Special catch-up chapel | Make it unownable and outside ordinary plots; define a temporary eligibility rule if needed |
-| Prestige conversion | Add the ordinary conversion action and bookkeeping |
-| Ten ordinary plots | Correct the previous eleven-plot test setup and state the urban/rural split |
+| Inspirations | Cultist Simulator's card/table vocabulary, Dominion's cycling, Colonization's concrete goods/chains/trade; inspiration rather than proprietary assets or copied rules |
+| Locale profiles | Climate/geography can vary terrain, amenities, deposits, starting resources, trade and advanced routes between sessions; geography within one climate may differ |
+| Illustrative locales | Temperate river valley: clay/wicker/reeds/fish/hemp; northern woodland: fur/resin/wax/timber; Mediterranean hills/coast: olives/grapes/aromatics/resins; humid tropical coast: spices/aromatic woods/fibres. None is an implemented guaranteed resource table |
+| Illustrative chains | Clay to pottery/bricks/tiles; fur to clothing/luxury; incense/resins to ceremonial prestige; spices to cuisine/medicine/luxury; wicker to baskets/containers/furnishings; hemp to rope/cloth/sails. Give new goods sensible demand and alternatives |
+| Terrain/deposit revelation | Finite landscape/development slots can include hills, riverbanks and deposits; exploration may reveal them. Current fixed scaffold does not implement those additional terrain types |
+| Ambiguous gathering capacity | The original example of a camp allowing one wood and an improved camp allowing three was deliberately ambiguous about production/storage/available stock. It is not a current wood cap or approved replacement recipe |
+| Foreign trade deck | Northern Fur Merchant, Eastern Spice Caravan, Overseas Building Contract and Permanent Maritime Route were examples of rotating opportunities. Current caravan/expedition rules are not a complete separate trade deck |
+| Scarcity safeguards | Bad random draws should not make unavoidable deadlock. Possible costly baseline imports, scouting/diplomacy, substitutes and predictable minimum access remain candidate safeguards; none is universally installed |
+| Institution examples | College (knowledge/instruments/manuscripts/engineering), church/temple (legitimacy/ceremonial goods/social services), shipyard (ships/transport/exploration), architects' guild (construction/technical service). Exact prerequisites and output systems remain open |
+| Institutional dependence | An institution might have fewer ownership slots than its supply chain requires, fostering dependence on rivals, town supply or imports. Evolution need not be a compulsory strict upgrade |
+| Broad achievement paths | Scholarship, exploration, population, influence, conquest and commerce are ideas, not implemented victory conditions |
+| Population possibilities | Workers, craftspeople, administrators, scholars, clergy and sailors; housing might create residents, consumption, income or prestige. The current six-token work pool does not implement this demographic model |
+| Distinctive imperfect AI | Intelligible biases, rigidity, limited foresight, slight variation/inertia and possible memory are design options. Current colour data and deterministic hashing do not implement the whole personality model |
+| Evaluation | Track deadlocks, passes, concentration, unused assets, trade, bottlenecks and pacing; later institution timing/diversity and victory distributions only when those systems exist. Batch play is an instrument, not proof of fun |
+| Architecture | Godot 4/GDScript, separate simulation from presentation, data-driven content, seeded RNG, saves/replay and a decision diary are retained. Proposed manager/class names in the foundation were architectural suggestions, not the names of actual current classes |
 
-Current status: 0.5.0 adds two small supply-link forms, caravan barter, a scenario directive and prestige milestones. Specialists, general transport, real foreign money, research, privileges, institutions, autonomous public development and redevelopment remain future systems.
+The initial 2–3-house/8–12-building/3–5-resource milestone and suggested two locales were a scope proposal, not a claim that today's prototype includes two playable locale profiles. Proposed building data fields, owner compensation alternatives and local market pricing variants are historical design possibilities; actual current fields/fees are described by source and the inventory.
 
-## 7. Recommendation: one contract, using existing goods
+### Establishment: a good home, industry, headquarters
 
-**Do not add a broad set of new goods next. First test whether one standing industry link produces the kind of change intended.**
+Confirmed sequence: **good owned brick home → owned industry → House Hall → remaining opportunities/prestige**. Headquarters is the core unique seat of the player house, one per house outside ordinary ownership slots, using urban land. House Hall is a working name, avoiding a premature claim to manor estate, guild or mature business status. A Hall grants one owner-only off-deck known workshop activity per round, paying its real recipe inputs; no free passive output or prestige is implied.
 
-The immediate hypothesis is:
+The small sawmill connects wood and labour to planks for Hall investment. Stone imports connect the Hall and chapel to external trade. The chapel upgrade and unlimited brick-to-influence demand were deliberately introduced as testing sinks and previews of future dependencies. They do not settle the final economy. An industry is not automatically a developed business merely because a house owns it.
 
-> A simple automatic lumber link can reduce routine activation/card dependence, while committing scarce labour gives that convenience a meaningful cost. It should help houses pursue improved housing without making all later decisions automatic.
+### Physical goods and meaningful commitments
 
-The clarified core must be reconciled first. That is implementation work and focused validation, not a separate large balancing project. Then use one six-game comparison to see both the reconciled baseline and the smallest contract variant.
+Goods should be legible individual physical objects as well as exact counts—a stylistic and planning aid inspired by the designer's old Venice/Prince game recollection. Do not treat that recollection as a verified exact title/reference asset. Reserved supply, private caches, export backing, held crew and consumed progress are economically distinct, and UI should reveal the distinction.
 
-### Proposed six-game experiment
+Idle houses can collect varied surplus goods and bulk-exchange three for three influence, then collect prestige. Current selection is deterministic/fixed-order in important places; a fully human-chosen three-good bundle is not yet implemented. Initial social policy should not simply buy everything outright. Acquiring property and priority must consume social currencies and create a reason to replenish them.
 
-| Parameter | Proposal, not a final rule |
+A produced batch offers one temporarily preferred output on the holder's next action; take it then or let priority expire. It is not permanent exclusion of the batch. Immediate rival use can pay social access costs. Existing law does not require a last-resort proof before buying through a stored token; expensive destructive/hostile interference has a stronger intended last-ditch strategic justification.
+
+### Contract establishment, title and quantity
+
+Confirmed direction: any physical resource can in principle support a justified contract with appropriate tested prerequisites. Current local services are a restricted catalogue; expedition imports broaden the goods available. Material setup, recurring input/capacity obligations, building ownership and socially purchased priority are different transactions. Priority has an increasing buyout price. Upgrading an automated source retains base supply and returns a card only for extra inputs/outputs.
+
+Q09 requires meaningful **quantities** of supply to be bindable. Three available grain outputs should not become one undifferentiated monopoly title. A binding must respect enabled production chains and theoretical access to upstream inputs. The example of two grain becoming two-or-more bread illustrates processing, not an instruction to add bread now. One local contract per resource is a current limitation, not the desired final rule. Independent same-good expedition routes are only a partial precedent.
+
+Partial supplies/service setup are intended generally but still absent. Exotic arrangements that help establish a future business were discussed as possible later options needing balance/design justification, not unrestricted current exceptions.
+
+### Clay backing and the caravan
+
+The legacy clay link consumes a chest at setup, holds one wood and one labour capacity, then supplies clay immediately and on visits without repeatedly consuming wood. Held wood is unavailable for interim use; cancellation releases backing/capacity. This is the current variant. The thread considered permanent reservation versus interim single-use access when the caravan was absent; do not combine those alternatives or restore recurring public-wood upkeep by accident.
+
+Caravan visits remain round-based and finite: one shared brick-for-gold order, stone for gold and prestige for gold instead of selling bricks in this test. That is distinct from expeditions with their own action-based outbound/return clock and semi-random deals. A missed local recurring input or insufficient external route gold must matter; a contract is not a magical resource generator.
+
+### Finite imports versus a committed investment
+
+Halls grant one land transport capacity. A manned expedition uses provisions, real held crew and time; on arrival the sponsor gets two buy/contract and two sell offers among known goods. Purchased finite goods only become usable on return, going to own store if space permits or public supply otherwise. Sales may use any legally accessible existing goods. Contracts retain transport and ongoing gold obligations after crew returns.
+
+The later revision distinguishes cheap-to-cancel **public supply** from socially purchased priority. Public output still has a sponsor, transport and operating cost. Local ownership consumes prestige plus influence; external public setup consumes prestige and setup gold, priority adds influence. Owner withdrawal should be inexpensive compared with hostile cancellation; overbuying is possible at rising prices. Ownership affects future priority, not public goods already delivered. The initial idea of automatic owned expedition contracts was superseded by this deliberate public/priority choice.
+
+Useful clay imports can receive a town reward, but only on a real paid delivery. Funding cannot count a reward before it occurs or assume a contested export order guarantees income. A temporary bridge needs a bounded budget and exit; small needs can be finite cargo. Current short home fixtures favour public access. A standing investment should gain value from a real repeated plan rather than from artificially forbidding all alternatives.
+
+### Partial work and restructuring
+
+Social clearing/claiming and physical building are separate actions. Paid material contributions consume goods into lasting progress; incomplete construction reserves land but has no completed function. Partial upgrades keep the old function. Ongoing sites are protected against further overbuilding. This later clarification supersedes the earlier tentative exception permitting unfinished sites to be displaced at full price.
+
+Otherwise legal occupied rural plots can become urban; count clearing, cancellation, conversion and lost-function costs. An empty fresh unowned plot is usually best. Combined cancellation during clearance is the explicitly **highly provisional** Q02 choice, to be judged when encountered in consequential tests. Full-price replacement pays the new building's complete materials after social clearance; old progress is not refunded. Private/special/ongoing protection is not waived.
+
+AI direction: pursue a real visible theoretical way out, allowing plausible random supply; if none is deducible, prepare brute force. It must distinguish credible routes from indefinite vague hope. The current bounded route heuristics are not proof that every legal alternative has been searched. The old two-Hall land ceiling and sawmill bookkeeping defect are not current design restrictions.
+
+### Town, biome and appearance
+
+Stockade investment rewards active wood delivery and allows two costly rural-to-urban redevelopments, then four outer rural claims rewarding one prestige each. The town may consume unused unreserved public wood at round end for known tasks. It does not seize all private plans or own a general treasury. Land claims use town-biome probabilities; current woodland is 65% forest/35% field, not an assured two-and-two package. Later cutting woods, draining swamps and terrain transformation need their own costs and consequences.
+
+The first visual scaffold keeps possible plot addresses/positions while terrain and occupants change. Reclaiming nature removes foreground vegetation; decorative roads and a single slow building animation create atmosphere. Current saved map has fifteen fixed positions and no adjacency, pathfinding, travel distance or timber-per-tree economy. Tabbed workspaces reduce information overload. One effect per building, reduced-motion control and a cosmetic clock protect readability and deterministic simulation. Dedicated Hall/sawmill art and human evaluation remain pending; the static map study is not a screenshot.
+
+### Knowledge, specialists and future institutions
+
+All unlocks are **global and permanent for everyone**. Later research might force a choice about helping rivals with an advance unnecessary to one's own win; retain that idea for later, not as an immediate denial mechanic. Recipe hooks are not yet technology research. Local invention, access to wider networks and acquiring advanced machinery are distinct ways to expand plans.
+
+Class and training can overlap; specialists should open qualitative possibilities rather than merely multiply output. Their support and alternate uses should create opportunity costs. Businesses, guilds and institutions might require capabilities, supplies, clientele, status, commitments and achievements; no exact prerequisites are settled. Privileges should serve specific ambitions. The final win condition and mature-house progression remain open.
+
+## Contradictions reconciled and gaps retained
+
+| Apparent contradiction | Resolution |
 |---|---|
-| Game pairs | Three matched pairs, seeds 1, 7 and 42 |
-| Locale | One river-valley scenario, keeping geography fixed |
-| Duration | Forty hand refreshes per game |
-| Baseline | Clarified core rules, no contract |
-| Comparison | Identical core and initial ordinary stocks, plus one preset public lumber link |
-| AI goal | Each house obtains an upgraded hut, then pursues further useful improvements |
-| New goods | None: use wood, grain, clay, brick, the existing abstract minor luxury and pops |
-| Contract agency | Preset scenario link; do not yet ask AI when it should choose or cancel a contract |
-| Transport/foreign trade | None in this first local-link test |
-| Victory | No new win condition; compare progress and decisions |
+| Old no-prestige-spending/no-gold/no-town-action text | Historical only; current inventory describes expenditure, trade and limited town tasks |
+| Hall optional in prestige phase | Superseded by explicit home → industry → Hall goal |
+| Two free urban plots imply only two possible Halls | Not intended; paid restructuring/conversion enables alternatives |
+| Demolished sawmill remains completed | Then-real bookkeeping defect fixed in current code, retained in historical evidence |
+| Old atomic market/kiln versus universal partial-work wish | Current builds now use staged/partial sites; partial service establishment still missing |
+| Fixed outer terrain versus biome roll | Fixed split superseded; transformation remains future |
+| Per-house unlock array versus everyone forever | Existing hooks propagate globally/permanently; future tech must preserve that rule |
+| General quantity contracts versus one local contract/resource | Genuine implementation gap; do not declare it resolved by unrelated imports |
+| Finite cargo versus reusable supply | Finite tokens arrive once; standing routes require recurring payment/capacity |
+| Priority contract versus public option | Later explicit access choice supersedes automatic ownership; sponsor and priority holder are distinct concepts |
+| Protected ongoing work versus older full-price unfinished overbuild | Later protection answer wins |
+| AI consolidation versus strategic intelligence | One inspectable pipeline is implemented; many rules remain narrow heuristics |
 
-This is six games total, not six per variant. Removing a card intentionally changes later hand sequences, so matching seeds does not mean every revealed hand remains identical. The aim is descriptive comparison, not a statistical claim.
+## Next discussion and experiment
 
-### Concrete contract variant to make the experiment reviewable
+Read the [decision register](ISSUES_AND_QUESTIONS.md) before asking for more rules. All twelve audit answers are settled as recorded, including Q02 uncertainty. Obtain actual UI feedback, then isolate a repeated private supply need to test when priority is worth its social/exit costs. Quantity bindings are a separate confirmed-direction feature candidate. Preserve the six-test/comment/remark/suggestion rhythm; use matched cases and explicit limits, not perpetual unattended simulation claims. Do not add business, tech, terrain and new demand together merely to increase complexity.
 
-The smallest proposed implementation is:
-
-- One public lumber yard remains a built town asset but is operated through a standing link.
-- One token from the finite pop pool is **committed for the entire experiment**, unavailable for ordinary labour generation or use.
-- The link adds **one wood to the public pile at each hand refresh**.
-- The yard's ordinary activation card leaves circulation while linked. It must not also provide its manual activation output.
-- The link cannot be cancelled in this first experiment. This holds the comparison steady while leaving the future cancellation system undesigned.
-- No prestige award, privilege, private income, new transport or town AI is attached to creating the link.
-
-The output cadence and committed-token interpretation are explicitly **my proposed test defaults**, not claims about what the user already specified. A preset link avoids introducing an untested AI investment policy before its economic effect is understood. It also avoids treating contracts as manually fulfilled delivery promises.
-
-If “constant one lumber” is intended as a standing supply entitlement rather than a per-refresh flow, substitute that interpretation before running the experiment; do not mix the two in the results.
-
-### Other minimum defaults to expose before that test
-
-These close implementation gaps without designing later systems:
-
-- **Land:** proposed six urban plots and four rural plots, plus the separate chapel. River valley: one forest, two fields, one claybank. This gives one vacant normal urban plot and one vacant rural plot after the existing three huts/two workshops/three rural producers. It permits a little expansion instead of pre-filling all urban space.
-- **Pop maximum:** proposed six tokens for the whole town. In the contract scenario, one is committed and five remain available for the ordinary reserve/pile/stores lifecycle. In the baseline, all six remain available. This is a test parameter, not a demographic model.
-- **Idle influence:** initially propose at most one idle-pass reward per house per round. Taking a later action does not claw back a previously earned reward. Record pass/re-entry patterns because this is an unconfirmed interpretation and can favour an early skip. The alternative of rewarding every eligible idle pass is a different rule to test separately.
-- **Chapel eligibility:** proposed access for houses tied for the fewest upgraded huts; ties include all tied houses. This is a transparent temporary catch-up proxy, not a final ranking system.
-- **Override:** for the test, two influence replaces the ordinary resource-access fee when consuming an existing otherwise inaccessible rival-stored/reserved token; a separate building-use fee may still apply. Pay a private holder when one exists. It cannot create a physically absent token or exceed the finite pop maximum. Whether any broader emergency access should exist remains open.
-- **Prestige:** use the provisional five influence → one prestige action, with no prestige spending or victory rewards yet. Log it as an outlet, not a measure of who played best.
-
-These assumptions belong in the experiment configuration and report. If they prove distracting or conflict with the intended core, run the six corrected-core games first and postpone the contract comparison; do not hide a broken baseline behind automation.
-
-### What the logging tool should compare
-
-1. Which houses reach their first upgraded hut, and when; time to any additional meaningful improvement.
-2. Actions and unproductive passes needed per milestone, including pass/re-entry and free paid uses.
-3. Wood stock, wood shortages, unused wood accumulation and manual card handling avoided.
-4. Labour issued, worked, stored, available in reserve and committed; blocked housing activations because the finite pool is exhausted.
-5. Grain/luxury supply problems, resource overrides and private-stock use, including whether the link shifts a bottleneck elsewhere.
-6. Influence transfers, chapel distribution, cap losses and prestige conversions.
-7. Whether every house benefits or one gains an outsized timing/access advantage.
-8. Whether fewer routine activations leave more consequential decisions, or merely make the game emptier.
-
-Maintain full decision histories, snapshots, source/sink accounting, token/commitment conservation, card identity, save/load continuation and replay checks. A contracted asset needs a distinct recorded state so its card is neither duplicated nor treated as destroyed.
-
-### How the result should guide the following step
-
-- If the link saves routine operations at a noticeable labour cost, the next contract experiment can let a house choose to establish it.
-- If it is always beneficial because labour is abundant, examine its opportunity cost before adding more contracts.
-- If it makes wood pile up without changing useful decisions, a per-refresh flow may be the wrong interpretation of a constant supply link.
-- If it simply moves the bottleneck to grain, luxury or clay, that is evidence to inspect the current chain; it is not automatically a request for ten new goods.
-- Add **one** additional good only when an observed decision needs it—for example, an input with a distinct opportunity cost or a crop that makes land conversion worth choosing.
-
-The recommended order is therefore: **reconcile the core → compare one standing link → let AI choose a link → introduce one new economic distinction when the logs justify it**. Richer trade, specialists and town milestones can then attach to a tested capability rather than arriving as one large untestable bundle.
-
-## 8. Decision to carry forward
-
-The fifteen initial topics now describe a coherent direction, but they do not require fifteen immediate systems. The next useful question is narrower:
-
-**Does converting one repeated local operation into a supply link create meaningful choices about scarce labour, shared benefit and card access?**
-
-That is a more informative next experiment than expanding the resource catalogue immediately. The user subsequently authorized this comparison with a marketplace scenario. It has now run as experiment 004; consult that report for actual results rather than treating this proposal as current unexecuted work.
+The original unpublished v0.906–v0.908 files were lost; v0.909 reconstructs them from preserved source and the thread. [Recovery report](RECOVERY_0_909.md) records fresh evidence. Original v0.903 references are archived, not erased or silently relabelled as current tests.

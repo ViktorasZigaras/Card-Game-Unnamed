@@ -2,6 +2,10 @@
 
 A native 2D Godot prototype of competing noble/merchant houses in one developing town. Houses pursue a good home, an owned industry, a House Hall, then further opportunities. Shared cards, physical goods, labour, influence, prestige, gold and access rights make this a planning economy.
 
+## Documentation and new-thread handoff
+
+Start with [the handoff](docs/THREAD_HANDOFF.md). Canonical references: [current game inventory](docs/CURRENT_GAME.md), [actual player AI](docs/PLAYER_AI.md), [design ideas](docs/Medieval_Town_Design_Synthesis_and_Next_Test.md), [decisions and open work](docs/ISSUES_AND_QUESTIONS.md), and [file inventory](docs/FILES_AND_DOCUMENTS.md). Updated 3 November 2026; gameplay remains v0.909/schema18. Older numbered reports and `CONFIRMED_…` copies are historical evidence, not competing current specifications.
+
 ## Play
 
 Use Godot 4.5.1 standard or newer. Download this repository as a ZIP, extract it, import `project.godot`, and press F5. The interface targets 1920 × 1080; F11 toggles fullscreen. This is an editor-playable source project, not a precompiled Windows executable. Art is included and no external plugins are required.

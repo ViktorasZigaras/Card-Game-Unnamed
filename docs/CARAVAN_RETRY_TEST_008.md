@@ -1,3 +1,5 @@
+> **Historical document.** Retained for its original version/experiment; its recommendations and missing-feature claims may be superseded. For current v0.909 rules, decisions and next work, start with [THREAD_HANDOFF.md](THREAD_HANDOFF.md). Historical results below are not relabelled as current validation.
+
 # Caravan retry window · experiment 008 · v0.80
 
 Six matched games, seeds 1, 7 and 42, manual-timber start and preset lumber link, using the same v0.75 AI, recipes, ownership costs and first-pick reservations. Local work only; no uploads.

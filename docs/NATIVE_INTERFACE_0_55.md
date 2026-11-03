@@ -1,3 +1,5 @@
+> **Historical document.** Retained for its original version/experiment; its recommendations and missing-feature claims may be superseded. For current v0.909 rules, decisions and next work, start with [THREAD_HANDOFF.md](THREAD_HANDOFF.md). Historical results below are not relabelled as current validation.
+
 # Native Godot interface — v0.55
 
 This release takes the structural proposal into native Godot Controls. Game rules are unchanged. Minimum window and base viewport: **1920 × 1080**. Larger windows expand the central area. This desktop preview does not offer the earlier web proposal's narrow-screen stacking.

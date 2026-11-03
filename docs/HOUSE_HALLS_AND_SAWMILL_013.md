@@ -1,3 +1,5 @@
+> **Historical document.** Retained for its original version/experiment; its recommendations and missing-feature claims may be superseded. For current v0.909 rules, decisions and next work, start with [THREAD_HANDOFF.md](THREAD_HANDOFF.md). Historical results below are not relabelled as current validation.
+
 # House Halls and the small sawmill — v0.903, experiment 013
 
 Local development only. No new GitHub upload. The name **House Hall** identifies a permanent seat for the player house. “Manor” suggests a landed estate; “guild headquarters” would imply a professional institution we have not yet established. Business formation, markets controlled by businesses, guild privileges and research systems remain deferred.

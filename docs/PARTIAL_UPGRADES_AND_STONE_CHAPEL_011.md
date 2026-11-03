@@ -1,3 +1,5 @@
+> **Historical document.** Retained for its original version/experiment; its recommendations and missing-feature claims may be superseded. For current v0.909 rules, decisions and next work, start with [THREAD_HANDOFF.md](THREAD_HANDOFF.md). Historical results below are not relabelled as current validation.
+
 # Partial home upgrades and stone chapel · v0.901 · experiment 011
 
 Version numbering now advances within 0.9xx: 0.901, 0.902, and so on. This is local work; nothing was uploaded.

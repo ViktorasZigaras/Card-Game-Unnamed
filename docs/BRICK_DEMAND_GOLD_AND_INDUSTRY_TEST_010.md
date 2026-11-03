@@ -1,3 +1,5 @@
+> **Historical document.** Retained for its original version/experiment; its recommendations and missing-feature claims may be superseded. For current v0.909 rules, decisions and next work, start with [THREAD_HANDOFF.md](THREAD_HANDOFF.md). Historical results below are not relabelled as current validation.
+
 # Brick demand, industries and gold · experiment 010 · v0.90
 
 Twelve towns: six initial runs and six follow-ups with corrected AI planning. Each batch uses seeds 1, 7 and 42 with manual timber or a preset lumber link. Each runs 40 action rounds plus the automatic refresh into round 41. Original failures are retained. All work is local; nothing was uploaded.

@@ -1,3 +1,5 @@
+> **Historical document.** Retained for its original version/experiment; its recommendations and missing-feature claims may be superseded. For current v0.909 rules, decisions and next work, start with [THREAD_HANDOFF.md](THREAD_HANDOFF.md). Historical results below are not relabelled as current validation.
+
 # Experiment 005 — a decent house for every house · v0.65
 
 All six unchanged-policy games completed within 40 rounds. This is a local experiment; nothing was uploaded.

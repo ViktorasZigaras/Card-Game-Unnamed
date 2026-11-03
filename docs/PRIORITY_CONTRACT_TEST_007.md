@@ -1,3 +1,5 @@
+> **Historical document.** Retained for its original version/experiment; its recommendations and missing-feature claims may be superseded. For current v0.909 rules, decisions and next work, start with [THREAD_HANDOFF.md](THREAD_HANDOFF.md). Historical results below are not relabelled as current validation.
+
 # Priority, ownership and last-resort cancellation · experiment 007 · v0.75
 
 Six fresh towns, seeds 1, 7 and 42, each with a manual-timber start or preset lumber link. Played through 40 action rounds; reported end stocks and automatic deliveries include the refresh into round 41, as in v0.70. Housing completion is a milestone, not a terminal state. Nothing was uploaded.

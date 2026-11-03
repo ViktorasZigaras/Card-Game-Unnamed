@@ -1,3 +1,5 @@
+> **Historical document.** Retained for its original version/experiment; its recommendations and missing-feature claims may be superseded. For current v0.909 rules, decisions and next work, start with [THREAD_HANDOFF.md](THREAD_HANDOFF.md). Historical results below are not relabelled as current validation.
+
 # Proposed next issue: partial construction, plot reservation and forced overbuilding
 
 Status: partly implemented in v0.903 for House Halls and the sawmill. Marketplace/kiln partial construction and general forced replacement remain deferred.

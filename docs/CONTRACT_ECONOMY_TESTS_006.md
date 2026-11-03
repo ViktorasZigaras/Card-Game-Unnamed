@@ -1,3 +1,5 @@
+> **Historical document.** Retained for its original version/experiment; its recommendations and missing-feature claims may be superseded. For current v0.909 rules, decisions and next work, start with [THREAD_HANDOFF.md](THREAD_HANDOFF.md). Historical results below are not relabelled as current validation.
+
 # Contract economy laboratory · v0.70
 
 Eighteen original games in three adaptive batches of six; no uploads. Seeds 1, 7 and 42, each manual timber and preset lumber link. Older v0.60 and v0.65 projects are preserved.

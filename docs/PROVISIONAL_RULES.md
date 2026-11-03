@@ -1,3 +1,5 @@
+> **Historical document.** Retained for its original version/experiment; its recommendations and missing-feature claims may be superseded. For current v0.909 rules, decisions and next work, start with [THREAD_HANDOFF.md](THREAD_HANDOFF.md). Historical results below are not relabelled as current validation.
+
 # Provisional rules, prototype 0.1.0
 
 These are reversible implementation choices, not approved final design. The source design brief remains authoritative. The current goal is to expose state transitions and AI decisions for testing.
