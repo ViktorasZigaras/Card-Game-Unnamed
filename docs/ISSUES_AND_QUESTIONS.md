@@ -1,6 +1,6 @@
 # Medieval Town — decisions, gaps and discussion queue
 
-Updated 3 November 2026. Current executable **v0.909 / schema 18**, code baseline `30514b0228bafc34aa37aaa8d8027db6c207fdb9`. Documentation-only reconciliation. This is the canonical decision register; old `CONFIRMED_…` documents are historical copies. [Current game](CURRENT_GAME.md), [actual AI](PLAYER_AI.md), [design ideas](Medieval_Town_Design_Synthesis_and_Next_Test.md), [handoff](THREAD_HANDOFF.md).
+Updated 3 November 2026. Current executable **v0.910 / schema18**. The economy/AI baseline remains v0.909; [UI_RELEASE_0_910.md](UI_RELEASE_0_910.md) records the completed interface changes and fresh evidence. This is the canonical decision register; old `CONFIRMED_…` documents are historical copies. [Current game](CURRENT_GAME.md), [actual AI](PLAYER_AI.md), [design ideas](Medieval_Town_Design_Synthesis_and_Next_Test.md), [handoff](THREAD_HANDOFF.md).
 
 ## Authority and working agreement
 
@@ -92,7 +92,7 @@ Benefit the acting house when able. If private gain is uncertain or there is no 
 - Partial paid progress consumes goods and persists. Partial upgrades keep old function; new sites are nonfunctional until finished. Social claiming is separate from material construction. The later ongoing-site protection supersedes the earlier tentative unfinished force-overbuild exception.
 - House Hall is the current working headquarters name. One per house, owner-only off-deck workshop, outside the ordinary three-property allowance but using urban land. This is not the business phase.
 - An external offer can be finite cargo or a committed route. Public output still has a paying sponsor and uses transport; ownership/priority is a separate social investment. Cheap voluntary cancellation differs from hostile interference.
-- Versions advance as 0.9xx. Current code is 0.909; a documentation-only update does not make it 0.910.
+- Versions advance as 0.9xx. Current code is 0.910; future versions retain local source and a persistent downloadable archive, with periodic git checkpoints.
 
 ## Open work — not yet new questions requiring immediate answers
 
@@ -102,7 +102,7 @@ Benefit the acting house when able. If private gain is uncertain or there is no 
 | O02 | Strategic value of priority | Compare repeated privately useful inputs against paid access and exit cost. Existing six paired fixtures show equal home timing and favour public access; do not add an artificial lock merely to make ownership look necessary. |
 | O03 | Replacement consequences | Follow lost production, dependent titles, capacity, backing, card identity and delayed rival outcomes after Q02 clearance; include a worthwhile route and a legal-but-pointless route. |
 | O04 | Planner confidence | Specify observable reasons to wait, commit, replan or prepare force under uncertain hands/supply; no general search is implemented. |
-| O05 | Human interface/art test | Designer tries the tabbed screen: can they find a goal, needed token, rights/costs, partial progress, trade arrival and the next legal action? Judge map readability/motion from actual play. |
+| O05 | Human interface/art test | Designer tries the implemented v0.910 redesign: can they find a goal, needed token, rights/costs, partial progress, trade arrival and the next legal action? Judge map readability/motion from actual play. |
 | O06 | Replacing testing demand | Find justified future uses/dependencies before replacing unlimited brick demand. No automatic quota or removal is agreed. |
 | O07 | Wider ambitions | What makes a real business possible beyond home/industry/Hall? Specialists, research, privileges and institutions remain candidates; prerequisites and win conditions are unsettled. |
 | O08 | Terrain and town agency | Future terrain work, biome tables, treasury, need assessment and incentives need coherent costs/consequences. Existing scenery and wood routine do not implement them. |
@@ -117,3 +117,7 @@ If the next feature is quantity binding instead, scope that separately and start
 ## Evidence preservation
 
 The historical v0.903 audit and its 6,218 recorded decisions are retained as history, including the then-real B1 defect. v0.909 fresh evidence is in [RECOVERY_0_909.md](RECOVERY_0_909.md) and compact `experiments/*/results.json`. The unpublished v0.906–v0.908 originals were lost; v0.909 is a tested reconstruction, not byte-identical restoration. No test result should silently change version or be described as proof of optimal play.
+
+## UI decisions and delivery — 3 November 2026
+
+The new brief is implemented in v0.910: visible cards/goods/trade, layered town, explicit Build catalogue and manual eligible-site selection, supplied/missing project tokens, heraldic goods rights, separate menus, readable feedback and optional confirmations. Safe Actions defaults **Off**, chosen as the immediate-action behaviour requested by the designer; it persists independently from saves. Necessary target/location choices remain. Confirmation includes access fees, held capacity and ongoing upkeep. Existing economic costs, staged claims/contributions, schema18 and PlannerAI are preserved. Human evaluation of density/art/discoverability remains O05; no claim of final visual acceptance or new mechanics follows from automated tests. See UI_RELEASE_0_910.md.

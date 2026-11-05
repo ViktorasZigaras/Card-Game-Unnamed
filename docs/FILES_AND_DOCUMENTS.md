@@ -1,3 +1,13 @@
+# v0.910 inventory update — 3 November 2026
+
+Current source release is v0.910/schema18. New canonical UI references: [UI_RELEASE_0_910.md](UI_RELEASE_0_910.md) (delivered behaviour, tests, screenshots, limits) and [UI_ART_REQUIREMENTS_2026_11_03.md](UI_ART_REQUIREMENTS_2026_11_03.md) (original specification).
+
+New/changed presentation files: `ui/play_interface.gd`, `goods_view.gd`, `token_strip.gd`, `crest.gd`, `town_view.gd`, `town_ambience.gd`, `artwork.gd`, `live_session.gd`; authoritative manual placement lives in `src/mapped_town_simulation.gd`. Intact expansion/landscape assets: `art/expansion_0910.png`, `art/valley_0910.png`. Current UI checks: `tests/ui_redesign_checks.gd`, `ui_delivery_checks.gd`; `recovered_ui_checks.gd` is a compatible current-suite entry point. Original tabbed UI fixture: `tests/archive/recovered_ui_0909.gd`. Reproducible graphics capture: `tests/capture_ui.gd`; screenshots/motion in `docs/images/ui_0_910_*`. Compact current results: `experiments/ui_0910/results.json`, `experiments/ui_delivery/results.json`.
+
+The detailed inventory below is the preserved v0.909 consolidation; its old version-specific file counts and artifact references describe that baseline. Current handoff, README, current-game inventory and decision register have been updated for 0.910. Existing persistent document identities below are retained.
+
+---
+
 # Medieval Town — files and document inventory
 
 Prepared 3 November 2026. Current gameplay **v0.909 / schema18**, immutable baseline `30514b0228bafc34aa37aaa8d8027db6c207fdb9` in [ViktorasZigaras/Card-Game-Unnamed](https://github.com/ViktorasZigaras/Card-Game-Unnamed). This inventory distinguishes durable source, documentation, historical evidence and temporary working outputs. Paths below are repository-relative unless explicitly described as temporary.
@@ -38,7 +48,7 @@ Older downloadable prototypes remain historical artifacts, not current backups: 
 | Files/group | Role |
 |---|---|
 | `project.godot`, `ui/interface.tscn` | Godot project and actual main scene |
-| `ui/play_interface.gd` → `live_interface.gd` → `interface.gd` | Current tabbed playing screen over existing action/session interface |
+| `ui/play_interface.gd` → `live_interface.gd` → `interface.gd` | Current integrated playing screen over existing action/session interface |
 | `ui/live_session.gd` | Live adapter: MappedTownSimulation + PlannerAI, batch 3; legal previews, play/save/replay integration |
 | `src/mapped_town_simulation.gd`, `src/town_layout.gd` | Schema18 saved plot addresses/terrain/occupancy and map invariants |
 | `src/flexible_contract_simulation.gd` | Schema17 public/priority route choice, social ownership costs, creator/owner exit prices and delivered-clay reward timing |

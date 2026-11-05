@@ -1,6 +1,6 @@
 # Medieval Town — current game inventory
 
-Updated 3 November 2026. Executable baseline **v0.909, save schema 18**, published code commit `30514b0228bafc34aa37aaa8d8027db6c207fdb9`. This review changes documentation only. Prices, yields, thresholds and scenario restrictions below are provisional balance values. Design intentions beyond the executable rules are in [the design register](Medieval_Town_Design_Synthesis_and_Next_Test.md); actual policy is in [Player AI](PLAYER_AI.md).
+Updated 3 November 2026. Current executable **v0.910, save schema18**. Economics and PlannerAI remain the tested v0.909 baseline; see [UI release](UI_RELEASE_0_910.md) for the new interaction and presentation layer. Prices, yields, thresholds and scenario restrictions below are provisional balance values. Design intentions beyond the executable rules are in [the design register](Medieval_Town_Design_Synthesis_and_Next_Test.md); actual policy is in [Player AI](PLAYER_AI.md).
 
 ## Purpose and starting town
 
@@ -126,15 +126,17 @@ A useful clay route can earn the town's one-time 3-prestige expedition reward on
 
 ## Playing screen and saved town
 
-Godot 4.5.1 standard or newer; import `project.godot`, run F5. F11 toggles fullscreen. This is source, not a packaged native executable. Main workspaces: Town / Goods / Cards. Sidebar: Houses / Buildings. Detail areas: Inspect / Trade / Plans / Log. Select, preview the legal action and Execute. AI stepping/batches and detailed technical records remain in the laboratory.
+Godot 4.5.1 standard or newer; import `project.godot`, run F5. F11 toggles fullscreen. This is an editor-playable source release. Cards and exact Deck/Discard contents are above, tangible goods left, layered sprite town centre, action categories/context right, and actual trade opportunities below. Game and Info menus contain utilities and explanations; House Info is separate.
 
-Goods use individual unit pictures, grouped by public/reserved/private access; numeric counts are exact. Above twelve pictures an explicit overflow count appears. Incoming cargo remains in Trade until usable. Fixed map addresses: U1–U6 urban, F1–F2 forest, D1–D2 field, S1 special chapel, N1–N4 outer wilderness: fifteen positions in a 5×3 scaffold. Terrain/occupancy change in place and are saved. Initially ten economic sites plus chapel are active; outer nature is not free extra land. Placement selects an eligible address automatically; clicking a vacant plot does not implement manual placement or adjacency.
+Build uses a structure catalogue followed by manual eligible plot choice, then the separate social claim. Material contributions still require their own later legal actions. Existing map identities and economic land rules are preserved. Private, temporary-priority, public and held goods remain distinct. Costs and project progress use repeated supplied/missing token silhouettes, with exact expandable overflow. Incoming cargo is unavailable until arrival.
 
-Vegetation clears with site development; roads are atmospheric. One gentle effect per completed building: window, saw, banner or smoke. Timing is cosmetic, capped at twelve updates/second, does not consume game RNG, stops on hidden map tabs and can be disabled. Windows vary by building/cycle; smoke puffs comprise one effect. Hall and sawmill reuse provisional house/carpenter art; kiln uses a drawn placeholder. Decorative trees are not counted timber and some vegetation is baked into art. The published town image is a static design study, not a Godot screenshot.
+Safe Actions defaults Off; fully specified actions execute immediately. On adds a full cost/obligation confirmation. Presentation preferences persist separately from saves. Ordinary feedback is readable; recorded AI reasons and detailed developer diagnostics remain accessible. Historic recordings are inspected without conversion into new saves.
+
+The new landscape and expansion atlas are intact and rendered. Buildings, removable vegetation, props, construction progress and stockade sections remain separate. Roads are atmospheric. Small window/saw/banner/smoke effects use local coordinates, separate cosmetic time and the motion toggle. See [the UI release report](UI_RELEASE_0_910.md) for actual screenshots, validation and the remaining limits.
 
 ## Verification and limits
 
-Fresh v0.909 evidence: six 80-round mapped towns, 4,793 exactly replayed actions and all 18 Halls completed; six baseline-policy comparisons, 4,806 identical decisions and candidate scores; 302 controlled cargo/bridge actions; twelve paired public/priority trials, 220 actions. Focused checks cover 82 contract assertions, 41 map/motion checks, eight ownership-value checks and 31 recovered UI checks. Archived native UI exercised 83 states; expedition UI exercised 21 commands. See [recovery evidence](RECOVERY_0_909.md) for seeds, exact scope and reproduction.
+Historical v0.909 evidence (retained separately from the new UI release checks): six 80-round mapped towns, 4,793 exactly replayed actions and all 18 Halls completed; six baseline-policy comparisons, 4,806 identical decisions and candidate scores; 302 controlled cargo/bridge actions; twelve paired public/priority trials, 220 actions. Focused checks cover 82 contract assertions, 41 map/motion checks, eight ownership-value checks and 31 recovered UI checks. Archived native UI exercised 83 states; expedition UI exercised 21 commands. See [recovery evidence](RECOVERY_0_909.md) for seeds, exact scope and reproduction.
 
 The priority competition fixtures produced equal home-completion rounds in all six pairs. They deliberately arrange prerequisites to isolate the mechanism and are not organic-strategy evidence. Headless UI checks establish geometry/interaction, not visual quality or satisfaction. Replaying selected decisions does not cover every legal path or prove optimality/balance.
 
